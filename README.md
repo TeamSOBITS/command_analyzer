@@ -24,12 +24,12 @@ $ bash install.sh
 <br>
 
 ## データセットの作り方
-データセットの作り方は[こちら]()から
+データセットの作り方は[こちら](https://github.com/TeamSOBITS/command_analyzer/blob/ubuntu18.04/doc/01_create_dataset.md)から
 
 <br>
 
 ## 学習の回し方
-学習の回し方は[こちら]()から
+学習の回し方は[こちら](https://github.com/TeamSOBITS/command_analyzer/blob/ubuntu18.04/doc/02_train_and_test.md)から
 
 <br>
 

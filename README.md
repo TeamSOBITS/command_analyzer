@@ -11,8 +11,8 @@ torchtext <= 0.9
 
 ```bash
 $ cd ~/catkin_ws/src
-$ git clone https://gitlab.com/TeamSOBITS/command_analyzer_seq2seq.git
-$ cd seq2seq
+$ git clone https://github.com/TeamSOBITS/command_analyzer.git
+$ cd command_analyzer
 $ bash install.sh
 ```
 
@@ -36,7 +36,7 @@ $ bash install.sh
 ## 使い方
 
 ```bash
-$ cd ~/catkin_ws/src/command_analyzer_seq2seq/scripts
+$ cd ~/catkin_ws/src/command_analyzer/scripts
 $ python3 example.py
 please input command >>                     # 命令文を入力する
 ```

@@ -1,0 +1,336 @@
+Who's sitting in the kitchen	_ find person <none> <none> <none> <none> kitchen operator <none> <none> <none> <none> <none> <none> name <none> <none> sitting <none> <none>
+Answer Jordan in the living room	_ answer Jordan <none> <none> <none> <none> living_room <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+how many girls are in the bathroom	_ find female <none> <none> <none> <none> bathroom operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+How many girls are in the bathroom?	_ find female <none> <none> <none> <none> bathroom operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+How many ladies are in the corridor	_ find female in corridor <none> <none> <none> operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+How many women are in the corridor?	_ find female in corridor <none> <none> <none> operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+say a joke to a man in the corridor	_ answer male in corridor <none> <none> <none> <none> <none> <none> <none> <none> <none> joke <none> <none> <none> <none> <none> <none>
+Hand me the biggest item in the sink	_ bring object in sink <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> largest <none> <none> <none> <none>
+what is the biggest thing on the bar	_ find object on bar <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+count the girls	_ find female <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+How many girls are in the living room?	_ find female <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+On the bar, which item is the largest?	_ find object on bar <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+How many females are in the living room	_ find female <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+Tell a joke to the man in the corridor.	_ answer male in corridor <none> <none> <none> <none> <none> <none> <none> <none> <none> joke <none> <none> <none> <none> <none> <none>
+What is the largest object in the sink?	_ find object in sink <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+Locate Jordan in the bedroom	_ guide Jordan <none> <none> <none> <none> bedroom operator <none> <none> <none> <none> <none> <none> gender <none> <none> <none> <none> <none>
+Get me the largest item from the cuboard	_ bring object in cupboard <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> largest <none> <none> <none> <none>
+how many people in the hallway are girls	_ find female in hallway <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+What is the largest object from the sink?	_ find object in sink <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name <none> <none> <none> <none> <none>
+hand me the largest item from the counter	_ bring object in counter <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> largest <none> <none> <none> <none>
+Bring me the rightmost object on the stove	_ bring object on stove <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> rightmost <none> <none> <none> <none>
+What are the biggest objects in the drawer	_ find object in drawer <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> largest <none> <none> <none> <none>
+How many people are sitting in the hallway	_ find person in hallway <none> <none> <none> operator <none> <none> <none> <none> <none> <none> count <none> <none> sitting <none> <none>
+get me the largest object from the counter	_ bring object in counter <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> largest <none> <none> <none> <none>
+How many people are girls in the bathroom?	_ find female <none> <none> <none> <none> bathroom operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Bring me the thinnest object from the sink	_ bring object in sink <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+get the thinnest thing from the dishwasher	_ bring object in dishwasher <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+go and tell the man on the corridor a joke	_ answer male on corridor <none> <none> <none> <none> <none> <none> <none> <none> <none> joke <none> <none> <none> <none> <none> <none>
+What are the biggest objects in the drawer?	_ find object in drawer <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+What are the largest items in the microwave	_ find object in microwave <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+Which item in the microwave is the biggest?	_ find object in microwave <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+Count the people sitting in the living room	_ find person <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> count <none> <none> sitting <none> <none>
+How many sitting people are in the kitchen?	_ find person <none> <none> <none> <none> kitchen operator <none> <none> <none> <none> <none> <none> count <none> <none> sitting <none> <none>
+Go get me the biggest item in the microwave	_ bring object in microwave <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> largest <none> <none> <none> <none>
+Tell the boy in the bedroom about yourself.	_ answer male <none> <none> <none> <none> bedroom <none> <none> <none> <none> <none> <none> yourself <none> <none> <none> <none> <none> <none>
+How many people are sitting in the bathroom?	_ find person <none> <none> <none> <none> bathroom operator <none> <none> <none> <none> <none> <none> count <none> <none> sitting <none> <none>
+How many people are sitting in the corridor?	_ find person in corridor <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> sitting <none> <none>
+bring me the thinnest thing from the counter	_ bring object in counter <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+count the number of girls in the living room	_ find female <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+how many female are there in the living room	_ find female <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+how many people in this bathroom are female?	_ find female <none> <none> <none> <none> bathroom operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+Tell the boy in the corridor what time it is	_ answer male in corridor <none> <none> <none> <none> <none> <none> <none> <none> <none> time <none> <none> <none> <none> <none> <none>
+Tracy is at the corridor and has a question.	_ answer Tracy at corridor <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Bring me the largest object in that cupboard.	_ bring object in cupboard <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> largest <none> <none> <none> <none>
+get me the thinnest thing from the dishwasher	_ bring object in dishwasher <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+How many people in the living room are girls?	_ find female <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+Answer Jordan's question he is in the bedroom	_ answer Jordan <none> <none> <none> <none> bedroom <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Is the person at the armchair male or female?	_ find person at chiar <none> <none> <none> operator <none> <none> <none> <none> <none> <none> gender <none> <none> <none> <none> <none>
+What objects on the microwave are the largest?	_ find object on microwave <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> largest <none> <none> <none> <none>
+What's the largest object on the baby's chair?	_ find object on chiar <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> largest <none> <none> <none> <none>
+Bring me what's above the cereal in the fridge	_ bring object above cereal in fridge <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Hand me the thinnest items on the center table	_ bring object on table <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+How many people in the living room are female?	_ find female <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+what's the number of females in the living room	_ find female <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+Please get me the thinnest item in the fridge.	_ bring object in fridge <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+FIND THE BOY IN DINING ROOM	_ guide male <none> <none> <none> <none> dining_room operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+TELL THE TIME.	_ answer operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> time <none> <none> <none> <none> <none> <none>
+Which is the largest object on top of the bar?	_ find object top bar <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+Bring me right most object from the nightstand.	_ bring object in nightstand <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> rightmost <none> <none> <none> <none>
+I'd like the rightmost object on the baby chair	_ bring object on chiar <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> rightmost <none> <none> <none> <none>
+On the baby chair, which is the biggest object?	_ find object on chiar <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+Please bring the largest item from the cupboard	_ bring object in cupboard <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> largest <none> <none> <none> <none>
+Find Robin near the tv	_ guide Robin near tv <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+give her the sponge.	_ bring sponge <none> <none> <none> <none> <none> female <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+go get the thing above the knife at the dresser	_ bring object above knife at dresser <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Show me the three thinnest objects on the desk.	_ bring object on desk <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest 3 <none> <none> <none>
+Tell the man in the living room what day it is.	_ answer male <none> <none> <none> <none> living_room <none> <none> <none> <none> <none> <none> date <none> <none> <none> <none> <none> <none>
+can you tell a joke to the man at the corridor?	_ answer male at corridor <none> <none> <none> <none> <none> <none> <none> <none> <none> joke <none> <none> <none> <none> <none> <none>
+Detail the largest object on the cutlery drawer	_ find object on drawer <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+please sink, tell me what is the biggest object	_ find object in sink <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+What are the largest things on the dining table?	_ find object on table <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+Tell me how many people are women in the bedroom	_ find female <none> <none> <none> <none> bedroom operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+What's the largest object on the washing machine	_ find object on washing_machine <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+Find the person waving from the corridor	_ guide person in corridor <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> waving <none> <none>
+Tell a joke to the person waving in the corridor.	_ answer person in corridor <none> <none> <none> <none> <none> <none> <none> <none> <none> joke <none> <none> <none> waving <none> <none>
+Tell a joke to the person sitting in the bedroom.	_ answer person <none> <none> <none> <none> bedroom <none> <none> <none> <none> <none> <none> joke <none> <none> <none> sitting <none> <none>
+Pass me the object above the peach on the counter	_ bring object above peach on counter <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Meet Alex at the sink	_ guide Alex at sink <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+follow Alex to the bed.	_ follow Alex <none> <none> <none> <none> <none> place at bed <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+What are the three smallest objects on the toilet	_ find object on toilet <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name smallest 3 <none> <none> <none>
+Which three things on that desk are the thinnest?	_ find object on desk <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name thinnest <none> <none> <none> <none>
+which three things on the desk are the skinniest?	_ find object on desk <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+give me the smallest thing in the washing machine	_ bring object in washing_machine <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> smallest <none> <none> <none> <none>
+say the time then locate a boy in the dining room	_ answer male <none> <none> <none> <none> dining_room <none> <none> <none> <none> <none> <none> time <none> <none> <none> <none> <none> <none>
+Bring me the thing on top of the tea from the tub	_ bring object top tea in tub <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Bring me the object on the right side of the stove	_ bring object right stove <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+What is the biggest thing in the microwave please?	_ find object in microwave <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+TELL A JOKE TO A PERSON SITTING IN THE DINING ROOM	_ answer person <none> <none> <none> <none> dining_room <none> <none> <none> <none> <none> <none> joke <none> <none> <none> sitting <none> <none>
+What's the largest objects on the washing machine?	_ find object on washing_machine <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+Which are the largest objects on the dining table.	_ find object on table <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+Tell me how many people are resting in the kitchen	_ find person <none> <none> <none> <none> kitchen operator <none> <none> <none> <none> <none> <none> count <none> <none> lying <none> <none>
+Hand me the thinnest objects from the center table	_ bring object in table <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+of the people in the bathroom, how many are girls?	_ find female <none> <none> <none> <none> bathroom operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+of the people in the corridor, how many are women?	_ find female in corridor <none> <none> <none> operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+Bring me the thinnest item from the clothes washer	_ bring object in washing_machine <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+see a boy	_ guide male <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+say about yourself	_ answer operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> yourself <none> <none> <none> <none> <none> <none>
+Let me know the largest item on the cutlery drawer	_ find object on drawer <none> <none> <none> operator <none> <none> <none> <none> <none> name <none> <none> <none> <none> <none> <none>
+Find Taylor in the hallway	_ guide Taylor in hallway <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+have Tracy answer a question	_ answer Tracy <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Please bring me the rightmost object on the counter	_ bring object on counter <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> rightmost <none> <none> <none> <none>
+hey robot get me the object to the right of the bar	_ bring object right bar <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+what is the biggest thing on the dining room table?	_ find object on table <none> <none> dining_room operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+Take the peach from the stove	_ bring peach in stove <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+give it to Robin.	_ bring object <none> <none> <none> <none> <none> Robin <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Bring me the object above the peach on the counter.	_ bring object above peach on counter <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Go tell the person standing in the bathroom a joke.	_ answer person <none> <none> <none> <none> bathroom <none> <none> <none> <none> <none> <none> joke <none> <none> <none> standing <none> <none>
+Please bring me the thinnest objects in the freezer	_ bring object in fridge <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+What are the three most thin objects on the toilet?	_ find object on toilet <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name thinnest 3 <none> <none> <none>
+Of the people in the corridor, how many are female?	_ find female in corridor <none> <none> <none> operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+State the time after you find a boy in the corridor	_ answer male in corridor <none> <none> <none> <none> <none> <none> <none> <none> <none> time <none> <none> <none> <none> <none> <none>
+Whats the biggest utensil in in the cutlery drawer?	_ find object in drawer <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+What is the gender of the person at the wheelchair?	_ find person at chiar <none> <none> <none> operator <none> <none> <none> <none> <none> <none> gender <none> <none> <none> <none> <none>
+Bring me the object on the right side of the counter	_ bring object right counter <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+please give me the most smallest item from the bar	_ bring object in bar <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> smallest <none> <none> <none> <none>
+Robin take the peach from the cupboard at the bar.	_ bring peach in cupboard at bar <none> Robin <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+follow tracy to the refridgerator	_ follow Tracy <none> <none> <none> <none> <none> place at fridge <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+On the cabinet, what are the three thinnest objects?	_ find object on cabinet <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name thinnest 3 <none> <none> <none>
+Which three objects in the cabinet are the thinnest?	_ find object in cabinet <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name thinnest 3 <none> <none> <none>
+tell him the time.	_ answer male <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> time <none> <none> <none> <none> <none> <none>
+Count the number of sitting people in the living room	_ find person <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> count <none> <none> sitting <none> <none>
+tell them the day	_ answer person <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> date <none> <none> <none> <none> <none> <none>
+Meet Jamie at the towel rack	_ guide Jamie at towel_rack <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+go to the sink.	_ go <none> at sink <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Can you fetch the skinniest item from the sink please	_ bring object in sink <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+Say something about yourself to a man in the bathroom	_ answer male <none> <none> <none> <none> bathroom <none> <none> <none> <none> <none> <none> yourself <none> <none> <none> <none> <none> <none>
+I'd like the thing on top of the tea from the bathtub	_ bring object top tea in tub <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Tell me if a man or woman is sitting in the armchair.	_ find person in chiar <none> <none> <none> operator <none> <none> <none> <none> <none> <none> gender <none> <none> <none> <none> <none>
+How many people present in the living room are female?	_ find female <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+go tell a boy in the bathroom something about yourself	_ answer male <none> <none> <none> <none> bathroom <none> <none> <none> <none> <none> <none> yourself <none> <none> <none> <none> <none> <none>
+Bring me whatever is on top of the fork in the dresser	_ bring object top fork in dresser <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Hand me the object on top of the tea from the airchair	_ bring object top tea in chiar <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+follow her to the fridge	_ follow female <none> <none> <none> <none> <none> place at fridge <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Please bring me the thinnest object from the dishwasher	_ bring object in dishwasher <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+Hand me the object that is on the left side of the sofa	_ bring object left sofa <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+bring me the object on top of the cookies in the shower	_ bring object top cookies in shower <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Find Jordan in the living room	_ guide Jordan <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+go look for Jordan in the bedroom	_ guide Jordan <none> <none> <none> <none> bedroom operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+locate waving individual	_ guide person <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> waving <none> <none>
+give a fact about yourself.	_ answer operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> yourself <none> <none> <none> <none> <none> <none>
+ask the person sitting in the dining room what day it is	_ ask person <none> <none> <none> <none> dining_room <none> <none> <none> <none> <none> <none> date <none> <none> <none> sitting <none> <none>
+Inform me which items on the side table are the biggest?	_ find object on table <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+Take the pear from the coffee table to Morgan at the bed.	_ bring pear in table <none> <none> <none> Morgan at bed <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+bring me the object above the cereal	_ bring object above chocoflake <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Go meet Tracy at the sink	_ guide Tracy at sink <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+I'd like the thinnest things that were in the dishwasher	_ bring object in dishwasher <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+Please give me the thinnest objects from the dishwasher.	_ bring object in dishwasher <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+Tell me how many people in the living room are not boys.	_ find female <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+tell me the thinnest object in there.	_ bring object <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name thinnest <none> <none> <none> <none>
+Get me the object on top of the tea spoon at the cabinet	_ bring object top teaspoon at cabinet <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+bring me the thing on top of the cookies from the shower	_ bring object top cookies in shower <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Let me know the number of people sitting in the corridor.	_ find person in corridor <none> <none> <none> operator <none> <none> <none> <none> <none> <none> count <none> <none> sitting <none> <none>
+Bring me the item that is above the knife on the dresser.	_ bring object above knife on dresser <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Please get me the thinnest objects from the freezer Robot	_ bring object in fridge <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+get the thinnest object from the fridge	_ bring object in fridge <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+Tell the man in the living room something about yourself.	_ answer male <none> <none> <none> <none> living_room <none> <none> <none> <none> <none> <none> yourself <none> <none> <none> lying <none> <none>
+Pass me the object at the dining table left of the banana	_ bring object left banana at table <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Look for Jordan in the living room	_ guide Jordan <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Look at the person by the drawer	_ guide person near drawer <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+tell me their gender	_ find person <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> gender <none> <none> <none> <none> <none>
+Could you bring me the object right next to the baby chair	_ bring object right chiar <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+What's the largest objects on the cabinet in the bathroom?	_ find object on cabinet <none> <none> bathroom operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+Find the largest item from the counter	_ bring object in counter <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+let me have it.	_ bring object <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+bring me the largest item in it.	_ bring object in <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> largest <none> <none> <none> <none>
+Bring the coke from the side table to Jamie at the counter	_ bring coke in table <none> <none> <none> Jamie at counter <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Tell person standing in corridor something about yourself.	_ answer person in corridor <none> <none> <none> <none> <none> <none> <none> <none> <none> yourself <none> <none> <none> standing <none> <none>
+Please meet Alex at the sink	_ guide Alex at sink <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+follow them to the bed.	_ follow person <none> <none> <none> <none> <none> place at bed <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+locate a boy in the kitchen	_ guide male <none> <none> <none> <none> kitchen operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+say a thing about yourself	_ answer operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> yourself <none> <none> <none> <none> <none> <none>
+bring me the thing to the left of the peach in the cabinet	_ bring object left peach in cabinet <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+please get me the farthest right object from the baby chair	_ bring object in chiar <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> rightmost <none> <none> <none> <none>
+tell a joke then locate a person sitting in the dining room	_ answer person <none> <none> <none> <none> dining_room <none> <none> <none> <none> <none> <none> joke <none> <none> <none> sitting <none> <none>
+tell the person standing in the kitchen the day of the week	_ answer person <none> <none> <none> <none> kitchen <none> <none> <none> <none> <none> <none> day_of_week <none> <none> <none> <none> <none> <none>
+say something about yourself.	_ answer operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> yourself <none> <none> <none> <none> <none> <none>
+please tell me from the bathroom how many people are sitting	_ find person <none> <none> <none> <none> bathroom <none> <none> <none> <none> <none> <none> <none> count <none> <none> sitting <none> <none>
+get the biggest object from the microwave	_ bring object in microwave <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> largest <none> <none> <none> <none>
+Grab the small dish next to the bathtub	_ bring dish near tub <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> smallest <none> <none> <none> <none>
+Robin is by the cupboard bring him the peach from the stove.	_ bring peach in stove <none> <none> <none> Robin near cupboard <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+take the spaghetti from the drawer to morgan in the bath tub	_ bring spaghetti in drawer <none> <none> <none> Morgan in tub <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Give me the item from the chair that is on top of the chips.	_ bring object in chiar top chips <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+You can go to the sink	_ go <none> at sink <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Please bring the thinnest objects to me that are on the bar.	_ bring object on bar <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+find the thinnest object from the freezer	_ guide object in fridge <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+Please tell me what are the 3 thinnest objects on the toilet	_ find object on toilet <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> name thinnest 3 <none> <none> <none>
+Please bring me the object on top of the coffee table glass.	_ bring object top glass on table <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Locate Hayden in the living room, then respond to a question	_ answer Hayden <none> <none> <none> <none> living_room <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Tell the person in the dining room what day of the week it is	_ answer person <none> <none> <none> <none> dining_room <none> <none> <none> <none> <none> <none> day_of_week <none> <none> <none> <none> <none> <none>
+find a person seated in the dining room	_ guide person <none> <none> <none> <none> dining_room operator <none> <none> <none> <none> <none> <none> <none> <none> <none> sitting <none> <none>
+Please tell me what the largest things on the side  table are	_ find object on table <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+tell the person pointing to the right in the corridor the time	_ answer person in corridor <none> <none> <none> <none> <none> <none> <none> <none> <none> time <none> <none> <none> pointing_right <none> <none>
+Bring me the object on the side table that's above the shampoo	_ bring object on table above shampoo <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Can you give me the item above the shampoo from the side table	_ bring object above shampoo in table <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Please give me the object that's above the chips on the chair.	_ bring object above chips on chiar <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+I want you to bring me the thinnest things from the bar thanks	_ bring object in bar <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+I'd like the most thin objects that are in the washing machine	_ bring object in washing_machine <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+Please get me the object from the fridge that is the thinnest.	_ bring object in fridge <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+find a man in the living room	_ guide male <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+say something about yourself	_ answer operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> yourself <none> <none> <none> <none> <none> <none>
+Please bring me the object on top of the tea from the bathtub.	_ bring object top tea in tub <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Report to me what the largest things that are on the drawer are	_ find object on drawer <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+go to the bedroom	_ go <none> <none> <none> <none> <none> bedroom <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+tell the person sitting what day today is	_ answer person <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> date <none> <none> <none> sitting <none> <none>
+Tell me the name of the largest item inside the washing machine	_ find object into washing_machine <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+find the largest item	_ bring object <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> largest <none> <none> <none> <none>
+meet Peyton at the fireplace	_ guide Peyton at fireplace <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+guide them to the center table	_ guide person <none> <none> <none> <none> <none> place at table <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Please locate a boy in the corridor	_ guide male in corridor <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+tell the person to raise the right arm in the kitchen then tell a joke	_ answer person <none> <none> <none> <none> kitchen <none> <none> <none> <none> <none> <none> joke <none> <none> <none> rising_right_arm <none> <none>
+tell the person sitting what day it is	_ answer person <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> date <none> <none> <none> sitting <none> <none>
+take the spaghetti to morgan at the bathtub	_ bring spaghetti <none> <none> <none> <none> <none> Morgan at tub <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Tell the day of the week to the person standing in the bathroom.	_ answer person <none> <none> <none> <none> bathroom <none> <none> <none> <none> <none> <none> day_of_week <none> <none> <none> standing <none> <none>
+Please meet Jamie at the towel rack	_ guide Jamie at towel_rack <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+go to the sink with them	_ guide person <none> <none> <none> <none> <none> place at sink <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Can you list the three thinnest objects on the dishwashing area?	_ find object on dishwasher <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name thinnest 3 <none> <none> <none>
+Give me the item on the left hand side of the soap from the sofa	_ bring object left soap in sofa <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Give me the object on the baby chair which is left of the melon.	_ bring object on chiar left melon <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Report to me the number of people in the bathroom who are sitting	_ find person <none> <none> <none> <none> bathroom operator <none> <none> <none> <none> <none> <none> count <none> <none> sitting <none> <none>
+Can you hand me that thing above the peach that's on the counter?	_ bring object above peach on counter <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Tell the person standing in the kitchen something about yourself.	_ answer person <none> <none> <none> <none> kitchen <none> <none> <none> <none> <none> <none> yourself <none> <none> <none> standing <none> <none>
+find the boy in the bedroom	_ guide male <none> <none> <none> <none> bedroom operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Please hand me the thing to the left of the chocolate on the sofa	_ bring object left chocolate on sofa <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+give me the object that is left of the choco flakes from the sofa	_ bring object left chocoflake in sofa <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Answer Tracy's question after you have found her in the corridor.	_ answer Tracy in corridor <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Tell the person sitting in the bathroom what day of the week it is	_ answer person <none> <none> <none> <none> bathroom <none> <none> <none> <none> <none> <none> day_of_week <none> <none> <none> sitting <none> <none>
+Please identify the largest objects placed on the washing machine.	_ guide object on washing_machine <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+robot go meet jamie at the towel rack	_ guide Jamie at towel_rack <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+follower her to the sink	_ follow female <none> <none> <none> <none> <none> place at sink <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Find the man in the middle of the dining room	_ guide male <none> <none> <none> <none> dining_room operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+tell him the day	_ answer male <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> date <none> <none> <none> <none> <none> <none>
+Can you please hand me the thing on the far right on my nightstand?	_ bring object on nightstand <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> rightmost <none> <none> <none> <none>
+In the corridor, tell the time to the person raising their left arm	_ answer person in corridor <none> <none> <none> <none> <none> <none> <none> <none> <none> time <none> <none> <none> rising_left_arm <none> <none>
+find a seated person	_ guide person <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> sitting <none> <none>
+Tell the person standing in the kitchen what day of the week it is.	_ answer person <none> <none> <none> <none> kitchen <none> <none> <none> <none> <none> <none> day_of_week <none> <none> <none> standing <none> <none>
+say what day it is to the person standing	_ answer person <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> date <none> <none> <none> standing <none> <none>
+bring them to the center table.	_ guide person <none> <none> <none> <none> <none> place at table <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Find the man in the bathroom	_ guide male <none> <none> <none> <none> bathroom operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+tell him something about yourself.	_ answer male <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> yourself <none> <none> <none> <none> <none> <none>
+bring the thing on top of the teaspoon to me.	_ bring object top teaspoon <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+give me the item on top of the teaspoon please	_ bring object top teaspoon <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Please bring me the object placed at the right most from the nightst	_ bring object at nightstand <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> rightmost <none> <none> <none> <none>
+Please bring me the thing that is furthest to the right on the stove	_ bring object on stove <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> rightmost <none> <none> <none> <none>
+go and say a joke to the person pointing to the left in the corridor	_ answer person in corridor <none> <none> <none> <none> <none> <none> <none> <none> <none> joke <none> <none> <none> pointing_left <none> <none>
+Scan the items on the microwave	_ find object on microwave <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name <none> <none> <none> <none> <none>
+inform me which are the largest.	_ find object <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+tell the person sitting there what day it is.	_ answer person <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> date <none> <none> <none> sitting <none> <none>
+Bring me the count of how many people are seated in the living room.	_ find person <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> count <none> <none> sitting <none> <none>
+take the bag from the microwave	_ bring bag in microwave <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+give to alex at the dining table	_ bring object <none> <none> <none> <none> <none> Alex at table <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+lets go find the boy in the kitchen	_ guide male <none> <none> <none> <none> kitchen operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Find bathroom with a person waving	_ guide person <none> <none> <none> <none> bathroom operator <none> <none> <none> <none> <none> <none> <none> <none> <none> waving <none> <none>
+Look on the baby chair	_ go <none> at chiar <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+let me know which objects are the largest.	_ find object <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+Tell something about yourself to a sitting person in the living room.	_ answer person <none> <none> <none> <none> living_room <none> <none> <none> <none> <none> <none> yourself <none> <none> <none> sitting <none> <none>
+go find a person standing in the bedroom	_ guide person <none> <none> <none> <none> bedroom operator <none> <none> <none> <none> <none> <none> <none> <none> <none> standing <none> <none>
+tell them what day it is today	_ answer person <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> date <none> <none> <none> <none> <none> <none>
+TELL A JOKE TO THE PERSON IN THE KITCHEN WHO IS RAISING THEIR LEFT ARM	_ answer person <none> <none> <none> <none> kitchen <none> <none> <none> <none> <none> <none> joke <none> <none> <none> rising_left_arm <none> <none>
+tell me what are the biggest objects in there.	_ find object <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name largest <none> <none> <none> <none>
+Find the small dish in the bathrub	_ bring dish in tub <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> smallest <none> <none> <none> <none>
+take it to Robin at the cabinet	_ bring object at cabinet <none> <none> <none> Robin <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+bring it to Tracy in her bed	_ bring object <none> <none> <none> <none> <none> Tracy in bed <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+retrieve the water from the armchair take it to hayden in the bathroom	_ bring water in chiar <none> <none> <none> Hayden <none> <none> <none> <none> bathroom <none> <none> <none> <none> <none> <none> <none>
+tell something about yourself to the standing person	_ answer person <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> yourself <none> <none> <none> standing <none> <none>
+can you tell me what are the three thinnest objects in the dishwasher.	_ find object in dishwasher <none> <none> <none> operator <none> <none> <none> <none> <none> <none> name thinnest 3 <none> <none> <none>
+please can I bring the object that from the baby's chair is on the left side of the sofa	_ bring object in chiar left sofa <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Please bring me the object on the counter that is furthest to the right	_ bring object on counter <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> rightmost <none> <none> <none> <none>
+tell a joke to the person raising their left arm.	_ answer person <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> joke <none> <none> <none> rising_left_arm <none> <none>
+walk to the dining room	_ go <none> <none> <none> <none> <none> dining_room <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+ask the person sitting there what day it is	_ ask person <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> date <none> <none> <none> sitting <none> <none>
+Give me the names of the biggest things you see on the bathroom cabinet	_ find object on cabinet <none> <none> bathroom operator <none> <none> <none> <none> <none> <none> <none> largest <none> <none> <none> <none>
+Please inform me of what the biggest items on the bathroom cabinet are.	_ find object on cabinet <none> <none> bathroom operator <none> <none> <none> <none> <none> <none> <none> largest <none> <none> <none> <none>
+GET THE BAG FROM THE MICROWAVE	_ bring bag in microwave <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+GIVE IT TO ALEX AT THE DINING TABLE.	_ bring object <none> <none> <none> <none> <none> Alex at table <none> <none> dining_room <none> <none> <none> <none> <none> <none> <none>
+Take the napkin from the microwave	_ bring napkin in microwave <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Find a standing person at the living room	_ guide person <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> <none> <none> <none> standing <none> <none>
+ask the person standing there what day it is.	_ ask person <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> date <none> <none> <none> standing <none> <none>
+Can you meet Jamie at the side table	_ guide Jamie at table <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+lead them to the dining table.	_ guide person <none> <none> <none> <none> <none> place at table <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+let me know which three items are the thinnest.	_ find object <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest 3 <none> <none> <none>
+Place the right most difficult object from the baby chair into my hands.	_ bring object in chiar <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> rightmost <none> <none> <none> <none>
+tell the time to the person pointing right	_ answer person <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> time <none> <none> <none> pointing_right <none> <none>
+Tell the person in the living room with their right arm raised what time it is	_ answer person <none> <none> <none> <none> living_room <none> <none> <none> <none> <none> <none> time <none> <none> <none> rising_right_arm <none> <none>
+Move into the kitchen	_ go <none> <none> <none> <none> <none> kitchen <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+I'd like the thing that was on top of the cookies from the shower please	_ bring object top cookies in shower <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Please give me the thing that is on top of the glass on the coffee table	_ bring object top glass on table <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Ask the man in the corridor, who's raising his right arm, what day it is.	_ answer male in corridor <none> <none> <none> <none> <none> <none> <none> <none> <none> date <none> <none> <none> rising_right_arm <none> <none>
+ask what day its is to the person in the corridor with their right arm up	_ ask person in corridor <none> <none> <none> operator <none> <none> <none> <none> <none> date <none> <none> <none> rising_right_arm <none> <none>
+Get the toothpaste on the bookshelf	_ bring toothpaste on bookshelf <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Robot please bring me the object on top of the shampoo from the fireplace	_ bring object top shampoo in fireplace <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Robot, can you please give me the object from the chair, above the chips?	_ bring object in chiar above chips <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+I need the object to the left of the peach in the cabinet, bring it to me	_ bring object left peach in cabinet <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Please bring me the thing that is to the left of the peach on the cabinet	_ bring object left peach on cabinet <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Robot please give me the item that is left of the chocolate from the sofa	_ bring object left chocolate in sofa <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Look for a person sitting at the dining room	_ guide person <none> <none> <none> <none> bathroom operator <none> <none> <none> <none> <none> <none> <none> <none> <none> sitting <none> <none>
+Please inform me of the amount of people that are sitting in the bathroom.	_ find person <none> <none> <none> <none> bathroom operator <none> <none> <none> <none> <none> <none> count <none> <none> sitting <none> <none>
+Please hand me the object to the left of that banana from the dining table	_ bring object left banana in table dining_room operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+can you bring me the thing from the coffee table that on top of the glass	_ bring object in table top glass <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+follow them to the dining table	_ follow person <none> <none> <none> <none> <none> place at table <none> <none> dining_room <none> <none> <none> <none> <none> <none> <none>
+come up with a joke	_ answer operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> joke <none> <none> <none> <none> <none> <none>
+Please find the object placed at the right most of the bar	_ bring object on bar <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> rightmost <none> <none> <none> <none>
+Tell something yourself to the person with their right hand up in the kitchen	_ answer person <none> <none> <none> <none> kitchen <none> <none> <none> <none> <none> <none> yourself <none> <none> <none> rising_right_arm <none> <none>
+search for a person sitting	_ guide person <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> sitting <none> <none>
+get the spaghetti	_ bring spaghetti <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Count how many people in the kitchen are sitting	_ find person <none> <none> <none> <none> kitchen operator <none> <none> <none> <none> <none> <none> count <none> <none> sitting <none> <none>
+tell me how many that is.	_ find object <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> count <none> <none> <none> <none> <none>
+go to the coffee table where you will find a pear	_ bring pear in table <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Navigate to the living room	_ go <none> <none> <none> <none> <none> living_room <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Peyton is sitting by the fireplace, could you bring her a beer from the cabinet	_ bring beer in cabinet <none> <none> <none> Peyton at fireplace <none> <none> <none> <none> <none> <none> <none> sitting <none> <none>
+go to the armchair	_ go <none> at chiar <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+take water	_ bring water <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+deliver it to Hayden who is in the bathtub	_ bring object <none> <none> <none> <none> <none> Hayden in tub <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Head to the bedroom	_ go <none> <none> <none> <none> <none> bedroom <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Go get me the item that's located to the left of the choco flakes near the sofa.	_ bring object left chocoflake near sofa <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+announce what day of the week today is.	_ answer operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> day_of_week <none> <none> <none> <none> <none> <none>
+Look for someone sitting in the living room	_ guide person <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> <none> <none> <none> sitting <none> <none>
+Find the prson raising their left arm in the corridor.	_ guide person in corridor <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> rising_left_arm <none> <none>
+Take the pickles from the counter	_ bring pickles in counter <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+deliver them to Hayden at the cutlery drawer.	_ bring object <none> <none> <none> <none> <none> Hayden at drawer <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+so you can bring it to Hayden near the bathtub.	_ bring object <none> <none> <none> <none> <none> Hayden near tub <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+On the top of the tea placed on the armchair is an object, please hand it over to me.	_ bring object top tea on chiar <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+On the left side of the choco flakes from the sofa is an object, please hand it to me.	_ bring object left chocoflake in sofa <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+look for someone raising their left hand	_ guide person <none> <none> <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> rising_left_arm <none> <none>
+tell something about yourself to the person who's standing	_ answer person <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> yourself <none> <none> <none> standing <none> <none>
+Look for the person raising their right arm at the corridor	_ guide person at corridor <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> rising_right_arm <none> <none>
+Find the person who is waving their hand in the bathroom	_ guide person in tub <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> waving <none> <none>
+Please take the toothpaste from the bookshelf	_ bring toothpaste in bookshelf <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+take it to Peyton who is at the bathtub	_ bring object <none> <none> <none> <none> <none> Peyton at tub <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+There is an object located above the cereal from the fridge, can you please bring it to me	_ bring object above chocoflake in fridge <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+go to the kitchen where you will find a person standing	_ guide person <none> <none> <none> <none> kitchen operator <none> <none> <none> <none> <none> <none> <none> <none> <none> standing <none> <none>
+bring me the items from the center of the table that are the thinnest.	_ bring object in table <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> thinnest <none> <none> <none> <none>
+could you please get the toothpaste on the bookshelf	_ bring toothpaste on bookshelf <none> <none> <none> operator <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+Tell the person who is in the living room raising their right arm what day of the week it is.	_ answer person <none> <none> <none> <none> living_room <none> <none> <none> <none> <none> <none> day_of_week <none> <none> <none> rising_right_arm <none> <none>
+deliver it to Robin who is at the cabinet	_ bring object <none> <none> <none> <none> <none> Robin at cabinet <none> <none> <none> <none> <none> <none> <none> <none> <none> <none>
+please tell what day of the week it is to the person in the living room raising their right arm	_ answer person <none> <none> <none> <none> living_room <none> <none> <none> <none> <none> <none> day_of_week <none> <none> <none> rising_right_arm <none> <none>
+Find the person raising their right arm in the living room	_ guide person <none> <none> <none> <none> living_room operator <none> <none> <none> <none> <none> <none> <none> <none> <none> rising_right_arm <none> <none>

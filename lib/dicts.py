@@ -13,6 +13,7 @@ class dict:
             self.stoi[w] = i
 
 #正解ラベルの辞書
+# 辞書のキー値は正解ラベルを，値はラベルの単語を指すコマンド内の単語を示す
 verc_dict = {
     "bring":0,
     "follow":1,

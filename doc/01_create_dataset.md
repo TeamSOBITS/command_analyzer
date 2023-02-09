@@ -1,21 +1,22 @@
 # Command Analyzer Seq2Seq - データセットについて
 
 ## **各種ファイルについて**
-- `data/create_label.py`  
+- `dataset/scripts/create_label.py`  
     正解ラベルを作成するためのプログラム  
 
-- `data/key_direct.py`  
+- `dataset/scripts/key_direct.py`  
     `create_label.py`のキーボード入力を受け取るプログラム  
 
-- `data/annonymize_dataset.py`  
+- `dataset/scripts/annonymize_dataset.py`  
     データセット増量のために，単語を種類ごとに匿名化するプログラム  
 
-- `data/increase_dataset.py`  
+- `dataset/scripts/increase_dataset.py`  
     匿名化した単語を入れ替えることでデータセットを増量するプログラム  
 
-- `data/trim_dataset.py`  
+- `dataset/scripts/trim_dataset.py`  
     データセットのサイズをトリミングするプログラム  
 
+---
 
 ## **目次**
 1. [テキストデータを作成する](#1-テキストデータを作成する)
@@ -23,6 +24,7 @@
 3. [データの増量をする](#3-データの増量をする)
 4. [データサイズをトリミングする](#4-データサイズをトリミングする)
 
+---
 
 ## 1. テキストデータを作成する
 学習時の入力となるテキストデータの作成手順を説明します．
@@ -38,7 +40,7 @@ $ sudo apt install mono-complete
 
 コマンドジェネレータを実行します．
 ```bash
-$ cd  ~/catkin_ws/src/command_analyzer_seq2seq/data/GPSRCmdGen
+$ cd  ~/catkin_ws/src/command_analyzer/dataset/GPSRCmdGen
 $ mono GPSRCmdGen.exe
 ```
 
@@ -50,7 +52,7 @@ $ mono GPSRCmdGen.exe
 
 以下のファイルを編集します．
 ```bash
-$ cd  ~/catkin_ws/src/command_analyzer_seq2seq/data/GPSRCmdGen/gpsr_grammars/
+$ cd  ~/catkin_ws/src/command_analyzer/dataset/GPSRCmdGen/gpsr_grammars/
 $ gedit category1.txt
 ```
 
@@ -76,7 +78,7 @@ $pmain    = $polite $main
 
 以下のファイルを編集します．
 ```bash
-$ cd  ~/catkin_ws/src/command_analyzer_seq2seq/data/
+$ cd  ~/catkin_ws/src/command_analyzer/dataset/scripts/
 $ gedit create_label.py
 ```
 
@@ -93,7 +95,7 @@ cmd_type = "create"                 # create or fix
 
 `create_label.py`を実行します．
 ```bash
-$ cd  ~/catkin_ws/src/command_analyzer_seq2seq/data/
+$ cd  ~/catkin_ws/src/command_analyzer/dataset/scripts/
 $ python3 create_label.py
 ```
 実行すると，以下のような出力がされます．操作は上下左右キーとEnterキーで行います．  
@@ -125,7 +127,7 @@ person_names = lists.person_names
 
 `annonymize_dataset.py`を実行します．
 ```bash
-$ cd  ~/catkin_ws/src/command_analyzer_seq2seq/data/
+$ cd  ~/catkin_ws/src/command_analyzer/dataset/scripts/
 $ python3 annonymize_dataset.py
 ```
 
@@ -144,7 +146,7 @@ person_names = lists.person_names
 
 `increase_dataset.py`を実行します．
 ```bash
-$ cd  ~/catkin_ws/src/command_analyzer_seq2seq/data/
+$ cd  ~/catkin_ws/src/command_analyzer/dataset/scripts/
 $ python3 increase_dataset.py
 ```
 
@@ -168,7 +170,7 @@ trim_size = 1000                                # << ここを書き換える
 
 `trim_datset.py`を実行します．
 ```bash
-$ cd  ~/catkin_ws/src/command_analyzer_seq2seq/data/
+$ cd  ~/catkin_ws/src/command_analyzer/dataset/scripts/
 $ python3 trim_datset.py
 ```
 

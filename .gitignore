@@ -1,0 +1,6 @@
+dataset/data/
+!dataset/data/command.txt
+!dataset/data/train_data.txt
+!dataset/data/test_data.txt
+
+scripts/.vector_cache

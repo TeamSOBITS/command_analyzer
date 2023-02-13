@@ -32,7 +32,6 @@ class CommandAnalyzer():
         self.hidden_size = 650                  # 入力文をエンコーダで変換するときの特徴の数
         self.dropout = 0.5                      # 特定の層の出力を0にする割合(過学習の抑制)
         self.max_grad = 0.25                    # 勾配の最大ノルム
-        self.eval_interval = 20                 # 検証する間隔(インターバル)
 
         self.is_debug = True                    # デバッグ用の出力をするかのフラッグ
         self.is_predict_unk = False             # 推論時に未知語を変換するかどうかのフラッグ

@@ -2,7 +2,7 @@
 import warnings
 warnings.filterwarnings('ignore')           # 警告文の無視
 import sys
-sys.append("..")
+sys.path.append('../..')  # 親ディレクトリのファイルをインポートするための設定
 import os
 import re
 import matplotlib
@@ -21,25 +21,24 @@ class CommandAnalyzer():
     def __init__(self) -> None:
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         # パラメータ設定
-        self.sen_length = 30
-        self.output_len = 20
-        self.batch_size = 1220
-        self.wordvec_size = 300
-        self.hidden_size = 650
-        self.dropout = 0.5
-        self.learning_rate = 0.001
-        self.momentum=0
-        self.max_grad = 0.25
-        self.eval_interval = 20
-        self.predict_unk = True
-        self.show_attention_map = True
+        self.sen_length = 30                    # 入力文の長さ(この長さより短い場合はパディングされる)
+        self.output_len = 20                    # 出力ラベルの数：19 + "_"
+        self.batch_size = 746                   # バッチサイズ(同時に学習するデータの数)
+        self.wordvec_size = 300                 # 辞書ベクトルの特徴の数
+        self.hidden_size = 650                  # 入力文をエンコーダで変換するときの特徴の数
+        self.dropout = 0.5                      # 特定の層の出力を0にする割合(過学習の抑制)
+        self.max_grad = 0.25                    # 勾配の最大ノルム
+
+        self.is_predict_unk = True               # 推論時に未知語を変換するかどうかのフラッグ
+        self.show_attention_map = False          # Attentionマップを表示するかどうかのフラッグ
 
         # モデルのパス
-        self.model_path = "gpsr_2013"
         self.dir_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
-        self.encoder_path = "{}/model/{}/encoder.pth".format(self.dir_path, self.model_path)
-        self.decoder_path = "{}/model/{}/decoder.pth".format(self.dir_path, self.model_path)
-        self.text_vocab_path = "{}/model/{}/text_vocab.pth".format(self.dir_path, self.model_path)
+        self.model_path = "example"             # 保存したモデルのパス
+        self.model_num = 17                     # 保存したモデルのエポック数
+        self.encoder_path = "{}/model/{}/encoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
+        self.decoder_path = "{}/model/{}/decoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
+        self.text_vocab_path = "{}/model/{}/text_vocab.pth".format(self.dir_path, self.model_path, self.model_path)
         self.label_vocab_path = "{}/model/{}/label_vocab.pth".format(self.dir_path, self.model_path)
 
         #辞書ベクトルの読み込み
@@ -51,8 +50,8 @@ class CommandAnalyzer():
 
 
         # モデルの生成
-        self.encoder = Encoder(self.vocab_size, self.wordvec_size, self.hidden_size, self.dropout, self.text_vocab, self.vectors, self.predict_unk)
-        self.decoder = AttentionDecoder(self.vocab_size, self.wordvec_size, self.hidden_size, self.dropout, self.batch_size, self.label_vocab)
+        self.encoder = Encoder(self.vocab_size, self.wordvec_size, self.hidden_size, self.dropout, self.text_vocab, self.vectors, is_predict_unk=self.is_predict_unk)
+        self.decoder = AttentionDecoder(self.label_size, self.wordvec_size, self.hidden_size, self.dropout, self.batch_size, self.label_vocab)
         self.encoder.load_state_dict(torch.load(self.encoder_path))
         self.decoder.load_state_dict(torch.load(self.decoder_path))
         self.encoder.to(self.device)                                    # GPUを使う場合
@@ -153,28 +152,14 @@ class CommandAnalyzer():
 
 
 if __name__ == "__main__":
-    command_analyzer = CommandAnalyzer()
-    # print('Evaluating......')
-    coke = ["cola", "coca", "coca-cola", "pepsi", "cocacola"]
-    beer = ["budweiser", "guinness", "stout", "carlsberg", "heineken"]
-    cereal = ["oatmeal", "granola", "bran", "oats", "cornflakes"]
-    
+    command_analyzer = CommandAnalyzer()    
     while True:
         try:
-            # input_str = input("please input command >>").split()
-            # input_str = input("please input command >>")
-            input_str = "bring me the carlsberg in the living room"
-            # input_str = "bring the coke on the cabinet to Michael"
+            input_str = input("please input command >>")
+            # input_str = "bring me the coke in the living room"
             print(input_str)
             result =command_analyzer.predict(input_str)
-            print(result)
-            
-            # for w in cereal:
-            #     input_str = "bring me the {} in the living room".format(w)
-            #     print(input_str)
-            #     result =command_analyzer.predict(input_str)
-            #     print(result)
-
-            break
+            for key, val in result.items():
+                print(key, ":", val)
         except KeyboardInterrupt:
             break

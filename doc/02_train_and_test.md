@@ -13,12 +13,14 @@
 - `scripts/predict.py`  
     学習したモデルで命令を理解するプログラム  
 
+- `scripts/example.py`  
+    命令理解のサンプルプログラム  
+    
 ---
 
 ## **目次**
 1. [学習する](#1-学習する)
 2. [推論する](#2-推論する)
-3. [プログラムに組み込む](#3-プログラムに組み込む)
 
 ---
 
@@ -96,7 +98,7 @@ $ python3 train.py
 テストを行う場合，学習後に以下のような出力とAttentionマップが表示されます．
 出力はテストデータの理解精度と，成功例10個，失敗例20個を示します．
 
-<div align="center"><img src="pictures/実行画面_推論.png" width="80%"></div><br>
+<div align="center"><img src="pictures/実行画面_テスト.png" width="80%"></div><br>
 
 Attentionマップは各出力をする際に入力文中のどの単語に注目をしていたかを示すものです．
 上部のカラーバーに示すように，マスの色が明るければ明るいほど，その単語に注目をしていることを示しています．
@@ -116,9 +118,9 @@ Attentionマップは各出力をする際に入力文中のどの単語に注�
 これが学習時と異なる場合，ネットワーク内の構成が崩れるため，上手く動作しません．
 これは，ネットワークに用いるパラメータであれば全て同様です．
 
-41行目は推論するデータセットのパスを設定します．
-43行目は読み込むモデルのパスを設定します．
-44行目は読み込むモデルのエポック数を設定します．
+40行目は推論するデータセットのパスを設定します．
+42行目は読み込むモデルのパスを設定します．
+43行目は読み込むモデルのエポック数を設定します．
 特に理由がない限りは，保存されているモデルの中で一番大きいエポック数を設定しましょう．
 
 ```test.py
@@ -154,48 +156,83 @@ class CommandAnalyzer():
 $ cd  ~/catkin_ws/src/command_analyzer/scripts/
 $ python3 test.py
 ```
-実行結果は，`train.py`のテスト行こうと同じであるため割愛します．
+実行結果は，`test.py`のテスト行こうと同じであるため割愛します．
+
+2つ目は，入力された命令文を理解(推論)する方法です．
+この方法は，推論の処理を関数化して行います．
+推論には`predict.py`というプログラムを使用します．
+
+`predict.py`の23行目以降のパラメータを編集します．  
+26行目のバッチサイズを学習時と同じ値に設定します．
+これが学習時と異なる場合，ネットワーク内の構成が崩れるため，上手く動作しません．
+これは，ネットワークに用いるパラメータであれば全て同様です．
+
+39行目は読み込むモデルのパスを設定します．
+40行目は読み込むモデルのエポック数を設定します．
+特に理由がない限りは，保存されているモデルの中で一番大きいエポック数を設定しましょう．
+
+
+```predict.py
+class CommandAnalyzer():
+    def __init__(self) -> None:
+        self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        # パラメータ設定
+        self.sen_length = 30
+        self.output_len = 20
+        self.batch_size = 746                  # バッチサイズ(同時に学習するデータの数)
+        self.wordvec_size = 300
+        self.hidden_size = 650
+        self.dropout = 0.5
+        self.learning_rate = 0.001
+        self.momentum=0
+        self.max_grad = 0.25
+        self.eval_interval = 20
+        self.predict_unk = True
+        self.show_attention_map = True
+
+        # モデルのパス
+        self.model_path = "gpsr_2013"
+        self.dir_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
+        self.encoder_path = "{}/model/{}/encoder.pth".format(self.dir_path, self.model_path)
+        self.decoder_path = "{}/model/{}/decoder.pth".format(self.dir_path, self.model_path)
+        self.text_vocab_path = "{}/model/{}/text_vocab.pth".format(self.dir_path, self.model_path)
+        self.label_vocab_path = "{}/model/{}/label_vocab.pth".format(self.dir_path, self.model_path)
+```
+
+
+関数としての使い方は154行目以降に記載しています．
+この例では，158行目で受け取ったした命令文の理解を行います．
+
+プログラムに書き込む際はこの書き方を参考にして下さい．
+```predict.py
+if __name__ == "__main__":
+    command_analyzer = CommandAnalyzer()    
+    while True:
+        try:
+            input_str = input("please input command >>")
+            # input_str = "bring me the carlsberg in the living room"
+            print(input_str)
+            result =command_analyzer.predict(input_str)
+            print(result)
+            break
+        except KeyboardInterrupt:
+            break
+
+```
+
+`predict.py`を実行します．
+```bash
+$ cd  ~/catkin_ws/src/command_analyzer/scripts/
+$ python3 predict.py
+```
+
+実行すると，以下のような出力が得られます．
+この例では，`bring me the coke in the living room`という命令文を入力しています．
+プログラムは`Ctrl+C`で終了することができます．
+
+
+<div align="center"><img src="pictures/実行画面_推論.png" width="80%"></div><br>
 
 <br>
 
-## 3. プログラムに組み込む
-作成したデータセットを増量する手順を説明します．まず，データセット増量の前処理として，単語の匿名化を行います．
-単語の匿名化には，`annonymize_dataset.py`を使用します．
-
-`annonymize_dataset.py`の10, 11行目を読み込むファイル名と書き込むファイル名に書き換えます.
-```annonymize_dataset.py
-from lib import lists, dicts
-
-read_file_name = "dataset.txt"                  # << ここを書き換える
-write_file_name = "annonymized_dataset.txt"     # << ここを書き換える
-
-person_names = lists.person_names
-```
-
-`annonymize_dataset.py`を実行します．
-```bash
-$ cd  ~/catkin_ws/src/command_analyzer_seq2seq/data/
-$ python3 annonymize_dataset.py
-```
-
-次に，データセットの増量を行います．
-データセットの増量には，`increase_dataset.py`を使用します．
-
-`increase_dataset.py`の12, 13行目を読み込むファイル名と書き込むファイル名に書き換えます.
-```increase_dataset.py
-from tqdm import tqdm
-
-read_file_name = "annonymized_dataset.txt"      # << ここを書き換える
-write_file_name = "increased_dataset.txt"       # << ここを書き換える
-
-person_names = lists.person_names
-```
-
-`increase_dataset.py`を実行します．
-```bash
-$ cd  ~/catkin_ws/src/command_analyzer_seq2seq/data/
-$ python3 increase_dataset.py
-```
-
-<br>
 

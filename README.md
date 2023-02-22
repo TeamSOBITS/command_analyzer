@@ -3,8 +3,12 @@
 GPSR(General Purpose Service Robot)タスクの命令理解リポジトリ
 
 # 動作環境
-pytorch <= 1.8
-torchtext <= 0.9
+pytorch <= 1.13.1+cu117
+<!-- pytorch <= 1.8 -->
+torchtext <= 0.14.1
+<!-- torchtext <= 0.9 -->
+torchaudio <= 0.13.1+cu117
+torchvision <= 0.14.1+cu117
 ※ 上記より新しいバージョンを利用する場合はブランチを切り替えて下さい
 
 ## インストール

@@ -16,9 +16,14 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torchtext import data, datasets         # データセットの読み込み用のライブラリ
-from torchtext.vocab import FastText, GloVe         # word2vecの上位互換
+from torchtext.vocab import FastText, GloVe, vocab        # word2vecの上位互換
+from collections import Counter
 from network import Encoder, AttentionDecoder
 from lib import lists, dicts
+from torchtext.data.utils import get_tokenizer
+from torchtext.vocab import build_vocab_from_iterator
+import torchtext.transforms as T
+from torch.utils.data import DataLoader
 
 class CommandAnalyzer():
     def __init__(self) -> None:
@@ -26,8 +31,8 @@ class CommandAnalyzer():
         # パラメータ設定
         self.sen_length = 30                    # 入力文の長さ(この長さより短い場合はパディングされる)
         self.output_len = 20                    # 出力ラベルの数：19 + "_"
-        self.max_epoch = 100                    # エポック数(学習回数)の最大値
-        self.batch_size = 746                  # バッチサイズ(同時に学習するデータの数)
+        self.max_epoch = 1                    # エポック数(学習回数)の最大値
+        self.batch_size = 90                  # バッチサイズ(同時に学習するデータの数)
         self.wordvec_size = 300                 # 辞書ベクトルの特徴の数
         self.hidden_size = 650                  # 入力文をエンコーダで変換するときの特徴の数
         self.dropout = 0.5                      # 特定の層の出力を0にする割合(過学習の抑制)
@@ -42,34 +47,60 @@ class CommandAnalyzer():
         self.is_test_model = True               # モデルのテストを行うかどうかのフラッグ
         self.is_predict_unk = False             # 推論時に未知語を変換するかどうかのフラッグ
 
-        self.train_path = '37300.txt'           # データセットのパス
+        self.train_path = 'train_900.txt'           # データセットのパス
         self.test_path = None                   # 学習データと別のデータセットでテストを行う際のデータセットのパス
         self.model_path = "example"             # モデルを保存する際のパス
-        self.text_vocab_path = "text_vocab.pth"
-        self.label_vocab_path = "label_vocab.pth"
-        self.vectors=GloVe(dim=300)                 # GloVe(dim=300) or FastText(language="en")
+        self.text_vocab_path = "text_vocab_01.pth"
+        self.label_vocab_path = "label_vocab_01.pth"
+        self.vectors=GloVe(name='840B', dim=300)          # GloVe(name='840B', dim=300) or FastText(language="en")
 
         # 学習データの読み込み
-        self.TEXT = data.Field(lower=True, batch_first=True, pad_token='<pad>', tokenize=self.tokenize, preprocessing=data.Pipeline(self.preprocessing), pad_first=True, fix_length=self.sen_length)
-        self.LABEL = data.Field(batch_first=True, pad_token='<pad>')
+        # self.TEXT = data.Field(lower=True, batch_first=True, pad_token='<pad>', tokenize=self.tokenize, preprocessing=data.Pipeline(self.preprocessing), pad_first=True, fix_length=self.sen_length)
+        # self.LABEL = data.Field(batch_first=True, pad_token='<pad>')
+        
+        df = pd.read_table('../dataset/data/' + self.train_path)
+        df['text'] = df['text'].map(lambda x: self.tokenize(x))
+        df['label'] = df['label']
+        # print(df)
+        # df['text'] = df['text'].map(lambda x, y: self.preprocessing(x))
 
-        if self.test_path is not None:
-            (self.train_data, self.test_data) = data.TabularDataset.splits(path='../dataset/data/', train=self.train_path, test=self.test_path, format='tsv', fields=[('text', self.TEXT), ('label', self.LABEL)])
-            self.train_data, self.val_data = self.train_data.split(split_ratio=[0.9, 0.1])
-        else:
-            (self.train_data,) = data.TabularDataset.splits(path='../dataset/data/', train=self.train_path, format='tsv', fields=[('text', self.TEXT), ('label', self.LABEL)])
-            self.train_data, self.val_data = self.train_data.split(split_ratio=[0.7, 0.3])
-            self.val_data, self.test_data = self.val_data.split(split_ratio=[0.333, 0.666])
+        # if self.test_path is not None:
+        #     (self.train_data, self.test_data) = data.TabularDataset.splits(path='../dataset/data/', train=self.train_path, test=self.test_path, format='tsv', fields=[('text', self.TEXT), ('label', self.LABEL)])
+        #     self.train_data, self.val_data = self.train_data.split(split_ratio=[0.9, 0.1])
 
-        self.TEXT.build_vocab(self.train_data, vectors=self.vectors)
-        self.text_vocab = self.TEXT.vocab
-        self.LABEL.build_vocab(self.train_data, vectors=self.vectors)
-        self.label_vocab = self.LABEL.vocab
+        # else:
+        #     (self.train_data,) = data.TabularDataset.splits(path='../dataset/data/', train=self.train_path, format='tsv', fields=[('text', self.TEXT), ('label', self.LABEL)])
+        #     self.train_data, self.val_data = self.train_data.split(split_ratio=[0.7, 0.3])
+        #     self.val_data, self.test_data = self.val_data.split(split_ratio=[0.333, 0.666])
+
+        self.text_vocab = build_vocab_from_iterator(df['text'], specials=('<unk>', '<pad>'))#, vectors=self.vectors)
+        # self.text_vocab.set_default_index(self.text_vocab['<unk>'])
+        print(self.text_vocab)
+        text_vector = self.vectors.get_vecs_by_tokens(self.text_vocab)
+        print(text_vector)
+        text_transform = T.Sequential(
+            T.VocabTransform(self.text_vocab),
+            T.ToTensor(padding_value=self.text_vocab['<pad>'])
+        )
+
+        self.label_vocab = build_vocab_from_iterator(df['label'], specials=('<unk>', '<pad>'))#, vectors=self.vectors)
+        print(self.text_vocab)
+        text_vector = self.vectors.get_vecs_by_tokens(self.label_vocab)
+        print(text_vector)
+        label_transform = T.Sequential(
+            T.VocabTransform(self.label_vocab),
+            T.ToTensor()
+        )
+
+        # self.TEXT.build_vocab(self.train_data, vectors=self.vectors)
+        # self.text_vocab = self.TEXT.vocab
+        # self.LABEL.build_vocab(self.train_data, vectors=self.vectors)
+        # self.label_vocab = self.LABEL.vocab
         if self.is_save_vec:
             torch.save(self.text_vocab, "../model/{}/{}".format(self.model_path, self.text_vocab_path))
             torch.save(self.label_vocab, "../model/{}/{}".format(self.model_path, self.label_vocab_path))
-        self.label_size = len(self.label_vocab.itos)
-        self.vocab_size = len(self.text_vocab.itos)
+        self.label_size = len(self.label_vocab.get_itos)
+        self.vocab_size = len(self.text_vocab.get_itos)
 
         self.train_iter, self.val_iter, self.test_iter = data.Iterator.splits(
                                     (self.train_data, self.val_data, self.test_data), batch_size=self.batch_size, 
@@ -106,15 +137,16 @@ class CommandAnalyzer():
             s = s.replace(p, dicts.replace_phrases[p])
         s = s.replace("'s", "")
         s = re.sub(r" +", r" ", s).strip()
+        for p in dicts.replace_words.keys():
+            s = s.replace(p, dicts.replace_words[p])
         return s.split()
 
-    # 前処理の関数(リプレイスワードの処理)
-    def preprocessing(self, s: str) -> str:
-        if s in dicts.replace_words.keys():
-            return dicts.replace_words[s]
-        else:
-            return s
-
+    # # 前処理の関数(リプレイスワードの処理)
+    # def preprocessing(self, s: str) -> str:
+    #     if s in dicts.replace_words.keys():
+    #         return dicts.replace_words[s]
+    #     else:
+    #         return s
 
     # Decoderのアウトプットのテンソルから要素が最大のインデックスを返す。つまり生成文字を意味する
     def get_max_index(self, decoder_output):
@@ -365,7 +397,7 @@ class CommandAnalyzer():
                     plt.draw()
                     plt.pause(0.0001)
             _ = input("Enter to the next, q -> quit")
-            if _ is 'q':
+            if _ == 'q':
                 break
             plt.close(2)                    # 2番目のウインドウを閉じる
             plt.close(3)                    # 3番目のウインドウを閉じる

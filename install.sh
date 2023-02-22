@@ -8,7 +8,7 @@ read -p $'pytorch のCPU版をインストールします。
 case "$yn" in
   [yY]*) sudo apt install python3-pip
          python3 -m pip install -U pip
-         python3 -m pip install torch==1.9.0+cpu torchvision==0.10.0+cpu torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html;;
+         python3 -m pip install torch==1.13.1+cpu torchvision==0.14.1+cpu torchaudio==0.13.1 -f https://download.pytorch.org/whl/torch_stable.html;;
   *) echo "終了します。
 pytorchのGPU版を入れたい方はこちら
 https://pytorch.org/";;
@@ -25,11 +25,13 @@ version=""
 
 # 連想配列の定義
 declare -A torch_text_versions=(
-        # ["1.12.0"]="0.13.0"
-        # ["1.11.0"]="0.12.0"
-        # ["1.10.0"]="0.11.0"
-        # ["1.9.1"]="0.10.1"
-        # ["1.9"]="0.10"
+        ["1.13.1"]="0.14.1"
+        ["1.13.0"]="0.14.0"
+        ["1.12.0"]="0.13.0"
+        ["1.11.0"]="0.12.0"
+        ["1.10.0"]="0.11.0"
+        ["1.9.1"]="0.10.1"
+        ["1.9"]="0.10"
         ["1.8"]="0.9"
         ["1.7.1"]="0.8.1"
         ["1.7"]="0.8"
@@ -53,4 +55,7 @@ case "$yn" in
 pytorchのGPU版を入れたい方はこちら
 https://pytorch.org/";;
 esac
+
+# python3 -m pip install torchtext==${torch_text_versions[$version]}
+# python3 -m pip install pandas seaborn
 

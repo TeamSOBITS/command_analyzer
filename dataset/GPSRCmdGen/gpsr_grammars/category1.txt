@@ -23,7 +23,7 @@
 * following format:
 *
 * ; grammar name MyGrammar
-* ; grammar tier High
+* ; grammar tier Easy
 *
 * Accepted values for the tier are Easy, Moderate, and High.
 *
@@ -209,6 +209,7 @@
 
 ; grammar name GPSR Grammar
 ; grammar tier Easy
+; load common.txt
 ; import common.txt
 
 $Main     = $pmain | $main

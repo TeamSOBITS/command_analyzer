@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # coding:utf-8
 import warnings
 warnings.filterwarnings('ignore')           # 警告文の無視

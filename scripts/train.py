@@ -24,6 +24,8 @@ from torchtext.data.utils import get_tokenizer
 from torchtext.vocab import build_vocab_from_iterator
 import torchtext.transforms as T
 from torch.utils.data import DataLoader
+from torchtext.data.utils import get_tokenizer
+from sklearn.model_selection import train_test_split
 
 class CommandAnalyzer():
     def __init__(self) -> None:
@@ -31,8 +33,8 @@ class CommandAnalyzer():
         # パラメータ設定
         self.sen_length = 30                    # 入力文の長さ(この長さより短い場合はパディングされる)
         self.output_len = 20                    # 出力ラベルの数：19 + "_"
-        self.max_epoch = 1                    # エポック数(学習回数)の最大値
-        self.batch_size = 90                  # バッチサイズ(同時に学習するデータの数)
+        self.max_epoch = 100                    # エポック数(学習回数)の最大値
+        self.batch_size = 100                 # バッチサイズ(同時に学習するデータの数)
         self.wordvec_size = 300                 # 辞書ベクトルの特徴の数
         self.hidden_size = 650                  # 入力文をエンコーダで変換するときの特徴の数
         self.dropout = 0.5                      # 特定の層の出力を0にする割合(過学習の抑制)
@@ -47,68 +49,70 @@ class CommandAnalyzer():
         self.is_test_model = True               # モデルのテストを行うかどうかのフラッグ
         self.is_predict_unk = False             # 推論時に未知語を変換するかどうかのフラッグ
 
-        self.train_path = 'train_900.txt'           # データセットのパス
+        self.train_path = 'train_1000.txt'           # データセットのパス
         self.test_path = None                   # 学習データと別のデータセットでテストを行う際のデータセットのパス
         self.model_path = "example"             # モデルを保存する際のパス
         self.text_vocab_path = "text_vocab_01.pth"
         self.label_vocab_path = "label_vocab_01.pth"
-        self.vectors=GloVe(name='840B', dim=300)          # GloVe(name='840B', dim=300) or FastText(language="en")
+        self.vectors=GloVe(name='840B', dim=300)        # GloVe(name='840B', dim=300) or FastText(language="en")
+        self.label_tokenizer = get_tokenizer(tokenizer = None)
 
         # 学習データの読み込み
         # self.TEXT = data.Field(lower=True, batch_first=True, pad_token='<pad>', tokenize=self.tokenize, preprocessing=data.Pipeline(self.preprocessing), pad_first=True, fix_length=self.sen_length)
         # self.LABEL = data.Field(batch_first=True, pad_token='<pad>')
         
+
         df = pd.read_table('../dataset/data/' + self.train_path)
         df['text'] = df['text'].map(lambda x: self.tokenize(x))
-        df['label'] = df['label']
-        # print(df)
-        # df['text'] = df['text'].map(lambda x, y: self.preprocessing(x))
+        df['label'] = df['label'].map(lambda x: self.label_tokenizer(x))
+        
+        #学習用、検証用、テスト用に分割
+        self.train_text_data, self.val_text_data, self.train_label_data, self.val_label_data = train_test_split(df['text'], df['label'], train_size= 0.7)
+        self.val_text_data, self.test_text_data, self.val_label_data, self.test_label_data = train_test_split(self.val_text_data, self.val_label_data, test_size= 2/3)
+        self.train_data = pd.DataFrame({'text':self.train_text_data,'lavel':self.train_label_data})
+        self.val_data = pd.DataFrame({'text':self.val_text_data,'lavel':self.val_label_data})
+        self.test_data = pd.DataFrame({'text':self.test_text_data,'lavel':self.test_label_data})
 
-        # if self.test_path is not None:
-        #     (self.train_data, self.test_data) = data.TabularDataset.splits(path='../dataset/data/', train=self.train_path, test=self.test_path, format='tsv', fields=[('text', self.TEXT), ('label', self.LABEL)])
-        #     self.train_data, self.val_data = self.train_data.split(split_ratio=[0.9, 0.1])
+        #traindataからテキスト辞書作成
+        self.text_vocab = build_vocab_from_iterator(self.train_text_data, specials=('<unk>', '<pad>'))#, vectors=self.vectors)
+        self.text_vocab.set_default_index(self.text_vocab['<unk>'])
+        self.text_vectors = self.vectors.get_vecs_by_tokens(self.text_vocab.get_itos())
+        # print(self.text_vocab.get_itos())
+        # print(self.text_vectors)
+        # ラベル辞書作成
+        # df['label'] = df['label'].astype(str)  # ラベルが数値のため文字型に変換。文字型で指定していた場合はこの処理は不要
 
-        # else:
-        #     (self.train_data,) = data.TabularDataset.splits(path='../dataset/data/', train=self.train_path, format='tsv', fields=[('text', self.TEXT), ('label', self.LABEL)])
-        #     self.train_data, self.val_data = self.train_data.split(split_ratio=[0.7, 0.3])
-        #     self.val_data, self.test_data = self.val_data.split(split_ratio=[0.333, 0.666])
-
-        self.text_vocab = build_vocab_from_iterator(df['text'], specials=('<unk>', '<pad>'))#, vectors=self.vectors)
-        # self.text_vocab.set_default_index(self.text_vocab['<unk>'])
-        print(self.text_vocab)
-        text_vector = self.vectors.get_vecs_by_tokens(self.text_vocab)
-        print(text_vector)
-        text_transform = T.Sequential(
+        self.label_vocab = build_vocab_from_iterator(self.train_label_data, specials=('<unk>', '<pad>'))
+        self.label_vocab.set_default_index(self.label_vocab['<unk>'])
+        self.label_vectors = self.vectors.get_vecs_by_tokens(self.label_vocab.get_itos())
+        
+        self.text_transform = T.Sequential(
             T.VocabTransform(self.text_vocab),
             T.ToTensor(padding_value=self.text_vocab['<pad>'])
         )
-
-        self.label_vocab = build_vocab_from_iterator(df['label'], specials=('<unk>', '<pad>'))#, vectors=self.vectors)
-        print(self.text_vocab)
-        text_vector = self.vectors.get_vecs_by_tokens(self.label_vocab)
-        print(text_vector)
-        label_transform = T.Sequential(
+        self.label_transform = T.Sequential(
             T.VocabTransform(self.label_vocab),
-            T.ToTensor()
+            T.ToTensor(padding_value=self.label_vocab['<pad>'])
         )
-
-        # self.TEXT.build_vocab(self.train_data, vectors=self.vectors)
-        # self.text_vocab = self.TEXT.vocab
-        # self.LABEL.build_vocab(self.train_data, vectors=self.vectors)
-        # self.label_vocab = self.LABEL.vocab
+        # print(self.label_vectors)
+        # DataLoader設定
+        self.train_data_loader = DataLoader(self.train_data.values, batch_size=self.batch_size, shuffle=True, collate_fn=self.collate_batch)
+        self.val_data_loader = DataLoader(self.val_data.values, batch_size=self.batch_size, shuffle=True, collate_fn=self.collate_batch)        
+        self.test_data_loader = DataLoader(self.test_data.values, batch_size=self.batch_size, shuffle=True, collate_fn=self.collate_batch)        
+        # for i, (texts, labels) in enumerate(data_loader):
+        #     print(i)
+        #     for text, label in zip(texts, labels):
+        #         print(type(text), type(label))
         if self.is_save_vec:
             torch.save(self.text_vocab, "../model/{}/{}".format(self.model_path, self.text_vocab_path))
             torch.save(self.label_vocab, "../model/{}/{}".format(self.model_path, self.label_vocab_path))
-        self.label_size = len(self.label_vocab.get_itos)
-        self.vocab_size = len(self.text_vocab.get_itos)
-
-        self.train_iter, self.val_iter, self.test_iter = data.Iterator.splits(
-                                    (self.train_data, self.val_data, self.test_data), batch_size=self.batch_size, 
-                                     device=self.device, sort=False)
-        self.corpus_size = len(self.train_iter)
+        self.label_size = len(self.label_vocab.get_itos())
+        self.vocab_size = len(self.text_vocab.get_itos())
+        # print(self.text_vocab.get_stoi()['what'])
+        # print(len(self.text_vectors[self.text_vocab.get_stoi()['what']]))
 
         # モデルの生成
-        self.encoder = Encoder(self.vocab_size, self.wordvec_size, self.hidden_size, self.dropout, self.text_vocab, is_predict_unk=self.is_predict_unk)
+        self.encoder = Encoder(self.vocab_size, self.wordvec_size, self.hidden_size, self.dropout, self.text_vocab, vocab_vectors=self.text_vectors, is_predict_unk=self.is_predict_unk)
         self.decoder = AttentionDecoder(self.label_size, self.wordvec_size, self.hidden_size, self.dropout, self.batch_size, self.label_vocab)
         self.encoder.to(self.device)                                    # GPUを使う場合
         self.decoder.to(self.device)                                    # GPUを使う場合
@@ -121,13 +125,12 @@ class CommandAnalyzer():
             print("train size: ", len(self.train_data))
             print("val size: ", len(self.val_data))
             print("test size: ", len(self.test_data))
-            print('corpus size: %d, vocabulary size: %d' % (self.corpus_size, self.vocab_size))
+            print('corpus size: %d, vocabulary size: %d' % (len(self.train_data_loader), self.vocab_size))
             print("label size: ", self.label_size)
-            if len(self.train_data)%self.batch_size != 0 or len(self.val_data)%self.batch_size != 0 or len(self.test_data)%self.batch_size != 0:
+            if len(self.train_text_data)%self.batch_size != 0 or len(self.val_text_data)%self.batch_size != 0 or len(self.test_text_data)%self.batch_size != 0:
                 print("################## ERROR ##################")
                 print(" Incorrect batch size relative to data size")
                 
-
     # 前処理の関数(トークン化)
     def tokenize(self, s: str) -> list:
         s = s.lower()
@@ -140,6 +143,12 @@ class CommandAnalyzer():
         for p in dicts.replace_words.keys():
             s = s.replace(p, dicts.replace_words[p])
         return s.split()
+    # ミニバッチ時のデータ変換関数
+
+    def collate_batch(self, batch):
+        texts = self.text_transform([text for (text, label) in batch])
+        labels = self.label_transform([label for (text, label) in batch])
+        return texts, labels
 
     # # 前処理の関数(リプレイスワードの処理)
     # def preprocessing(self, s: str) -> str:
@@ -160,12 +169,14 @@ class CommandAnalyzer():
         loss_count = 0
         self.encoder.eval()
         self.decoder.eval()
-        with tqdm(total = len(self.val_iter), leave=False) as bar:
-            for i, iters in enumerate(self.val_iter):
+        with tqdm(total = len(self.val_data_loader), leave=False) as bar:
+            for i, iters in enumerate(self.val_data_loader):
                 bar.update(1)
                 time.sleep(0.001)
                 # 入力データと教師データを取り出す
-                x, l = iters.text, iters.label
+                x, l = iters[0], iters[1]
+                x = x.to(self.device)
+                l = l.to(self.device)
                 # 順伝播
                 hs, encoder_state = self.encoder(x)
                 decoder_x = l[:, :-1]
@@ -186,6 +197,8 @@ class CommandAnalyzer():
         print('Saving Model ...epoch:{}'.format(epoch+1))
         encoder_path = "../model/{}/encoder_epoch{}.pth".format(self.model_path, epoch+1)
         decoder_path = "../model/{}/decoder_epoch{}.pth".format(self.model_path, epoch+1)
+        # torch.save(self.encoder.state_dict(), encoder_path)
+        # torch.save(self.decoder.state_dict(), decoder_path)
         torch.save(self.encoder.state_dict(), encoder_path)
         torch.save(self.decoder.state_dict(), decoder_path)
 
@@ -216,8 +229,8 @@ class CommandAnalyzer():
         # 最良のloss (初期値は無限大)
         best_loss = float('inf')
         if self.is_debug:
-            for i, iters in enumerate(self.test_iter):
-                x, l = iters.text, iters.label
+            for i, iters in enumerate(self.test_data_loader):
+                x, l = iters[0], iters[1] # x = text, l = label
                 if x.size(0) != self.batch_size or x.size(1) != self.sen_length:
                     print('x', i, x.size(), x)
                 if l.size(0) != self.batch_size or l.size(1) != self.output_len:
@@ -230,20 +243,23 @@ class CommandAnalyzer():
             # モデルを訓練モードに設定
             self.encoder.train()
             self.decoder.train()
-            with tqdm(total = len(self.train_iter), leave=False) as bar:
-                for i, iters in enumerate(self.train_iter):
+            with tqdm(total = len(self.train_data_loader), leave=False) as bar:
+                for i, iters in enumerate(self.train_data_loader):
                     bar.update(1)
                     time.sleep(0.001)
                     # 入力データと教師データを取り出す
-                    x, l = iters.text, iters.label
+                    x, l = iters[0], iters[1]
                     #print('x : ', x.size())
                     #print('l : ', l.size())
+                    x = x.to(self.device)
+                    l = l.to(self.device)
 
                     # 勾配をゼロにリセット
                     self.encoder_optimizer.zero_grad()
                     self.decoder_optimizer.zero_grad()
                     
                     # 順伝播
+                    
                     hs, encoder_state = self.encoder(x)
                     decoder_x = l[:, :-1]
                     target = l[:, 1:]
@@ -313,11 +329,13 @@ class CommandAnalyzer():
             row = []
 
             print('Evaluating......')
-            with tqdm(total = len(self.test_iter), leave=False) as bar:
-                for iters in self.test_iter:
+            with tqdm(total = len(self.test_data_loader), leave=False) as bar:
+                for iters in self.test_data_loader:
                     bar.update(1)
                     time.sleep(0.001)
-                    x, l = iters.text, iters.label
+                    x, l = iters[0], iters[1]
+                    x = x.to(self.device)
+                    l = l.to(self.device)
                     hs, encoder_state = self.encoder(x)
 
                     # Decoderにはまず文字列生成開始を表す"_"をインプットにするので、"_"のtensorをバッチサイズ分作成
@@ -343,9 +361,9 @@ class CommandAnalyzer():
                     predicts.append(batch_tmp[:,1:])
 
                     for inp, output, predict in zip(x, l, batch_tmp[:,1:]):
-                        inp_ = [self.text_vocab.itos[idx] for idx in inp]
-                        y = [self.label_vocab.itos[idx] for idx in output]
-                        p = [self.label_vocab.itos[idx.item()] for idx in predict]
+                        inp_ = [self.text_vocab.get_itos()[idx] for idx in inp]
+                        y = [self.label_vocab.get_itos()[idx] for idx in output]
+                        p = [self.label_vocab.get_itos()[idx.item()] for idx in predict]
                         x_str = " ".join(inp_).replace('<pad> ', '')
                         y_str = " ".join(y[1:]).replace('<pad>', '')
                         p_str = " ".join(p).replace('<pad>', '')
@@ -367,10 +385,12 @@ class CommandAnalyzer():
 
     def plot_attention_map(self):
         # attention 可視化
-        iter_ = iter(self.test_iter)
+        iter_ = iter(self.test_data_loader)
         for num in range(10000):
             iters = iter_.__next__()
-            x, l = iters.text, iters.label
+            x, l = iters[0], iters[1]
+            x = x.to(self.device)
+            l = l.to(self.device)
             with torch.no_grad():
                 # モデルを評価モードへ
                 self.encoder.eval()
@@ -387,8 +407,8 @@ class CommandAnalyzer():
                             break
                     #print(offset)
                     df = pd.DataFrame(data=torch.transpose(attention_weight[i][offset:], 0, 1).cpu().numpy(), 
-                                    columns=[self.text_vocab.itos[idx.item()] for idx in x[i][offset:]], 
-                                    index=[self.label_vocab.itos[idx.item()] for idx in torch.max(decoder_output[i],1)[1]])
+                                    columns=[self.text_vocab.get_itos()[idx.item()] for idx in x[i][offset:]], 
+                                    index=[self.label_vocab.get_itos()[idx.item()] for idx in torch.max(decoder_output[i],1)[1]])
                     plt.figure(figsize=(12, 12)) 
                     plt.ion()
                     sns.set_context("paper", 2.5)

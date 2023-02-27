@@ -5,27 +5,30 @@ import numpy as np
 import torch
 import torch.nn as nn
 
+
 # deviceの設定(GPUを使う場合)
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
 class Encoder(nn.Module):
-    def __init__(self, vocab_size=10000, wordvec_size=100, hidden_size=100, dropout_ratio=0.5, vocab=None, vectors=None, is_predict_unk=True):
+    def __init__(self, vocab_size=10000, wordvec_size=100, hidden_size=100, dropout_ratio=0.5, vocab=None, vocab_vectors=None, vectors=None, is_predict_unk=True):
         super(Encoder, self).__init__()
         V, D, H = vocab_size, wordvec_size, hidden_size
         self.vocab = vocab
         self.vectors = vectors
+        self.vocab_vectors = vocab_vectors
         self.is_predict_unk = is_predict_unk
+        print(vocab)
 
         # レイヤの生成
-        # self.embed = nn.Embedding(V, D, padding_idx=vocab.stoi['<pad>'])
+        # self.embed = nn.Embedding(V, D, padding_idx=vocab.get_stoi()['<pad>'])
         self.embed = nn.Embedding(V, D)
         self.lstm = nn.LSTM(D, H, num_layers=1, bias=True, batch_first=True, dropout=dropout_ratio)
         # self.affine = nn.Linear(H, V, bias=True)
         self.dropout = nn.Dropout(dropout_ratio)
 
         # 重みの初期化
-        self.embed.weight = nn.Parameter(self.vocab.vectors)
+        self.embed.weight = nn.Parameter(self.vocab_vectors)
         self.embed.weight.requires_grad = False
         # nn.init.normal_(self.embed.weight, std=0.01)
         nn.init.normal_(self.lstm.weight_ih_l0, std=1/np.sqrt(D))
@@ -35,12 +38,15 @@ class Encoder(nn.Module):
         # self.affine.weight = self.embed.weight      # 重みの共有
         # nn.init.zeros_(self.affine.bias)
 
+
     def cosine_matrix(self, a, b):
+        print("c")
         dot = torch.matmul(a, torch.t(b))
         norm = torch.matmul(torch.norm(a, dim=0).unsqueeze(-1), torch.norm(b, dim=0).unsqueeze(0))
         return dot / norm
 
     def compare_word_sim(self, a, b):
+        print("d")
         if torch.norm(b) == 0:
             return torch.norm(b)
         norm = torch.norm(a-b)
@@ -76,6 +82,7 @@ class Encoder(nn.Module):
                     # print(xvecs)
         xs, h = self.lstm(xvecs)
         # score = self.affine(xs)
+
         return xs, h
 
 
@@ -103,7 +110,6 @@ class AttentionDecoder(nn.Module):
         nn.init.zeros_(self.lstm.bias_hh_l0)
         nn.init.normal_(self.affine.weight, std=1/np.sqrt(H))
         nn.init.zeros_(self.affine.bias)
-
 
 
     def forward(self, xs, hs, h):
@@ -159,6 +165,7 @@ class AttentionDecoder(nn.Module):
         # print("output_1", output.size())
         output = self.affine(output) # output.size() = ([batch_size, output_size, label_size])
         # print("output_2", output.size())
+
         return output, state, attention_weight
 
 

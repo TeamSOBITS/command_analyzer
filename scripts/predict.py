@@ -23,7 +23,7 @@ class CommandAnalyzer():
         # パラメータ設定
         self.sen_length = 30                    # 入力文の長さ(この長さより短い場合はパディングされる)
         self.output_len = 20                    # 出力ラベルの数：19 + "_"
-        self.batch_size = 746                   # バッチサイズ(同時に学習するデータの数)
+        self.batch_size = 100                   # バッチサイズ(同時に学習するデータの数)
         self.wordvec_size = 300                 # 辞書ベクトルの特徴の数
         self.hidden_size = 650                  # 入力文をエンコーダで変換するときの特徴の数
         self.dropout = 0.5                      # 特定の層の出力を0にする割合(過学習の抑制)
@@ -35,25 +35,27 @@ class CommandAnalyzer():
         # モデルのパス
         self.dir_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
         self.model_path = "example"             # 保存したモデルのパス
-        self.model_num = 17                     # 保存したモデルのエポック数
+        self.model_num = 56                     # 保存したモデルのエポック数
         self.encoder_path = "{}/model/{}/encoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
         self.decoder_path = "{}/model/{}/decoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
-        self.text_vocab_path = "{}/model/{}/text_vocab.pth".format(self.dir_path, self.model_path, self.model_path)
-        self.label_vocab_path = "{}/model/{}/label_vocab.pth".format(self.dir_path, self.model_path)
+        self.text_vocab_path = "{}/model/{}/text_vocab_01.pth".format(self.dir_path, self.model_path, self.model_path)
+        self.label_vocab_path = "{}/model/{}/label_vocab_01.pth".format(self.dir_path, self.model_path)
 
         #辞書ベクトルの読み込み
         self.text_vocab = torch.load(self.text_vocab_path)
         self.label_vocab = torch.load(self.label_vocab_path)
-        self.vocab_size = len(self.text_vocab.itos)
-        self.label_size = len(self.label_vocab.itos)
-        self.vectors=GloVe(dim=300)
-
+        self.vocab_size = len(self.text_vocab.get_itos())
+        self.label_size = len(self.label_vocab.get_itos())
+        print(self.vocab_size, self.label_size)
+        self.vectors = GloVe(name='840B', dim=300)
 
         # モデルの生成
-        self.encoder = Encoder(self.vocab_size, self.wordvec_size, self.hidden_size, self.dropout, self.text_vocab, self.vectors, is_predict_unk=self.is_predict_unk)
+        self.encoder = Encoder(self.vocab_size, self.wordvec_size, self.hidden_size, self.dropout, vocab=self.text_vocab, vectors=self.vectors, is_predict_unk=self.is_predict_unk)
         self.decoder = AttentionDecoder(self.label_size, self.wordvec_size, self.hidden_size, self.dropout, self.batch_size, self.label_vocab)
-        self.encoder.load_state_dict(torch.load(self.encoder_path))
-        self.decoder.load_state_dict(torch.load(self.decoder_path))
+        load_encorder = torch.load(self.encoder_path)
+        load_decoder = torch.load(self.decoder_path)
+        # self.encoder.load_state_dict(load_encorder)
+        # self.decoder.load_state_dict(load_decoder)
         self.encoder.to(self.device)                                    # GPUを使う場合
         self.decoder.to(self.device)                                    # GPUを使う場合
         self.criterion = nn.CrossEntropyLoss()                 # 損失の計算
@@ -90,8 +92,8 @@ class CommandAnalyzer():
             sentence = ['<pad>' for i in range(self.sen_length)]
             cmd_sen = self.tokenize(self.preprocessing(cmd_sen))
             sentence[self.sen_length-len(cmd_sen):] = cmd_sen
-            # print(sentence)
-            x = [self.text_vocab.stoi[w] for w in sentence]
+            print(sentence)
+            x = [self.text_vocab.get_stoi()[w] for w in sentence]
             x = torch.tensor(x*self.batch_size).view(self.batch_size, -1).to(self.device)
             hs, encoder_state = self.encoder(x, sentence)
 

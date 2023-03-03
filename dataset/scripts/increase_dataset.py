@@ -41,9 +41,10 @@ category_list = ["task", "target", "prep_T1", "location_T1", "prep_T2", "locatio
                    "WYS", "FIND", "obj_option", "obj_num", "guesture", "room_F"]
 
 
-with tqdm(total = len(category_list)-9, leave=False) as bar1:
+with tqdm(total = len(category_list)-13, leave=False) as bar1:
     for i in range(len(category_list)):
-        if i in [0, 2, 4, 8, 10, 14, 15, 16, 17]:
+        # if i in [0, 2, 4, 8, 10, 14, 15, 16, 17]:
+        if i in [0, 2, 4, 5, 8, 10, 11, 12, 14, 15, 16, 17, 18]:
             continue
         bar1.update(1)
         increase_data = {}

@@ -18,13 +18,12 @@ class Encoder(nn.Module):
         self.vectors = vectors
         self.vocab_vectors = vocab_vectors
         self.is_predict_unk = is_predict_unk
-        print(vocab)
 
         # レイヤの生成
         # self.embed = nn.Embedding(V, D, padding_idx=vocab.get_stoi()['<pad>'])
         self.embed = nn.Embedding(V, D)
         self.lstm = nn.LSTM(D, H, num_layers=1, bias=True, batch_first=True, dropout=dropout_ratio)
-        # self.affine = nn.Linear(H, V, bias=True)
+        self.affine = nn.Linear(H, V, bias=True)
         self.dropout = nn.Dropout(dropout_ratio)
 
         # 重みの初期化
@@ -58,7 +57,7 @@ class Encoder(nn.Module):
         xvecs = self.embed(xs)
         if self.is_predict_unk == True:
             for i, x in enumerate(xs[0]):
-                if x.item() == self.vocab.stoi['<unk>']:
+                if x.item() == self.vocab.get_stoi()['<unk>']:
                     print("unknown sentence :",sentence[i])
                     max_var = -1
                     synonym = ""

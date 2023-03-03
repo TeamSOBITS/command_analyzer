@@ -14,14 +14,13 @@ remove_words = [
 ]
 
 verb_list = [
-    "go",
     "bring",
+    "put",
+    "find",
     "follow",
     "guide",
-    "find",
-    "ask",
     "answer",
-    #"put",
+    "ask",
     "else"
 ]
 
@@ -74,83 +73,102 @@ gender = [
     "ladies"
     ]
 
+category = [
+    "food",
+    "kitchen_item",
+    "task_item"
+    ]
+
 item_names = [
-    "apple",
-    "bag",
-    "banana",
-    "beer", #"beers",
-    "box",
-    "bowl"
-    "cereal", #"flakes"
-    "chips", #"potato chips",
-    "chocoflake", #"choco flakes", "choco cereal", "choco cereals", "flakes of choco",
-    "chocolate",
-    "coke", #"cokes",
+    # "apple",
+    # "bag",
+    # "banana",
+    # "beer", #"beers",
+    # "box",
+    # "bowl"
+    "block",
+    # "cereal", #"flakes"
+    # "chips", #"potato chips",
+    # "chocoflake", #"choco flakes", "choco cereal", "choco cereals", "flakes of choco",
+    # "chocolate",
+    # "coke", #"cokes",
     "cookies",
     "cup",
-    "dish", #"dishes",
-    "fork",
-    "glass",
-    "it",
-    "key",
-    "knife",
-    "melon",
-    "milk",
-    "mug",
-    "napkin",
-    "noodles", #"noodle",
-    "object", #"objects", "item", "items",
-    "pasta", #"spaghetti",
-    "peach",
-    "pear",
-    "pickles", #"pickle",
-    "shampoo",
-    "soap",
-    "sponge",
-    "spoon",
-    "tea",
-    "teaspoon", #"tea spoon", "tea spoons", "spoon",
-    "tray",
-    "toothpaste",
-    "towel",
-    "tuna", #"tuna fish",
-    "water"
+    # "dish", #"dishes",
+    "dice",
+    "detergent",
+    # "fork",
+    # "glass",
+    # "it",
+    # "key",
+    # "knife",
+    "lunch_box",
+    "light_bulb",
+    # "melon",
+    # "milk",
+    # "mug",
+    # "napkin",
+    "noodle", #"noodles",
+    "potato_chips"
+    # "object", #"objects", "item", "items",
+    # "pasta", #"spaghetti",
+    # "peach",
+    # "pear",
+    # "pickles", #"pickle",
+    # "shampoo",
+    # "soap",
+    # "sponge",
+    # "spoon",
+    # "tea",
+    # "teaspoon", #"tea spoon", "tea spoons", "spoon",
+    # "tray",
+    # "toothpaste",
+    # "towel",
+    # "tuna", #"tuna fish",
+    # "water"
 ]
 
 furniture_names = [
-    "bar",
-    "bed",
-    "bookshelf", #"shelf",
-    "bowl",
-    "cabinet",
-    "chiar", #"armchair",　"baby chair",
-    "couch", #"TV couch",
-    "counter",
-    "cupboard",
-    "desk",
-    "dishwasher", #"dish washer", "washer",
+    # "bar",
+    # "bed",
+    # "bookshelf", #"shelf",
+    # "bowl",
+    "bin_a",
+    "bin_b",
+    # "cabinet",
+    "chair_a", #"armchair",　"baby chair",
+    "chair_b",
+    # "couch", #"TV couch",
+    # "counter",
+    # "cupboard",
+    # "desk",
+    # "dishwasher", #"dish washer", "washer",
     "drawer", #"cutlery drawer",
-    "dresser",
-    "fireplace",
-    "fridge", #"freezer",
-    "microwave",
-    "nightstand",
-    "shower",
-    "sink",
-    "sofa",
-    "stove",
-    "table", #"side table", "dining table", "coffee table", "center table",
-    "towel_rack",
-    "tub", #"bathtub",
-    "tv", 
-    "washing_machine"
+    # "dresser",
+    # "fireplace",
+    # "fridge", #"freezer",
+    # "microwave",
+    # "nightstand",
+    # "shower",
+    # "sink",
+    # "sofa",
+    # "stove",
+    "long_table_a",
+    "long_table_b",
+    "shelf",
+    "tall_table"
+    # "table", #"side table", "dining table", "coffee table", "center table",
+    # "towel_rack",
+    # "tub", #"bathtub",
+    # "tv", 
+    # "washing_machine"
 ]
 
 room_names = [
-    "bathroom",
-    "bedroom",
+    # "bathroom",
+    # "bedroom",
     "dining_room",
-    "kitchen",
+    # "kitchen",
     "living_room"
 ]
 
@@ -187,6 +205,7 @@ category_list = [
 
 what_you_say = [
     "name",
+    "age",
     "yourself",
     "country",
     "affiliation",
@@ -220,12 +239,14 @@ quantity = [
     "3"
 ]
 guestures = [
-    "waving",
-    "rising_left_arm",
-    "rising_right_arm",
-    "pointing_left",
-    "pointing_right",
+    # "waving",
+    # "rising_left_arm",
+    # "rising_right_arm",
+    "rising_hands",
+    "pointing",
+    # "pointing_left",
+    # "pointing_right",
     "sitting",
     "standing",
-    "lying"
+    # "lying"
 ]

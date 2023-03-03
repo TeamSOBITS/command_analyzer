@@ -1,5 +1,12 @@
-Tell me the name of the person in the bedroom
-Could you please go to the TV, meet Hunter, and lead her to the TV
-The person being guided must deviate when indicated by the referee before reaching the TV
-Provide drinks to all the people in the bedroom.
-There are two people here
+Go to the living_room, grasp the noodle on the chiar_a and place it on the chiar_a.
+Go to the living_room, grasp the noodle on the chiar_a and give it to chiar_a.
+Tell me how many food there are on the chiar_a.
+Tell me how many people in the living_room are standing.
+Go to the living_room, find Alex at the chiar_a and follow him.
+Go to the living_room, find Alex at the chiar_a and guide him to the chiar_a.
+Go to the living_room, find Alex at the chiar_a and answer his question.
+Go to the living_room, find Alex at the chiar_a and ask him his age.
+Go to the living_room, find Alex at the chiar_a and follow her.
+Go to the living_room, find Alex at the chiar_a and guide her to the chiar_a.
+Go to the living_room, find Alex at the chiar_a and answer her question.
+Go to the living_room, find Alex at the chiar_a and ask her her age.

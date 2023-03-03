@@ -46,6 +46,7 @@ for j, text in enumerate(data):
     new_label_list = copy.copy(label_list)
     for i, lbl in enumerate(label_list):
         if i in [0, 2, 4, 8, 10, 14]:
+            # print(lbl)
             continue
         #annonymize
         if lbl in item_names_dict:

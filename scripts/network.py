@@ -52,6 +52,10 @@ class Encoder(nn.Module):
         return cos_sim
 
     def forward(self, xs, sentence=None):
+        # print(type(sentence))
+        # print(sentence)
+        # print(type(xs))
+        # print(xs)
         xvecs = self.embed(xs)
         if self.is_predict_unk == True:
             for i, x in enumerate(xs[0]):

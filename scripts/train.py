@@ -34,7 +34,7 @@ class CommandAnalyzer():
         self.sen_length = 30                    # 入力文の長さ(この長さより短い場合はパディングされる)
         self.output_len = 20                    # 出力ラベルの数：19 + "_"
         self.max_epoch = 100                    # エポック数(学習回数)の最大値
-        self.batch_size = 987                   # バッチサイズ(同時に学習するデータの数)
+        self.batch_size = 10                   # バッチサイズ(同時に学習するデータの数)
         self.wordvec_size = 300                 # 辞書ベクトルの特徴の数
         self.hidden_size = 650                  # 入力文をエンコーダで変換するときの特徴の数
         self.dropout = 0.5                      # 特定の層の出力を0にする割合(過学習の抑制)
@@ -72,6 +72,7 @@ class CommandAnalyzer():
         self.train_data = pd.DataFrame({'text':self.train_text_data,'lavel':self.train_label_data})
         self.val_data = pd.DataFrame({'text':self.val_text_data,'lavel':self.val_label_data})
         self.test_data = pd.DataFrame({'text':self.test_text_data,'lavel':self.test_label_data})
+        # print(self.train_text_data)
 
         #traindataからテキスト辞書作成
         self.text_vocab = build_vocab_from_iterator(self.train_text_data, specials=('<unk>', '<pad>'))#, vectors=self.vectors)

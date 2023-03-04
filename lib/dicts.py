@@ -27,20 +27,20 @@ verc_dict = {
 }
 
 replace_words = {
-    "boy":"male",
-    "boys":"male",
-    "males":"male",
-    "man":"male",
-    "men":"male",
-    "gentleman":"male",
-    "gentlemen":"male",
-    "girl":"female",
-    "girls":"female",
-    "females":"female",
-    "woman":"female",
-    "women":"female",
-    "lady":"female",
-    "ladies":"female",
+    # "boy":"male",
+    # "boys":"male",
+    # "males":"male",
+    # "man":"male",
+    # "men":"male",
+    # "gentleman":"male",
+    # "gentlemen":"male",
+    # "girl":"female",
+    # "girls":"female",
+    # "females":"female",
+    # "woman":"female",
+    # "women":"female",
+    # "lady":"female",
+    # "ladies":"female",
     "chocoflackes":"chocoflacke"
 }
 

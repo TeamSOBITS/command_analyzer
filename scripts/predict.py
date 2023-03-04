@@ -23,7 +23,7 @@ class CommandAnalyzer():
         # パラメータ設定
         self.sen_length = 30                    # 入力文の長さ(この長さより短い場合はパディングされる)
         self.output_len = 20                    # 出力ラベルの数：19 + "_"
-        self.batch_size = 987                   # バッチサイズ(同時に学習するデータの数)
+        self.batch_size = 10                   # バッチサイズ(同時に学習するデータの数)
         self.wordvec_size = 300                 # 辞書ベクトルの特徴の数
         self.hidden_size = 650                  # 入力文をエンコーダで変換するときの特徴の数
         self.dropout = 0.5                      # 特定の層の出力を0にする割合(過学習の抑制)
@@ -35,14 +35,15 @@ class CommandAnalyzer():
         # モデルのパス
         self.dir_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
         self.model_path = "example"             # 保存したモデルのパス
-        self.model_num = 100                     # 保存したモデルのエポック数
+        self.model_num = 36                     # 保存したモデルのエポック数
         self.encoder_path = "{}/model/{}/encoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
         self.decoder_path = "{}/model/{}/decoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
-        self.text_vocab_path = "{}/model/{}/text_vocab_01.pth".format(self.dir_path, self.model_path, self.model_path)
+        self.text_vocab_path = "{}/model/{}/text_vocab_01.pth".format(self.dir_path, self.model_path)
         self.label_vocab_path = "{}/model/{}/label_vocab_01.pth".format(self.dir_path, self.model_path)
 
         #辞書ベクトルの読み込み
         self.text_vocab = torch.load(self.text_vocab_path)
+        # print(self.text_vocab.get_itos())
         self.label_vocab = torch.load(self.label_vocab_path)
         self.vocab_size = len(self.text_vocab.get_itos())
         self.label_size = len(self.label_vocab.get_itos())
@@ -75,6 +76,8 @@ class CommandAnalyzer():
             s = s.replace(p, dicts.replace_phrases[p])
         s = s.replace("'s", "")
         s = re.sub(r" +", r" ", s).strip()
+        for p in dicts.replace_words.keys():
+            s = s.replace(p, dicts.replace_words[p])
         return s.split()
 
     def preprocessing(self, s: str) -> str:
@@ -89,13 +92,13 @@ class CommandAnalyzer():
             results.append(torch.argmax(h))
         return torch.tensor(results, device=self.device).view(self.batch_size, 1)
 
-    def predict(self, cmd_sen):
+    def predict(self, cmd_sentence):
         with torch.no_grad():
             # モデルを評価モードへ
             self.encoder.eval()
             self.decoder.eval()
             sentence = ['<pad>' for i in range(self.sen_length)]
-            cmd_sen = self.tokenize(self.preprocessing(cmd_sen))
+            cmd_sen = self.tokenize(self.preprocessing(cmd_sentence))
             sentence[self.sen_length-len(cmd_sen):] = cmd_sen
             x = []
 

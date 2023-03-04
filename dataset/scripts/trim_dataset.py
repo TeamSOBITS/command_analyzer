@@ -2,13 +2,14 @@
 import sys
 import random
 from tqdm import tqdm
-input_file_name = "increased_dataset.txt"
-output_file_name = "train_98700.txt"
 
 # データセットのサイズを任意の数にトリミングするプログラム
-
 # トリミングサイズ
 trim_size = 98700
+input_file_name = "increased_dataset.txt"
+output_file_name = "train_" + str(trim_size) + ".txt"
+
+
 
 # ファイルを読み込んでwhileで1行ずつ見ていく
 input_file = open("../data/"+input_file_name)

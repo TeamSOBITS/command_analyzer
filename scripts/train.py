@@ -34,7 +34,7 @@ class CommandAnalyzer():
         self.sen_length = 30                    # 入力文の長さ(この長さより短い場合はパディングされる)
         self.output_len = 20                    # 出力ラベルの数：19 + "_"
         self.max_epoch = 100                    # エポック数(学習回数)の最大値
-        self.batch_size = 987                 # バッチサイズ(同時に学習するデータの数)
+        self.batch_size = 987                   # バッチサイズ(同時に学習するデータの数)
         self.wordvec_size = 300                 # 辞書ベクトルの特徴の数
         self.hidden_size = 650                  # 入力文をエンコーダで変換するときの特徴の数
         self.dropout = 0.5                      # 特定の層の出力を0にする割合(過学習の抑制)

@@ -39,13 +39,11 @@ class Encoder(nn.Module):
 
 
     def cosine_matrix(self, a, b):
-        print("c")
         dot = torch.matmul(a, torch.t(b))
         norm = torch.matmul(torch.norm(a, dim=0).unsqueeze(-1), torch.norm(b, dim=0).unsqueeze(0))
         return dot / norm
 
     def compare_word_sim(self, a, b):
-        print("d")
         if torch.norm(b) == 0:
             return torch.norm(b)
         norm = torch.norm(a-b)
@@ -61,7 +59,7 @@ class Encoder(nn.Module):
                     print("unknown sentence :",sentence[i])
                     max_var = -1
                     synonym = ""
-                    for w in self.vocab.itos:
+                    for w in self.vocab.get_itos():
                         if w in ["<pad>", "<unk>"]:
                             continue
                         vec_w = self.vectors.get_vecs_by_tokens(w, lower_case_backup=True)
@@ -77,7 +75,7 @@ class Encoder(nn.Module):
                             max_var = var 
                             synonym = w
                     # print("w : {}\nmin_var : {}".format(synonym, max_var))
-                    xvecs[0][i] = self.embed(torch.tensor([self.vocab.stoi[synonym]]).to("cuda:0"))
+                    xvecs[0][i] = self.embed(torch.tensor([self.vocab.get_stoi()[synonym]]).to("cuda:0"))
                     # print(xvecs)
         xs, h = self.lstm(xvecs)
         # score = self.affine(xs)

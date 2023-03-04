@@ -35,7 +35,7 @@ class CommandAnalyzer():
         # モデルのパス
         self.dir_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
         self.model_path = "example"             # 保存したモデルのパス
-        self.model_num = 20                     # 保存したモデルのエポック数
+        self.model_num = 100                     # 保存したモデルのエポック数
         self.encoder_path = "{}/model/{}/encoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
         self.decoder_path = "{}/model/{}/decoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
         self.text_vocab_path = "{}/model/{}/text_vocab_01.pth".format(self.dir_path, self.model_path, self.model_path)
@@ -46,13 +46,13 @@ class CommandAnalyzer():
         self.label_vocab = torch.load(self.label_vocab_path)
         self.vocab_size = len(self.text_vocab.get_itos())
         self.label_size = len(self.label_vocab.get_itos())
-        print(self.vocab_size, self.label_size)
+        # print(self.vocab_size, self.label_size)
         self.vectors = GloVe(name='840B', dim=300)
 
         self.text_vectors = self.vectors.get_vecs_by_tokens(self.text_vocab.get_itos())
         self.label_vectors = self.vectors.get_vecs_by_tokens(self.label_vocab.get_itos())
-        print(type(self.text_vocab))
-        print(self.text_vectors)
+        # print(type(self.text_vocab))
+        # print(self.text_vectors)
 
         # モデルの生成
         self.encoder = Encoder(self.vocab_size, self.wordvec_size, self.hidden_size, self.dropout, vocab=self.text_vocab, vocab_vectors=self.text_vectors, vectors=self.vectors, is_predict_unk=self.is_predict_unk)
@@ -103,7 +103,7 @@ class CommandAnalyzer():
                 try:
                     x.append(self.text_vocab.get_stoi()[w])
                 except KeyError:
-                    x.append(self.text_vocab.get_stoi()['unk'])
+                    x.append(self.text_vocab.get_stoi()['<unk>'])
 
             x = torch.tensor(x*self.batch_size).view(self.batch_size, -1).to(self.device)
             hs, encoder_state = self.encoder(x, sentence)

@@ -17,6 +17,7 @@ location_names = lists.location_names
 wys_lists = lists.what_you_say
 
 gender_dict =dicts.gender_dict
+location_place_names_dicts = dicts.location_place_names_dict
 item_names_dict = dicts.item_names_dict
 furniture_names_dict = dicts.furniture_names_dict
 room_names_dict = dicts.room_names_dict
@@ -43,8 +44,8 @@ category_list = ["task", "target", "prep_T1", "location_T1", "prep_T2", "locatio
 
 with tqdm(total = len(category_list)-13, leave=False) as bar1:
     for i in range(len(category_list)):
-        # if i in [0, 2, 4, 8, 10, 14, 15, 16, 17]:
-        if i in [0, 2, 4, 5, 8, 10, 11, 12, 14, 15, 16, 17, 18]:
+        if i in [0, 2, 4, 8, 10, 14, 15, 16, 17]:
+        # if i in [0, 2, 4, 5, 8, 10, 11, 12, 14, 15, 16, 17, 18]:
             continue
         bar1.update(1)
         increase_data = {}
@@ -63,6 +64,8 @@ with tqdm(total = len(category_list)-13, leave=False) as bar1:
                     elif label_list[i] == "<gender>":
                         increase_dicts = gender_dict
                     # <furniture> <location>
+                    elif "location_place" in label_list[i]:
+                        increase_dicts = location_place_names_dicts
                     elif "location" in label_list[i]:
                         increase_dicts = furniture_names_dict
                         increase_lists = location_names 

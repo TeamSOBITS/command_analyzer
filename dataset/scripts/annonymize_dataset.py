@@ -11,11 +11,12 @@ read_file_name = "dataset.txt"
 write_file_name = "annonymized_dataset.txt"
 
 person_names = lists.person_names
-location_names = lists.location_names
+# location_names = lists.location_names
 wys_lists = lists.what_you_say
 
 gender_dict =dicts.gender_dict
 item_names_dict = dicts.item_names_dict
+location_place_names_dicts = dicts.location_place_names_dict
 furniture_names_dict = dicts.furniture_names_dict
 room_names_dict = dicts.room_names_dict
 
@@ -185,11 +186,18 @@ for j, text in enumerate(data):
                     new_text = new_text.replace(new_furniture, new_tag)
                     new_label_list[i] = new_tag
 
+        # #場所の変換
+        # elif lbl in location_names and lbl in text:
+        #     new_tag = "<"+category_list[i]+">"
+        #     new_text = new_text.replace(lbl, new_tag)
+        #     new_label_list[i] = new_tag
+
         #場所の変換
-        elif lbl in location_names and lbl in text:
-            new_tag = "<"+category_list[i]+">"
-            new_text = new_text.replace(lbl, new_tag)
-            new_label_list[i] = new_tag
+        elif lbl in location_place_names_dicts:
+            for loc in location_place_names_dicts[lbl]:
+                new_tag = "<location_place>"
+                new_text = new_text.replace(loc, new_tag)
+                new_label_list[i] = new_tag
 
         #部屋の変換
         elif lbl in room_names_dict:

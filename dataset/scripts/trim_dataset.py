@@ -5,8 +5,9 @@ from tqdm import tqdm
 
 # データセットのサイズを任意の数にトリミングするプログラム
 # トリミングサイズ
-trim_size = 98700
-input_file_name = "increased_dataset.txt"
+args = sys.argv
+trim_size = int(args[1])
+input_file_name = args[2]
 output_file_name = "train_" + str(trim_size) + ".txt"
 
 
@@ -19,6 +20,7 @@ random.shuffle(dataset)
 #output_file = open(output_file_name, "a")
 with tqdm(total = trim_size, leave=False) as bar:
     with open("../data/"+output_file_name,"w") as f:
+        f.write(str("text	label\n"))
         for i, line in enumerate(dataset):
             bar.update(1)
             if i >= trim_size:

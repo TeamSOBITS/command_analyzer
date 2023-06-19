@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # coding:utf-8
 
+import rospy
 from predict import CommandAnalyzer
 
-if __name__ == "__main__":
+def analyze_sentence(sentence):
     command_analyzer = CommandAnalyzer()
     while True:
         try:
@@ -13,3 +14,9 @@ if __name__ == "__main__":
                 print(key, ":", val)
         except KeyboardInterrupt:
             break
+
+if __name__ == "__main__":
+    rospy.init_node('command_analyzer_node') 
+    rospy.loginfo('Hello World')
+    example = "robot please meet Alex at the desk and follow her to the kitchen"
+    analyze_sentence(example)

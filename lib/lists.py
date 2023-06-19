@@ -63,6 +63,7 @@ person_names = [
     "Skyler",
     "Taylor",
     "Tracy",
+    "everyone",
     "person"
 ]
 
@@ -116,6 +117,7 @@ item_names = [
     "drink",
     "fork",
     "frute",
+    "fruit",
     "glass",
     "key",
     "knife",
@@ -154,7 +156,7 @@ furniture_names = [
     "bookshelf", #"shelf","bookcase"
     "bowl",
     "bin",
-    "cab",
+    "cab",#"uber"
     "cabinet",
     "chair", #"armchair", "baby chair",
     "couch", #"TV couch",
@@ -236,7 +238,8 @@ what_you_say = [
     "date",
     "day_of_week",
     "to_leave",
-    "question"
+    "question",
+    "awnser"
 ]
 
 find_type = [

@@ -34,7 +34,7 @@ class CommandAnalyzer():
         self.sen_length = 30                    # 入力文の長さ(この長さより短い場合はパディングされる)
         self.output_len = 20                    # 出力ラベルの数：19 + "_"
         self.max_epoch = 100                    # エポック数(学習回数)の最大値
-        self.batch_size = 10                   # バッチサイズ(同時に学習するデータの数)
+        self.batch_size = 415                   # バッチサイズ(同時に学習するデータの数)
         self.wordvec_size = 300                 # 辞書ベクトルの特徴の数
         self.hidden_size = 650                  # 入力文をエンコーダで変換するときの特徴の数
         self.dropout = 0.5                      # 特定の層の出力を0にする割合(過学習の抑制)
@@ -49,7 +49,7 @@ class CommandAnalyzer():
         self.is_test_model = True               # モデルのテストを行うかどうかのフラッグ
         self.is_predict_unk = False             # 推論時に未知語を変換するかどうかのフラッグ
 
-        self.train_path = 'train_98700.txt'           # データセットのパス
+        self.train_path = 'train_1245000.txt'           # データセットのパス
         self.test_path = None                   # 学習データと別のデータセットでテストを行う際のデータセットのパス
         self.model_path = "example"             # モデルを保存する際のパス
         self.text_vocab_path = "text_vocab_01.pth"
@@ -239,9 +239,13 @@ class CommandAnalyzer():
             for i, iters in enumerate(self.test_data_loader):
                 x, l = iters[0], iters[1] # x = text, l = label
                 if x.size(0) != self.batch_size or x.size(1) != self.sen_length:
-                    print('x', i, x.size(), x)
+                    # print('x', i, x.size(), x)
+                    pass
+                
                 if l.size(0) != self.batch_size or l.size(1) != self.output_len:
-                    print('l', i, l.size(), l)
+                    # print('l', i, l.size(), l)
+                    pass
+
             print(self.encoder)
             print(self.decoder)
 

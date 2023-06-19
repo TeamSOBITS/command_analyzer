@@ -28,7 +28,7 @@ class CommandAnalyzer():
         # パラメータ設定
         self.sen_length = 30                    # 入力文の長さ(この長さより短い場合はパディングされる)
         self.output_len = 20                    # 出力ラベルの数：19 + "_"
-        self.batch_size = 937                  # バッチサイズ(同時に学習するデータの数)
+        self.batch_size = 10                  # バッチサイズ(同時に学習するデータの数)
         self.wordvec_size = 300                 # 辞書ベクトルの特徴の数
         self.hidden_size = 650                  # 入力文をエンコーダで変換するときの特徴の数
         self.dropout = 0.5                      # 特定の層の出力を0にする割合(過学習の抑制)
@@ -38,7 +38,7 @@ class CommandAnalyzer():
         self.is_predict_unk = True             # 推論時に未知語を変換するかどうかのフラッグ
 
         # モデルのパス
-        self.test_path = 'train_98700.txt'            # データセットのパス
+        self.test_path = 'train_893000.txt'            # データセットのパス
         self.dir_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
         self.model_path = "example"             # 保存したモデルのパス
         self.model_num = 100                     # 保存したモデルのエポック数
@@ -211,7 +211,7 @@ class CommandAnalyzer():
                     plt.draw()
                     plt.pause(0.0001)
             _ = input("Enter to the next, q -> quit")
-            if _ is 'q':
+            if _ == 'q':
                 break
             plt.close(2)                    # 2番目のウインドウを閉じる
             plt.close(3)                    # 3番目のウインドウを閉じる

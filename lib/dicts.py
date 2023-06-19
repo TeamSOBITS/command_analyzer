@@ -43,7 +43,8 @@ replace_words = {
     " women ":" female ",
     " lady ":" female ",
     " ladies ":" female ",
-    " chocoflackes ":" chocoflacke "
+    " chocoflakes ":" chocoflake ",
+    "supplyes":"supply"
 }
 
 replace_phrases = {
@@ -53,13 +54,17 @@ replace_phrases = {
     "there's":"there is",
     "i'll":"i will",
     "i'd":"i would",
-    "choco flacke":"chocoflacke",
-    "choco flackes":"chocoflacke",
-    "choco cereal":"chococereal",
-    "choco cereals":"chococereal",
+    "choco flake":"chocoflake",
+    "choco cereal":"chocoflake",
     "tea spoon":"teaspoon",
     "bookcase":"bookshelf",
-    "book case":"bookshelf"
+    "book case":"bookshelf",
+    "chocolate drink":"chocodrink",
+    # "cleaning supply":"cleaning_supply",
+    # "cleaning supplies":"cleaning_supply",
+    # "cleaning stuff":"cleaning_supply",
+    # "cleaning stuffes":"cleaning_supply",
+    "dining table":"diningtable"
 }
 
 
@@ -78,20 +83,21 @@ item_names_dict = {
     "block":["block", "blocks"],
     "cereal":["cereal", "flakes"],
     "chips":["chips", "potato chips"],
-    "chocoflake":["chocoflake", "chocoflakes", "choco flakes", "choco cereal", "choco cereals", "flakes of choco"],
+    "chocoflake":["choco flakes", "choco cereal", "choco cereals", "flakes of choco", "choco flake"], #"chocoflake", "chocoflakes", 
     "chocolate":["chocolate"],
-    "chocolate_drink":["chocolate_drink"],
+    "chocodrink":["chocolate drink"],
     "cloth":["cloth"],
-    "cleaning_supply":["cleaning_stuff","cleaning_supply"],
+    "cleaning_supply":["cleaning stuffes","cleaning supply","cleaning stuff","cleaning supplies"],
     "coke":["coke", "cokes"],
     "cookies":["cookie", "cookies"],
-    "cup":["cup"],
+    "cup":["cup", "cups"],
     "cutlery":["cutlery"],
     "dish":["dish", "dishes"],
     "dice":["dice", "dices"],
     "detergent":["detergent", "detergents"],
     "fork":["fork"],
-    "frute":["frute","frutes"],
+    "fruit":["fruit", "fruits"],
+    "frute":["frute"],
     "glass":["glass"],
     "key":["key"],
     "knife":["knife"],
@@ -129,7 +135,7 @@ furniture_names_dict = {
     "bin":["bin"],
     "bookshelf":["bookshelf", "shelf", "bookcase"],
     "bowl":["bowl", "bowls"],
-    "cab":["cab"],
+    "cab":["cab", "uber"],
     "cabinet":["cabinet"],
     "chair":["chair", "armchair", "baby chair"],
     "couch":["couch", "TV couch"],
@@ -149,9 +155,11 @@ furniture_names_dict = {
     "sink":["sink"],
     "sofa":["sofa"],
     "stove":["stove"],
+    "side_table":["side table"],
+    "storage_table":["storage table"],
     "shelf":["shelf"],
     "tall_table":["tall table"],
-    "table":["table", "side table", "coffee table", "center table"], # "table",
+    "table":["table", "coffee table", "center table"], # "table",
     "towel_rack":["towel rack"],
     "tub":["tub", "bathtub"],
     "washing_machine":["washing machine", "wash"]
@@ -171,7 +179,8 @@ location_place_names_dict = {
     "entrance":["entrance", "exit"],
     "hallway":["hallway"],
     "toilet":["toilet"],
-    "wardrobe":["wardrobe"]
+    "wardrobe":["wardrobe"],
+    "uber":["uber"]
 }
 
 result_dict = {

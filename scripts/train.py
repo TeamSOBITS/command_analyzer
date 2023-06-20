@@ -41,7 +41,7 @@ class CommandAnalyzer():
         self.learning_rate = 0.001              # 学習率(どれくらいモデルを更新するか)の割合
         self.max_grad = 0.25                    # 勾配の最大ノルム
         self.eval_interval = 20                 # 検証する間隔(インターバル)
-        self.early_stoping = 10                 # 学習が連続して向上しなかった際に中断するためのしきい値
+        self.early_stoping = 5                 # 学習が連続して向上しなかった際に中断するためのしきい値
 
         self.is_debug = True                    # デバッグ用の出力をするかのフラッグ
         self.is_save_vec = True                 # 辞書ベクトルを保存するかどうかのフラッグ

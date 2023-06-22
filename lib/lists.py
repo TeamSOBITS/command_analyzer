@@ -17,12 +17,12 @@ verb_list = [
     "answer",
     "ask",
     "bring",
-    "find",
+    "find_object",
+    "find_person",
     "follow",
     "guide",
-    "grasp",
+    "manipulate",
     "introduce",
-    "put",
     "else"
 ]
 
@@ -43,26 +43,41 @@ prep_list = [
 
 person_names = [
     "operator",
-    "Alex",
+    # "Alex",
+    "Amelia",
+    "Angel",
+    "Ava",
     "Charlie",
-    "Elizabeth",
-    "Francis",
-    "Hayden",
-    "James",
-    "Jamie",
-    "Jordan",
-    "John",
-    "Jennifer",
-    "Mary",
-    "Michael",
-    "Morgan",
-    "Patricia",
-    "Peyton",
-    "Robert",
-    "Robin",
-    "Skyler",
-    "Taylor",
-    "Tracy",
+    "Charlotte",
+    "Hunter",
+    "Max",
+    "Mia",
+    "Olivia",
+    "Parker",
+    "Sam",
+    "Jack",
+    "Noah",
+    "Oliver",
+    "Thomas",
+    "William",
+    # "Elizabeth",
+    # "Francis",
+    # "Hayden",
+    # "James",
+    # "Jamie",
+    # "Jordan",
+    # "John",
+    # "Jennifer",
+    # "Mary",
+    # "Michael",
+    # "Morgan",
+    # "Patricia",
+    # "Peyton",
+    # "Robert",
+    # "Robin",
+    # "Skyler",
+    # "Taylor",
+    # "Tracy",
     "everyone",
     "person"
 ]
@@ -247,8 +262,9 @@ find_type = [
     "count",
     "gender",
     "where",
-    "guesture"
+    "pose"
 ]
+
 superlatives = [
     "largest", #"biggest"
     "smallest", #"littlest"
@@ -257,7 +273,12 @@ superlatives = [
     "thinnest", #"flimsiest", "skinniest", "narrowest"
     "most",
     "rightmost",
+    "right",
+    "left",
     "leftmost",
+    "inside",
+    "under",
+    "over"
 ]
 
 quantity = [

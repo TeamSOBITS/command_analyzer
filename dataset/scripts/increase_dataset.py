@@ -58,7 +58,7 @@ with tqdm(total = len(category_list)-13, leave=False) as bar1:
                 increase_lists =[]
                 if "<none>" not in label_list[i] and "<" in label_list[i] and ">" in label_list[i]:
                     # <item>
-                    if label_list[i] == "<item>":
+                    if "item" in label_list[i]:
                         increase_dicts = item_names_dict
                     # <gender>
                     elif label_list[i] == "<gender>":
@@ -73,7 +73,7 @@ with tqdm(total = len(category_list)-13, leave=False) as bar1:
                     elif "room" in label_list[i]:
                         increase_dicts = room_names_dict
                     # <person>
-                    elif label_list[i] == "<person>":
+                    elif "person" in label_list[i]:
                         increase_lists = person_names
                     # <WYS>
                     elif label_list[i] == "<WYS>":

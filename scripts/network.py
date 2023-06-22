@@ -21,9 +21,9 @@ class Encoder(nn.Module):
 
         # レイヤの生成
         # self.embed = nn.Embedding(V, D, padding_idx=vocab.get_stoi()['<pad>'])
-        self.embed = nn.Embedding(D, H)
+        self.embed = nn.Embedding(V, D)
         self.lstm = nn.LSTM(D, H, num_layers=1, bias=True, batch_first=True, dropout=dropout_ratio)
-        self.affine = nn.Linear(H, V, bias=True)
+        # self.affine = nn.Linear(H, V, bias=True)
         self.dropout = nn.Dropout(dropout_ratio)
 
         # 重みの初期化

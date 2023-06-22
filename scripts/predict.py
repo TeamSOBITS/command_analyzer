@@ -21,21 +21,21 @@ class CommandAnalyzer():
     def __init__(self) -> None:
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         # パラメータ設定
-        self.sen_length = 30                    # 入力文の長さ(この長さより短い場合はパディングされる)
+        self.sen_length = 25                    # 入力文の長さ(この長さより短い場合はパディングされる)
         self.output_len = 20                    # 出力ラベルの数：19 + "_"
-        self.batch_size = 415                   # バッチサイズ(同時に学習するデータの数)
+        self.batch_size = 1596                   # バッチサイズ(同時に学習するデータの数)
         self.wordvec_size = 300                 # 辞書ベクトルの特徴の数
         self.hidden_size = 650                  # 入力文をエンコーダで変換するときの特徴の数
         self.dropout = 0.5                      # 特定の層の出力を0にする割合(過学習の抑制)
         self.max_grad = 0.25                    # 勾配の最大ノルム
 
-        self.is_predict_unk = True               # 推論時に未知語を変換するかどうかのフラッグ
-        self.show_attention_map = False          # Attentionマップを表示するかどうかのフラッグ
+        self.is_predict_unk = True              # 推論時に未知語を変換するかどうかのフラッグ
+        self.show_attention_map = False         # Attentionマップを表示するかどうかのフラッグ
 
         # モデルのパス
         self.dir_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
         self.model_path = "example"             # 保存したモデルのパス
-        self.model_num = 8                     # 保存したモデルのエポック数
+        self.model_num = 16                      # 保存したモデルのエポック数
         self.encoder_path = "{}/model/{}/encoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
         self.decoder_path = "{}/model/{}/decoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
         self.text_vocab_path = "{}/model/{}/text_vocab_01.pth".format(self.dir_path, self.model_path)
@@ -57,7 +57,6 @@ class CommandAnalyzer():
         # print(self.text_vectors)
 
         # モデルの生成
-        # self.encoder = Encoder(self.vocab_size, self.wordvec_size, self.hidden_size, self.dropout, vocab=self.text_vocab, vocab_vectors=self.text_vectors, vectors=self.vectors, is_predict_unk=self.is_predict_unk)
         self.encoder = Encoder(self.vocab_size, self.wordvec_size, self.hidden_size, self.dropout, self.text_vocab, vocab_vectors=self.text_vectors, vectors=self.vectors, is_predict_unk=self.is_predict_unk)
         self.decoder = AttentionDecoder(self.label_size, self.wordvec_size, self.hidden_size, self.dropout, self.batch_size, self.label_vocab)
         load_encorder = torch.load(self.encoder_path)

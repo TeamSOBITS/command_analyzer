@@ -16,7 +16,7 @@ class dict:
 # 辞書のキー値は正解ラベルを，値はラベルの単語を指すコマンド内の単語を示す
 verc_dict = {
     "answer":0,
-    "ask":1,
+    "tidyup":1,
     "bring":2,
     "find_object":3,
     "find_person":4,
@@ -44,7 +44,7 @@ replace_words = {
     " lady ":" female ",
     " ladies ":" female ",
     " chocoflakes ":" chocoflake ",
-    " supplyes":" supply"
+    " supplyes ":" supply "
 }
 
 replace_phrases = {
@@ -52,30 +52,31 @@ replace_phrases = {
     "who's":"who is",
     "he's":"he is",
     "there's":"there is",
+    "team's":"team is",
     "i'll":"i will",
     "i'd":"i would",
-    "choco flake":"chocoflake",
+    # "choco flake":"chocoflake",
     "choco flakes":"chocoflake",
-    "choco cereal":"chocoflake",
+    # "choco cereal":"chocoflake",
     "choco cereals":"chocoflake",
     "tea spoon":"teaspoon",
     "bookcase":"bookshelf",
     "book case":"bookshelf",
-    "chocolate drink":"chocodrink",
-    # "cleaning supply":"cleaning_supply",
-    # "cleaning supplies":"cleaning_supply",
-    # "cleaning stuff":"cleaning_supply",
-    # "cleaning stuffes":"cleaning_supply",
-    "dining table":"diningtable",
-    "bubble tea":"bubbletea",
-    "ice tea":"icetea",
-    "couch table":"couchtable",
-    "TV couch":"couch",
-    "kitchen shelf":"kitchenshelf",
-    "small shelf":"smallshelf",
-    "big shelf":"bigshelf",
-    "dish washer":"dishwasher",
-    "office shelf":"officeshelf"
+    # # "chocolate drink":"chocodrink",
+    # # "cleaning supply":"cleaning_supply",
+    # # "cleaning supplies":"cleaning_supply",
+    # # "cleaning stuff":"cleaning_supply",
+    # # "cleaning stuffes":"cleaning_supply",
+    # "dining table":"diningtable",
+    # "bubble tea":"bubbletea",
+    # "ice tea":"icetea",
+    # "couch table":"couchtable",#couchtable
+    # "TV couch":"couch",
+    # "kitchen shelf":"kitchenshelf",#kitchenshelf
+    # "small shelf":"smallshelf",#smallshelf
+    # "big shelf":"bigshelf",#"bigshelf"
+    # "dish washer":"dishwasher",#"dishwasher"
+    # "office shelf":"officeshelf"#"officeshelf"
 }
 
 
@@ -95,9 +96,9 @@ item_names_dict = {
     "block":["block", "blocks"],
     "corn_flakes":["cereal", "flakes", "corn flakes"],
     "chips":["chips", "potato chips"],
-    "chocoflake":["choco cereal", "choco flake"], #"chocoflake", "chocoflakes", "flakes of choco", 
+    # "chocoflake":["choco cereal", "choco flakes"], #"chocoflake", "chocoflakes", "flakes of choco", 
     "chocolate":["chocolate"],
-    "chocodrink":["chocolate drink"],
+    # "chocodrink":["chocolate drink"],
     "cloth":["cloth"],
     "cleaning_supply":["cleaning stuff","cleaning supply","cleaning supplies"],
     "cleaner":["cleaner"],
@@ -127,14 +128,14 @@ item_names_dict = {
     "napkin":["napkin"],
     "noodle":["noodle"],#"noodles", 
     "orange":["orange"],
-    "potato_chips":["potato chips"],
+    # "potato_chips":["potato chips"],
     "pasta":["pasta", "spaghetti"],
     "pantry_items":["pantry items"],
     "peach":["peach"],
     "pear":["pear"],
     "plate":["plate"],
-    "pickles":["pickles", "pickle"],
-    "pockys":["pockys"],
+    "pickle":["pickles", "pickle"],
+    # "pocky":["pockys", "pocky"],
     "pringles":["pringles"],
     "shampoo":["shampoo"],
     "snacks":["snacks"],
@@ -144,27 +145,27 @@ item_names_dict = {
     "spoon":["spoon"],
     "sugar":["sugar"],
     "tea":["tea"],
-    "teaspoon":["teaspoon", "tea spoon", "tea spoons", "spoon"],
-    "trash":["garbage", "debris", "trash"],
+    "teaspoon":["tea spoon", "tea spoons", "spoon"],
+    "trash":["debris", "trash"],
     "tray":["tray"],
     "toothpaste":["toothpaste"],
     "towel":["towel"],
     "tonic":["tonic"],
-    "tuna_can":["tuna", "tuna can"],
+    "tuna":["tuna", "tuna can"],
     "water":["water"],
-    "object":["object", "objects", "it", "item", "items"]
+    "object":["object", "objects", "item", "items"]
 }
 
 furniture_names_dict = {
     "bar":["bar"],
     "bed":["bed"],
     "bin":["bin"],
-    "bookshelf":["bookshelf", "shelf", "bookcase"],
+    "bookshelf":["bookshelf", "bookcase"],
     "bowl":["bowl", "bowls"],
     "big_shelf":["big shelf"],
     "cab":["cab", "uber"],
     "cabinet":["cabinet"],
-    "chair":["chair", "armchair", "baby chair"],
+    "chair":["chair", "armchair"],
     "couch_table":["couch table"],
     "couch":["couch", "TV couch"],
     "counter":["counter"],
@@ -173,7 +174,7 @@ furniture_names_dict = {
     "desk":["desk"],
     "dishwasher":["dishwasher", "washer"],
     "dining_table":["dining table"],
-    "dinner table":["dinner table"],
+    "dinner_table":["dinner table"],
     "drawer":["drawer", "cutlery drawer"],
     "dresser":["dresser"],
     "end_table":["end table"],
@@ -185,7 +186,7 @@ furniture_names_dict = {
     "microwave":["microwave"],
     "nightstand":["nightstand"],
     "pantry":["pantry"],
-    "show rack":["show rack"],
+    "show_rack":["show rack"],
     "shower":["shower"],
     "sink":["sink"],
     "sofa":["sofa"],
@@ -200,7 +201,7 @@ furniture_names_dict = {
     "towel_rack":["towel rack"],
     "tub":["tub", "bathtub"],
     "tv":["tv"],
-    "washing_machine":["washing machine", "wash"]
+    "washing_machine":["washing machine"]#, "wash"
 }
 
 room_names_dict = {
@@ -241,7 +242,7 @@ result_dict = {
     "FIND":"<none>",
     "obj_option":"<none>",
     "obj_num":"<none>",
-    "guesture":"<none>",
+    "gesture":"<none>",
     "room_F":"<none>"
 }
 

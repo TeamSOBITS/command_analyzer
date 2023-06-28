@@ -6,6 +6,8 @@
 remove_words = [
     "please",
     "Please",
+    "robot",
+    "Robot",
    ",",
     ".",
     "?",
@@ -42,7 +44,7 @@ prep_list = [
 ]
 
 person_names = [
-    "operator",
+    # "operator",
     # "Alex",
     "Amelia",
     "Angel",
@@ -114,16 +116,22 @@ item_names = [
     "beer", #"beers",
     "box",
     "bowl",
+    "bubble_tea",
     "block",
-    "cereal", #"flakes"
+    "corn_flakes", #"cereal", "flakes", "corn flakes"
     "chips", #"potato chips",
     "chocoflake", #"choco flakes", "choco cereal", "choco cereals", "flakes of choco",
     "chocolate",
-    "chocolate_drink",
+    # "chocolate_drink",
     "cloth",
-    "cleaning_supply",#"cleaning_stuff"
+    "cleaning_supply",#"cleaning stuff","cleaning supply","cleaning supplies"
+    "cloth",
+    "cleaning_supply",
+    "cleaner",
+    "crackers",
     "coke", #"cokes",
     "cookies",
+    "coffee_jar",
     "cup",
     "cutlery",
     "dish", #"dishes",
@@ -131,38 +139,46 @@ item_names = [
     "detergent",
     "drink",
     "fork",
-    "frute",
+    # "frute",
     "fruit",
     "glass",
     "key",
     "knife",
+    "ice_tea",
     "lunch_box",
     "light_bulb",
     "melon",
     "milk",
     "mug",
+    "mustard",
     "napkin",
     "noodle", #"noodles",
-    "potato_chips",
-    "object", #"objects", "item", "items",
     "orange",
+    # "potato_chips",
     "pasta", #"spaghetti",
+    "pantry_items",
     "peach",
     "pear",
     "pickles", #"pickle",
+    "pocky",
+    "pringles",
     "shampoo",
     "snacks",
+    "strawberry",
     "soap",
     "sponge",
     "spoon",
+    "sugar",
     "tea",
     "teaspoon", #"tea spoon", "tea spoons", "spoon",
     "trash", #"garbage", "debris"
     "tray",
     "toothpaste",
     "towel",
+    "tonic",
     "tuna", #"tuna fish",
-    "water"
+    "water",
+    "object", #"objects", "item", "items",
 ]
 
 furniture_names = [
@@ -179,19 +195,30 @@ furniture_names = [
     "cupboard",
     # "cutlery drawer",
     "desk",
+    "dining_table",
     "dishwasher", #"dish washer", "washer",
+    "dining_table",
+    "dinner_table",
     "drawer", #"cutlery drawer",
     "dresser",
     "end_table",
     "fireplace",
     "fridge", #"freezer",
+    "house_plant",
+    "kitchen_shelf",
+    "kitchen_bin",
     "microwave",
     "nightstand",
+    "pantry",
+    "show_rack",
     "shower",
     "sink",
     "sofa",
     "stove",
     "shelf",
+    "side_table",
+    "office_shelf",
+    "small_shelf",
     "tall_table",
     "table", #"side table", "dining table", "coffee table", "center table",
     "storage_table",
@@ -207,7 +234,8 @@ room_names = [
     "bedroom",
     "dining_room",
     "kitchen",
-    "living_room"
+    "living_room",
+    "office"
 ]
 
 location_names = [
@@ -237,24 +265,31 @@ category_list = [
     "FIND",
     "obj_option",
     "obj_num",
-    "guesture",
+    "gesture",
     "room_F"
 ]
 
 what_you_say = [
-    "name",
-    "age",
-    "yourself",
-    "country",
-    "count",
-    "affiliation",
-    "joke",
-    "time",
-    "date",
-    "day_of_week",
+    "something_about_yourself",
+    "the_time",
+    "what_day_is_today",
+    "what_day_is_tomorrow",
+    "your_team_name",
+    "your_team_country",
+    "your_team_affiliation",
+    "the_day_of_the_week",
+    "the_day_of_the_month",
+    "the_day_of_the_week_tomorrow",
+    "the_day_of_the_month_tomorrow",
+    "a_joke",
+    # "your_name",
+    # "your_age",
+    # "your_country",
+    # "count",
+    # "affiliation",
     "to_leave",
-    "question",
-    "awnser"
+    # "question",
+    # "awnser"
 ]
 
 find_type = [
@@ -271,29 +306,31 @@ superlatives = [
     "heaviest",
     "lightest",
     "thinnest", #"flimsiest", "skinniest", "narrowest"
-    "most",
+    # "most",
     "rightmost",
     "right",
     "left",
     "leftmost",
     "inside",
     "under",
-    "over"
+    "over",
+    "front",
+    "behind"
 ]
 
 quantity = [
     "2",
     "3"
 ]
-guestures = [
+gestures = [
     "waving",
-    "rising_left_arm",
-    "rising_right_arm",
-    "rising_hands",
+    "raising_left_arm",
+    "raising_right_arm",
+    "raising_hands",
     "pointing",
     "pointing_left",
     "pointing_right",
     "sitting",
     "standing",
-    "lying"
+    "lying_down"
 ]

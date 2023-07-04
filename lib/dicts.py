@@ -62,21 +62,23 @@ replace_phrases = {
     "tea spoon":"teaspoon",
     "bookcase":"bookshelf",
     "book case":"bookshelf",
-    # # "chocolate drink":"chocodrink",
-    # # "cleaning supply":"cleaning_supply",
-    # # "cleaning supplies":"cleaning_supply",
-    # # "cleaning stuff":"cleaning_supply",
-    # # "cleaning stuffes":"cleaning_supply",
-    # "dining table":"diningtable",
-    # "bubble tea":"bubbletea",
-    # "ice tea":"icetea",
-    # "couch table":"couchtable",#couchtable
-    # "TV couch":"couch",
-    # "kitchen shelf":"kitchenshelf",#kitchenshelf
-    # "small shelf":"smallshelf",#smallshelf
-    # "big shelf":"bigshelf",#"bigshelf"
-    # "dish washer":"dishwasher",#"dishwasher"
-    # "office shelf":"officeshelf"#"officeshelf"
+    "book shelf":"bookshelf",
+    "could you ":"",
+    "chocolate drink":"chocodrink",
+    "cleaning supply":"cleaning_supply",
+    "cleaning supplies":"cleaning_supply",
+    "cleaning stuff":"cleaning_supply",
+    "cleaning stuffes":"cleaning_supply",
+    "dining table":"diningtable",
+    "bubble tea":"bubbletea",
+    "ice tea":"icetea",
+    "couch table":"couchtable",#couchtable
+    "TV couch":"couch",
+    "kitchen shelf":"kitchenshelf",#kitchenshelf
+    "small shelf":"smallshelf",#smallshelf
+    "big shelf":"bigshelf",#"bigshelf"
+    "dish washer":"dishwasher",#"dishwasher"
+    "office shelf":"officeshelf"#"officeshelf"
 }
 
 

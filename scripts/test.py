@@ -21,6 +21,9 @@ from torchtext import data, datasets         # データセットの読み込み
 from torchtext.vocab import FastText, GloVe         # word2vecの上位互換
 from network import Encoder, AttentionDecoder
 from lib import lists, dicts
+from torchtext.data.utils import get_tokenizer
+from torch.utils.data import DataLoader
+import torchtext.transforms as T
 
 class CommandAnalyzer():
     def __init__(self) -> None:
@@ -28,35 +31,56 @@ class CommandAnalyzer():
         # パラメータ設定
         self.sen_length = 30                    # 入力文の長さ(この長さより短い場合はパディングされる)
         self.output_len = 20                    # 出力ラベルの数：19 + "_"
-        self.batch_size = 10                  # バッチサイズ(同時に学習するデータの数)
+        self.batch_size = 100                  # バッチサイズ(同時に学習するデータの数)
         self.wordvec_size = 300                 # 辞書ベクトルの特徴の数
         self.hidden_size = 650                  # 入力文をエンコーダで変換するときの特徴の数
         self.dropout = 0.5                      # 特定の層の出力を0にする割合(過学習の抑制)
         self.max_grad = 0.25                    # 勾配の最大ノルム
 
         self.is_debug = True                    # デバッグ用の出力をするかのフラッグ
-        self.is_predict_unk = True             # 推論時に未知語を変換するかどうかのフラッグ
+        self.is_predict_unk = False             # 推論時に未知語を変換するかどうかのフラッグ
 
         # モデルのパス
-        self.test_path = 'train_893000.txt'            # データセットのパス
+        self.test_path = 'train_1000.txt'            # データセットのパス
         self.dir_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
         self.model_path = "example"             # 保存したモデルのパス
-        self.model_num = 100                     # 保存したモデルのエポック数
+        self.model_num = 6                     # 保存したモデルのエポック数
         self.encoder_path = "{}/model/{}/encoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
         self.decoder_path = "{}/model/{}/decoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
         self.text_vocab_path = "{}/model/{}/text_vocab_01.pth".format(self.dir_path, self.model_path, self.model_path)
         self.label_vocab_path = "{}/model/{}/label_vocab_01.pth".format(self.dir_path, self.model_path)
         print("Vecotors loading ...")
         self.vectors=GloVe(dim=300)                 # GloVe(dim=300) or FastText(language="en")
+        self.label_tokenizer = get_tokenizer(tokenizer = None)
         print("Loaded.")
 
         # 学習データの読み込み
-        self.TEXT = data.Field(lower=True, batch_first=True, pad_token='<pad>', tokenize=self.tokenize, preprocessing=data.Pipeline(self.preprocessing), pad_first=True, fix_length=self.sen_length)
-        self.LABEL = data.Field(batch_first=True, pad_token='<pad>')
+        # self.TEXT = data.Field(lower=True, batch_first=True, pad_token='<pad>', tokenize=self.tokenize, preprocessing=data.Pipeline(self.preprocessing), pad_first=True, fix_length=self.sen_length)
+        # self.LABEL = data.Field(batch_first=True, pad_token='<pad>')
+        self.text_vocab = torch.load(self.text_vocab_path)
+        # print(self.text_vocab.get_itos())
+        self.label_vocab = torch.load(self.label_vocab_path)
+        self.vocab_size = len(self.text_vocab.get_itos())
+        self.label_size = len(self.label_vocab.get_itos())
+        self.text_vectors = self.vectors.get_vecs_by_tokens(self.text_vocab.get_itos())
 
+        self.text_transform = T.Sequential(
+            T.VocabTransform(self.text_vocab),
+            T.ToTensor(padding_value=self.text_vocab['<pad>'])
+        )
+        self.label_transform = T.Sequential(
+            T.VocabTransform(self.label_vocab),
+            T.ToTensor(padding_value=self.label_vocab['<pad>'])
+        )
 
         print("Dataset loading ...")
-        (self.test_data,) = data.TabularDataset.splits(path='../dataset/data/', test=self.test_path, format='tsv', fields=[('text', self.TEXT), ('label', self.LABEL)])
+        # (self.test_data,) = data.TabularDataset.splits(path='../dataset/data/', test=self.test_path, format='tsv', fields=[('text', self.TEXT), ('label', self.LABEL)])
+        df = pd.read_table('../dataset/data/' + self.test_path)
+        test_text_data = df['text'].map(lambda x: self.tokenize(self.preprocessing(x)))
+        test_label_data = df['label'].map(lambda x: self.label_tokenizer(self.preprocessing(x)))
+
+        self.test_data = pd.DataFrame({'text':test_text_data,'lavel':test_label_data})
+
         print("Loaded.")
         # print(type(self.test_data))
 
@@ -64,17 +88,23 @@ class CommandAnalyzer():
         #辞書ベクトルの読み込み
         self.text_vocab = torch.load(self.text_vocab_path)
         self.label_vocab = torch.load(self.label_vocab_path)
-        self.vocab_size = len(self.text_vocab.itos)
-        self.label_size = len(self.label_vocab.itos)
-        self.TEXT.vocab = self.text_vocab
-        self.LABEL.vocab = self.label_vocab
+        self.vocab_size = len(self.text_vocab.get_itos())
+        self.label_size = len(self.label_vocab.get_itos())
+        # self.TEXT.vocab = self.text_vocab
+        # self.LABEL.vocab = self.label_vocab
 
-        self.test_iter = data.Iterator(
-                                    (self.test_data), batch_size=self.batch_size, 
-                                     device=self.device, sort=False)
+        # self.test_iter = data.Iterator(
+        #                             (self.test_data), batch_size=self.batch_size, 
+        #                              device=self.device, sort=False)
+
+        self.test_iter = DataLoader(self.test_data.values, batch_size=self.batch_size, shuffle=False, collate_fn=self.collate_batch)
+
         # モデルの生成
-        self.encoder = Encoder(self.vocab_size, self.wordvec_size, self.hidden_size, self.dropout, self.text_vocab, is_predict_unk=self.is_predict_unk)
+        # self.encoder = Encoder(self.vocab_size, self.wordvec_size, self.hidden_size, self.dropout, self.text_vocab, is_predict_unk=self.is_predict_unk)
+        # self.decoder = AttentionDecoder(self.label_size, self.wordvec_size, self.hidden_size, self.dropout, self.batch_size, self.label_vocab)
+        self.encoder = Encoder(self.vocab_size, self.wordvec_size, self.hidden_size, self.dropout, self.text_vocab, vocab_vectors=self.text_vectors, is_predict_unk=self.is_predict_unk)
         self.decoder = AttentionDecoder(self.label_size, self.wordvec_size, self.hidden_size, self.dropout, self.batch_size, self.label_vocab)
+
         self.encoder.load_state_dict(torch.load(self.encoder_path))
         self.decoder.load_state_dict(torch.load(self.decoder_path))
         self.encoder.to(self.device)                                    # GPUを使う場合
@@ -91,6 +121,10 @@ class CommandAnalyzer():
                 print("################## ERROR ##################")
                 print(" Incorrect batch size relative to data size")
                 
+    def collate_batch(self, batch):
+        texts = self.text_transform([text for (text, label) in batch])
+        labels = self.label_transform([label for (text, label) in batch])
+        return texts, labels
 
     # 前処理の関数(トークン化)
     def tokenize(self, s: str) -> list:
@@ -131,7 +165,10 @@ class CommandAnalyzer():
                 for iters in self.test_iter:
                     bar.update(1)
                     time.sleep(0.001)
-                    x, l = iters.text, iters.label
+                    x, l = iters[0], iters[1]
+                    print(x)
+                    x = x.to(self.device)
+                    l = l.to(self.device)
                     hs, encoder_state = self.encoder(x)
 
                     # Decoderにはまず文字列生成開始を表す"_"をインプットにするので、"_"のtensorをバッチサイズ分作成
@@ -157,9 +194,9 @@ class CommandAnalyzer():
                     predicts.append(batch_tmp[:,1:])
 
                     for inp, output, predict in zip(x, l, batch_tmp[:,1:]):
-                        inp_ = [self.text_vocab.itos[idx] for idx in inp]
-                        y = [self.label_vocab.itos[idx] for idx in output]
-                        p = [self.label_vocab.itos[idx.item()] for idx in predict]
+                        inp_ = [self.text_vocab.get_itos()[idx] for idx in inp]
+                        y = [self.label_vocab.get_itos()[idx] for idx in output]
+                        p = [self.label_vocab.get_itos()[idx.item()] for idx in predict]
                         x_str = " ".join(inp_).replace('<pad> ', '')
                         y_str = " ".join(y[1:]).replace('<pad>', '')
                         p_str = " ".join(p).replace('<pad>', '')
@@ -184,7 +221,9 @@ class CommandAnalyzer():
         iter_ = iter(self.test_iter)
         for num in range(10000):
             iters = iter_.__next__()
-            x, l = iters.text, iters.label
+            x, l = iters[0], iters[1]
+            x = x.to(self.device)
+            l = l.to(self.device)
             with torch.no_grad():
                 # モデルを評価モードへ
                 self.encoder.eval()
@@ -201,8 +240,8 @@ class CommandAnalyzer():
                             break
                     #print(offset)
                     df = pd.DataFrame(data=torch.transpose(attention_weight[i][offset:], 0, 1).cpu().numpy(), 
-                                    columns=[self.text_vocab.itos[idx.item()] for idx in x[i][offset:]], 
-                                    index=[self.label_vocab.itos[idx.item()] for idx in torch.max(decoder_output[i],1)[1]])
+                                    columns=[self.text_vocab.get_itos()[idx.item()] for idx in x[i][offset:]], 
+                                    index=[self.label_vocab.get_itos()[idx.item()] for idx in torch.max(decoder_output[i],1)[1]])
                     plt.figure(figsize=(12, 12)) 
                     plt.ion()
                     sns.set_context("paper", 2.5)

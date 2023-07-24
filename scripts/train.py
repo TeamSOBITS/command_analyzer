@@ -24,7 +24,6 @@ from torchtext.data.utils import get_tokenizer
 from torchtext.vocab import build_vocab_from_iterator
 import torchtext.transforms as T
 from torch.utils.data import DataLoader
-from torchtext.data.utils import get_tokenizer
 from sklearn.model_selection import train_test_split
 
 class CommandAnalyzer():
@@ -33,15 +32,15 @@ class CommandAnalyzer():
         # パラメータ設定
         self.sen_length = 25                    # 入力文の長さ(この長さより短い場合はパディングされる)
         self.output_len = 20                    # 出力ラベルの数：19 + "_"
-        self.max_epoch = 100                    # エポック数(学習回数)の最大値
-        self.batch_size = 1000                   # バッチサイズ(同時に学習するデータの数)
+        self.max_epoch = 100                   # エポック数(学習回数)の最大値
+        self.batch_size = 100                   # バッチサイズ(同時に学習するデータの数)
         self.wordvec_size = 300                 # 辞書ベクトルの特徴の数
         self.hidden_size = 650                  # 入力文をエンコーダで変換するときの特徴の数
         self.dropout = 0.5                      # 特定の層の出力を0にする割合(過学習の抑制)
         self.learning_rate = 0.001              # 学習率(どれくらいモデルを更新するか)の割合
         self.max_grad = 0.25                    # 勾配の最大ノルム
         self.eval_interval = 20                 # 検証する間隔(インターバル)
-        self.early_stoping = 5                 # 学習が連続して向上しなかった際に中断するためのしきい値
+        self.early_stoping = 10                 # 学習が連続して向上しなかった際に中断するためのしきい値
 
         self.is_debug = True                    # デバッグ用の出力をするかのフラッグ
         self.is_save_vec = True                 # 辞書ベクトルを保存するかどうかのフラッグ
@@ -67,8 +66,8 @@ class CommandAnalyzer():
         df['label'] = df['label'].map(lambda x: self.label_tokenizer(self.preprocessing(x)))
         
         #学習用、検証用、テスト用に分割
-        self.train_text_data, self.val_text_data, self.train_label_data, self.val_label_data = train_test_split(df['text'], df['label'], train_size= 0.7)
-        self.val_text_data, self.test_text_data, self.val_label_data, self.test_label_data = train_test_split(self.val_text_data, self.val_label_data, test_size= 2/3)
+        self.train_text_data, self.val_text_data, self.train_label_data, self.val_label_data = train_test_split(df['text'], df['label'], train_size= 0.8)
+        self.val_text_data, self.test_text_data, self.val_label_data, self.test_label_data = train_test_split(self.val_text_data, self.val_label_data, test_size= 1/2)
         print(len(self.train_text_data))
         self.train_data = pd.DataFrame({'text':self.train_text_data,'lavel':self.train_label_data})
         self.val_data = pd.DataFrame({'text':self.val_text_data,'lavel':self.val_label_data})
@@ -319,6 +318,10 @@ class CommandAnalyzer():
                 else:
                     self.learning_rate /= 4.0
                     stop_count += 1
+                    # if self.is_save_model:
+                    #     self.save_model(epoch)
+                    # best_encoder = self.encoder
+                    # best_decoder = self.decoder
                     if stop_count == self.early_stoping:
                         print("\n----Early stopping----")
                         break

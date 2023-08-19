@@ -18,10 +18,9 @@ echo "---------------------------------------------------------------"
 # torchtextのインストール
 
 # torchのバージョン確認
-version=`python3 -m pip freeze | grep torch= `
+version=$(python3 -m pip freeze | grep torch= )
 version=${version##*=}
 version=${version%+*}
-version=""
 
 # 連想配列の定義
 declare -A torch_text_versions=(
@@ -39,6 +38,8 @@ declare -A torch_text_versions=(
         ["1.5"]="0.6"
         ["1.4"]="0.5"
 )
+
+echo $version
 
 if [ -z "${torch_text_versions[$version]}" ]; then
   echo "pytorch == $version のバージョンに，このブランチは対応していません．

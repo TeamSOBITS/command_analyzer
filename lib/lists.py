@@ -44,39 +44,17 @@ prep_list = [
 ]
 
 person_names = [
-    # "operator",
-    # "Alex",
     "Adel",
-    "Angel",
     "Axel",
     "Charlie",
     "Jane",
     "Jules",
     "Morgan",
     "Paris",
-    "Robin",
     "Simone",
     "James",
-    # "Elizabeth",
-    # "Francis",
-    # "Hayden",
-    # "James",
-    # "Jamie",
-    # "Jordan",
-    # "John",
-    # "Jennifer",
-    # "Mary",
-    # "Michael",
-    # "Morgan",
-    # "Patricia",
-    # "Peyton",
-    # "Robert",
-    # "Robin",
-    # "Skyler",
-    # "Taylor",
-    # "Tracy",
-    "everyone",
-    "person"
+    "John",
+    "everyone"
 ]
 
 gender = [

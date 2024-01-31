@@ -64,7 +64,8 @@ replace_phrases = {
     "book case":"bookshelf",
     "book shelf":"bookshelf",
     "could you ":"",
-    "cheese it":"cheezit"
+    "cheese it":"cheezit",
+    "leftmost":"left most"
     # "chocolate drink":"chocodrink",
     # "cleaning supply":"cleaning_supply",
     # "cleaning supplies":"cleaning_supply",
@@ -89,16 +90,16 @@ gender_dict = {
     }
 
 item_names_dict = {
-    "apple":["apple"], #fruits
-    "banana":["banana"],
+    "apple":["apple", "apples"], #fruits
+    "banana":["banana", "bananas"],
     "fruit":["fruit", "fruits"],
     "lemon":["lemon"],
-    "orange":["orange"],
+    "orange":["orange", "oranges"],
     "peach":["peach"],
     "pear":["pear"],
     "plum":["plum"],
     "strawberry":["strawberry"],
-    "cleaning_supply":["cleaning stuff","cleaning supply","cleaning supplies"], #clean
+    # "cleaning_supply":["cleaning stuff","cleaning supply","cleaning supplies"], #clean
     "cleanser":["cleanser"],
     "sponge":["sponge"],
     "bowl":["bowl", "bowls"], #dishes
@@ -111,10 +112,10 @@ item_names_dict = {
     # "teaspoon":["tea spoon", "tea spoons", "spoon"],
     "cola":["coke", "cokes", "cola"], #drinks
     "iced_tea":["iced tea"],
-    "juice_pack":["juice", "juice pack"],
+    # "juice_pack":["juice", "juice pack"],
     "milk":["milk"],
     "orange_juice":["orange juice"],
-    "red_wine":["red wine", "wine"],
+    # "red_wine":["red wine", "wine"],
     "tropical_juice":["tropical juice"],
     "chocolate_jello":["chocolate jello"], #food
     "coffee_grounds":["coffee grounds"],
@@ -126,7 +127,7 @@ item_names_dict = {
     "tuna":["tuna", "tuna can"],
     "snacks":["snacks"], #snacks
     "cheezit":["cheezit"],
-    "cornflakes":["cereal", "flakes", "corn flakes"],
+    # "cornflakes":["cereal", "flakes", "corn flakes"],
     "pringles":["pringles", "chips", "potato chips"],
     "baseball":["baseball"],
     "dice":["dice", "dices"],

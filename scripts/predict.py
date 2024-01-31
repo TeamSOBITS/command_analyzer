@@ -2,7 +2,8 @@
 import warnings
 warnings.filterwarnings('ignore')           # 警告文の無視
 import sys
-sys.path.append('../..')  # 親ディレクトリのファイルをインポートするための設定
+# sys.path.append('../..')  # 親ディレクトリのファイルをインポートするための設定
+sys.path.append('/home/sobits/catkin_ws/src/command_analyzer_noetic/')  # 親ディレクトリのファイルをインポートするための設定
 import os
 import re
 import matplotlib
@@ -22,7 +23,7 @@ class CommandAnalyzer():
     def __init__(self) -> None:
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         # パラメータ設定
-        self.sen_length = 30                    # 入力文の長さ(この長さより短い場合はパディングされる)
+        self.sen_length = 25                    # 入力文の長さ(この長さより短い場合はパディングされる)
         self.output_len = 20                    # 出力ラベルの数：19 + "_"
         self.batch_size = 100                   # バッチサイズ(同時に学習するデータの数)
         self.wordvec_size = 300                 # 辞書ベクトルの特徴の数
@@ -36,7 +37,7 @@ class CommandAnalyzer():
         # モデルのパス
         self.dir_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
         self.model_path = "example"             # 保存したモデルのパス
-        self.model_num = 6                      # 保存したモデルのエポック数
+        self.model_num = 27                      # 保存したモデルのエポック数
         self.encoder_path = "{}/model/{}/encoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
         self.decoder_path = "{}/model/{}/decoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
         self.text_vocab_path = "{}/model/{}/text_vocab_01.pth".format(self.dir_path, self.model_path, self.model_path)
@@ -49,12 +50,9 @@ class CommandAnalyzer():
         self.label_vocab = torch.load(self.label_vocab_path)
         self.vocab_size = len(self.text_vocab.get_itos())
         self.label_size = len(self.label_vocab.get_itos())
-        # print(self.vocab_size, self.label_size)
 
         self.text_vectors = self.vectors.get_vecs_by_tokens(self.text_vocab.get_itos())
-        # self.label_vectors = self.vectors.get_vecs_by_tokens(self.label_vocab.get_itos())
-        # print(type(self.text_vocab))
-        # print(self.text_vectors)
+
         self.text_transform = T.Sequential(
             T.VocabTransform(self.text_vocab),
             T.ToTensor(padding_value=self.text_vocab['<pad>'])
@@ -65,7 +63,6 @@ class CommandAnalyzer():
         )
 
         # モデルの生成
-        # self.encoder = Encoder(self.vocab_size, self.wordvec_size, self.hidden_size, self.dropout, self.text_vocab, vocab_vectors=self.text_vectors, vectors=self.vectors, is_predict_unk=self.is_predict_unk)
         self.encoder = Encoder(self.vocab_size, self.wordvec_size, self.hidden_size, self.dropout, self.text_vocab, vocab_vectors=self.text_vectors, is_predict_unk=self.is_predict_unk)
         self.decoder = AttentionDecoder(self.label_size, self.wordvec_size, self.hidden_size, self.dropout, self.batch_size, self.label_vocab)
         self.encoder.load_state_dict(torch.load(self.encoder_path))

@@ -49,6 +49,24 @@ Contact Robert at the main entrance and introduce him to everyone in the dining 
 Pick up the tray and place it on the storage table
 Robot please bring the spoon to the counter
 Navigate to the side table, locate the paprika, and give it to Robert at the desk
+Could you give me the object above the mug from the desk
+Give me the object under the pockys from the small shelf
+Could you bring me the object on top of the orange from the dinner table
+Could you please find a person pointing to the left in the kitchen and say the day of the month
+Bring me the object at the left of the bubble tea from the small shelf
+Please give me the left most object from the desk
+Deliver the apple to the person pointing to the left in the kitchen
+Bring me the left most object from the side table
+Could you bring me the left most object from the side table
+Give me the left most object from the pantry
+Please look for a person raising their left arm in the office and answer a question
+Go to the bedroom, find a person pointing to the right, and say what day is tomorrow
+Could you bring me the right most object from the side table
+Bring the bowl to the person raising their right arm in the kitchen
+Give me the right most object from the pantry
+Bring me the right most object from the dinner table
+Deliver the tray to the person raising their right arm in the kitchen
+Could you Tell me the name of the person at the sink
 Could you please get the crackers and put it on the sink
 Take Skyler to the sink
 Follow John from the sink to the kitchen

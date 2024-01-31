@@ -39,10 +39,10 @@ with open("../data/"+read_file_name) as f:
 
 category_list = ["task", "target", "prep_T1", "location_T1", "prep_T2", "location_T2", "room_T",
                    "destination", "prep_D1", "location_D1", "prep_D2", "location_D2", "room_D",
-                   "WYS", "FIND", "obj_option", "obj_num", "guesture", "room_F"]
+                   "WYS", "FIND", "obj_option", "obj_num", "gesture", "room_F"]
 
 
-with tqdm(total = len(category_list)-13, leave=False) as bar1:
+with tqdm(total = len(category_list)-9, leave=False) as bar1:
     for i in range(len(category_list)):
         if i in [0, 2, 4, 8, 10, 14, 15, 16, 17]:
         # if i in [0, 2, 4, 5, 8, 10, 11, 12, 14, 15, 16, 17, 18]:
@@ -90,28 +90,67 @@ with tqdm(total = len(category_list)-13, leave=False) as bar1:
                         for word in increase_lists:
                             if word == "operator":
                                 new_word = "me"
-                            elif word == "date":
-                                new_word = "what day it is"
+                            elif word == "what_day_is_today":
+                                new_word = "what day it is today"
                                 new_text = text.replace(label_list[i], new_word)
                                 new_label = label.replace(label_list[i], word)
                                 increase_data[new_text] = new_label
-                                new_word = "which day it is"
-                            elif word == "name":
-                                new_word = "your name"
-                            elif word == "joke":
-                                new_word = "a joke"
-                            elif word == "time":
-                                new_word = "the time"
+                                new_word = "which day it is today"
+                            elif word == "what_day_is_tomorrow":
+                                new_word = "what day it is tomorrow"
                                 new_text = text.replace(label_list[i], new_word)
                                 new_label = label.replace(label_list[i], word)
                                 increase_data[new_text] = new_label
-                                new_word = "which time it is"
-                            elif word == "week":
-                                new_word = "week day"
+                                new_word = "which day it is tomorrow"
+                            elif word == "the_day_of_the_week":
+                                new_word = "the week day"
                                 new_text = text.replace(label_list[i], new_word)
                                 new_label = label.replace(label_list[i], word)
                                 increase_data[new_text] = new_label
                                 new_word = "the day of the week"
+                            elif word == "the_day_of_the_month":
+                                new_word = "the month"
+                                new_text = text.replace(label_list[i], new_word)
+                                new_label = label.replace(label_list[i], word)
+                                increase_data[new_text] = new_label
+                                new_word = "the day of the month"
+                            elif word == "the_day_of_the_week_tomorrow":
+                                new_word = "the week day tomorrow"
+                                new_text = text.replace(label_list[i], new_word)
+                                new_label = label.replace(label_list[i], word)
+                                increase_data[new_text] = new_label
+                                new_word = "the day of the week tomorrow"
+                            elif word == "the_day_of_the_month_tomorrow":
+                                new_word = "the month tomorrow"
+                                new_text = text.replace(label_list[i], new_word)
+                                new_label = label.replace(label_list[i], word)
+                                increase_data[new_text] = new_label
+                                new_word = "the day of the month tomorrow"
+                            elif word == "the_time":
+                                new_word = "the time"
+                                new_text = text.replace(label_list[i], new_word)
+                                new_label = label.replace(label_list[i], word)
+                                increase_data[new_text] = new_label
+                                new_word = "what time it is"
+                            elif word == "something_about_yourself":
+                                new_word = "something about yourself"
+                                new_text = text.replace(label_list[i], new_word)
+                                new_label = label.replace(label_list[i], word)
+                                increase_data[new_text] = new_label
+                                new_word = "yourself"
+
+                            elif word == "your_team_name":
+                                new_word = "your team's name"
+                            # elif word == "your_age":
+                            #     new_word = "your age"
+                            elif word == "your_team_country":
+                                new_word = "your team country"
+                            elif word == "your_team_affiliation":
+                                new_word = "your team affiliation"
+                            elif word == "to_leave":
+                                new_word = "to leave"
+                            elif word == "a_joke":
+                                new_word = "a joke"
                             else:
                                 new_word = word
                             new_text = text.replace(label_list[i], new_word)

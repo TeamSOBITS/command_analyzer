@@ -41,10 +41,10 @@ class CommandAnalyzer():
         self.is_predict_unk = False             # 推論時に未知語を変換するかどうかのフラッグ
 
         # モデルのパス
-        self.test_path = 'train_1000.txt'            # データセットのパス
+        self.test_path = 'train_100.txt'            # データセットのパス
         self.dir_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
         self.model_path = "example"             # 保存したモデルのパス
-        self.model_num = 6                     # 保存したモデルのエポック数
+        self.model_num = 10                     # 保存したモデルのエポック数
         self.encoder_path = "{}/model/{}/encoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
         self.decoder_path = "{}/model/{}/decoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
         self.text_vocab_path = "{}/model/{}/text_vocab_01.pth".format(self.dir_path, self.model_path, self.model_path)
@@ -166,7 +166,7 @@ class CommandAnalyzer():
                     bar.update(1)
                     time.sleep(0.001)
                     x, l = iters[0], iters[1]
-                    print(x)
+                    # print(x)
                     x = x.to(self.device)
                     l = l.to(self.device)
                     hs, encoder_state = self.encoder(x)

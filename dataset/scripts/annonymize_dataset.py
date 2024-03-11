@@ -10,15 +10,13 @@ from lib import lists, dicts
 read_file_name = "dataset.txt"
 write_file_name = "annonymized_dataset.txt"
 
-person_names = lists.person_names
+person_names = lists.person_name_list
 # location_names = lists.location_names
-wys_lists = lists.what_you_say
 
 gender_dict =dicts.gender_dict
-item_names_dict = dicts.item_names_dict
-location_place_names_dicts = dicts.location_place_names_dict
-furniture_names_dict = dicts.furniture_names_dict
-room_names_dict = dicts.room_names_dict
+item_names_dict = dicts.item_name_dict
+location_place_names_dicts = dicts.location_name_dict
+room_names_dict = dicts.room_name_dict
 
 data = {}
 increase_data = {}
@@ -35,10 +33,8 @@ with open("../data/"+read_file_name) as f:
     #print(data)
     #print([k for k, v in collections.Counter(l).items() if v > 0])
 
-category_list = ["task", "target", "prep_T1", "location_T1", "prep_T2", "location_T2", "room_T",
-                   "destination", "prep_D1", "location_D1", "prep_D2", "location_D2", "room_D",
-                   "WYS", "FIND", "obj_option", "obj_num", "guesture", "room_F"]
-
+category_list = lists.category_list
+talk_list = list.talk_list
 for j, text in enumerate(data):
     #print(i, d)
     new_text = text
@@ -133,58 +129,6 @@ for j, text in enumerate(data):
                     new_text = new_text.replace(gen, new_tag)
                     new_label_list[i] = new_tag
         
-        #家具の変換
-        elif lbl in furniture_names_dict:
-            for furniture in furniture_names_dict[lbl]:
-                if furniture == "tv" and "tv couch" in text:
-                    continue
-                if furniture == "shelf" and "bookshelf" in text:
-                    new_furniture = "bookshelf"
-                elif furniture == "chair" and ("armchair" in text or "baby chair" in text):
-                    if "armchair" in text:
-                        new_furniture = "armchair"
-                    elif "baby chair" in text:
-                        new_furniture = "baby chair"
-                elif furniture == "couch" and ("tv couch" in text or "TV couch" in text):
-                    if "tv couch" in text:
-                        new_furniture = "tv couch"
-                    elif "TV couch" in text:
-                        new_furniture = "TV couch"
-                elif furniture == "washer" and ("dish washer" in text or "dishwasher" in text):
-                    if "dish washer" in text:
-                        new_furniture = "dish washer"
-                    elif "dishwasher" in text:
-                        new_furniture = "dishwasher"
-                elif furniture == "drawer" and "cutlery drawer" in text:
-                    new_furniture = "cutlery drawer"
-                elif furniture == "rack" and "towel rack" in text:
-                    new_furniture = "towel rack"
-                elif furniture == "table" and ("side table" in text or "dining table" in text or "coffee table" in text or "center table" in text):
-                    if "side table" in text:
-                        new_furniture = "side table"
-                    elif "dining table" in text:
-                        new_furniture = "dining table"
-                    elif "coffee table" in text:
-                        new_furniture = "coffee table"
-                    elif "center table" in text:
-                        new_furniture = "center table"
-                elif furniture == "tub" and "bathtub" in text:
-                    new_furniture == "bathtub"
-                elif furniture == "wash" and ("washing machine" in text or "washer" in text):
-                    if "washing machine" in text:
-                        new_furniture = "washing machine"
-                    elif "washer" in text:
-                        new_furniture = "washer"
-                elif furniture == "bowl" and i == 1:
-                    continue
-                elif furniture == "bowl" and "bowls" in text:
-                    new_furniture = "bowls"
-                else:
-                    new_furniture = furniture
-                if new_furniture in text:
-                    new_tag = "<"+category_list[i]+">"
-                    new_text = new_text.replace(new_furniture, new_tag)
-                    new_label_list[i] = new_tag
 
         # #場所の変換
         # elif lbl in location_names and lbl in text:
@@ -213,7 +157,7 @@ for j, text in enumerate(data):
                     new_text = new_text.replace(new_room, new_tag)
                     new_label_list[i] = new_tag
 
-        elif lbl in wys_lists and i == 13:
+        elif lbl in talk_list and i == 13:
             if lbl == "date" and ("what day it is" in text or "which day it is" in text):
                 if "what day it is" in text:
                     wys = "what day it is"

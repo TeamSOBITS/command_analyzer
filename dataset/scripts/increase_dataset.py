@@ -12,15 +12,13 @@ from tqdm import tqdm
 read_file_name = "annonymized_dataset.txt"
 write_file_name = "increased_dataset.txt"
 
-person_names = lists.person_names
-location_names = lists.location_names
-wys_lists = lists.what_you_say
+person_names = lists.person_name_list
+location_names = lists.location_name_list
 
 gender_dict =dicts.gender_dict
-location_place_names_dicts = dicts.location_place_names_dict
-item_names_dict = dicts.item_names_dict
-furniture_names_dict = dicts.furniture_names_dict
-room_names_dict = dicts.room_names_dict
+location_place_names_dicts = dicts.location_name_dict
+item_names_dict = dicts.item_name_dict
+room_names_dict = dicts.room_name_dict
 
 data = {}
 
@@ -37,10 +35,8 @@ with open("../data/"+read_file_name) as f:
     #print(data)
     #print([k for k, v in collections.Counter(l).items() if v > 0])
 
-category_list = ["task", "target", "prep_T1", "location_T1", "prep_T2", "location_T2", "room_T",
-                   "destination", "prep_D1", "location_D1", "prep_D2", "location_D2", "room_D",
-                   "WYS", "FIND", "obj_option", "obj_num", "gesture", "room_F"]
-
+category_list = lists.category_list
+talk_list  = lists.talk_list
 
 with tqdm(total = len(category_list)-9, leave=False) as bar1:
     for i in range(len(category_list)):
@@ -67,7 +63,6 @@ with tqdm(total = len(category_list)-9, leave=False) as bar1:
                     elif "location_place" in label_list[i]:
                         increase_dicts = location_place_names_dicts
                     elif "location" in label_list[i]:
-                        increase_dicts = furniture_names_dict
                         increase_lists = location_names 
                     # <room>
                     elif "room" in label_list[i]:
@@ -77,7 +72,7 @@ with tqdm(total = len(category_list)-9, leave=False) as bar1:
                         increase_lists = person_names
                     # <WYS>
                     elif label_list[i] == "<WYS>":
-                        increase_lists = wys_lists
+                        increase_lists = talk_list
                     
                     if increase_dicts != {}:
                         for words in increase_dicts:
@@ -140,7 +135,7 @@ with tqdm(total = len(category_list)-9, leave=False) as bar1:
                                 new_word = "yourself"
 
                             elif word == "your_team_name":
-                                new_word = "your team's name"
+                                new_word = "your team name"
                             # elif word == "your_age":
                             #     new_word = "your age"
                             elif word == "your_team_country":

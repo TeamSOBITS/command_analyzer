@@ -14,7 +14,7 @@ class dict:
 
 #正解ラベルの辞書
 # 辞書のキー値は正解ラベルを，値はラベルの単語を指すコマンド内の単語を示す
-verc_dict = {
+verb_dict = {
     "take": ["take", "get", "grasp", "fetch"],
     "place": ["put", "place"],
     "deliver": ["bring", "give", "deliver"],
@@ -33,6 +33,61 @@ verc_dict = {
     "follow": ["follow"],
     "guide": ["guide", "escort", "take", "lead"],
     "accompany": ["accompany"]
+}
+
+replace_words = {
+    " boy ":" male ",
+    " boys ":" male ",
+    " males ":" male ",
+    " man ":" male ",
+    " men ":" male ",
+    " gentleman ":" male ",
+    " gentlemen ":" male ",
+    " girl ":" female ",
+    " girls ":" female ",
+    " females ":" female ",
+    " woman ":" female ",
+    " women ":" female ",
+    " lady ":" female ",
+    " ladies ":" female ",
+    " chocoflakes ":" chocoflake ",
+    " supplyes ":" supply "
+}
+
+replace_phrases = {
+    "what's":"what is",
+    "who's":"who is",
+    "he's":"he is",
+    "there's":"there is",
+    "team's":"team is",
+    "i'll":"i will",
+    "i'd":"i would",
+    "choco flake":"chocoflake",
+    "choco flakes":"chocoflake",
+    "choco cereal":"chocoflake",
+    "choco cereals":"chocoflake",
+    "tea spoon":"teaspoon",
+    "bookcase":"bookshelf",
+    "book case":"bookshelf",
+    "book shelf":"bookshelf",
+    "could you ":"",
+    "cheese it":"cheezit",
+    "leftmost":"left most"
+    # "chocolate drink":"chocodrink",
+    # "cleaning supply":"cleaning_supply",
+    # "cleaning supplies":"cleaning_supply",
+    # "cleaning stuff":"cleaning_supply",
+    # "cleaning stuffes":"cleaning_supply",
+    # "dining table":"diningtable",
+    # "bubble tea":"bubbletea",
+    # "ice tea":"icetea",
+    # "couch table":"couchtable",#couchtable
+    # "TV couch":"couch",
+    # "kitchen shelf":"kitchenshelf",#kitchenshelf
+    # "small shelf":"smallshelf",#smallshelf
+    # "big shelf":"bigshelf",#"bigshelf"
+    # "dish washer":"dishwasher",#"dishwasher"
+    # "office shelf":"officeshelf"#"officeshelf"
 }
 
 prep_dict = {
@@ -54,16 +109,16 @@ connector_dict = {
 }
 gesture_person_dict = {
     "waving_person": ["waving person"],
-    "person_raising_their_left_arm": ["person rasing their left arm"],
-    "person_raising_their_right_arm": ["person rasing their right arm"],
-    "person_pointing_to_the_left": ["person pointing to the left"],
-    "person_pointing_to_the_right": ["person pointing to the right"]
+    "person_raising_their_left_arm": ["person raising their left arm", "persons raising their left arm"],
+    "person_raising_their_right_arm": ["person raising their right arm", "persons raising their right arm"],
+    "person_pointing_to_the_left": ["person pointing to the left", "persons pointing to the left"],
+    "person_pointing_to_the_right": ["person pointing to the right", "persons pointing to the right"]
 }
 
 pose_person_dict = {
-    "sitting_person": ["sitting person"],
-    "standing_person": ["standing person"],
-    "lying_person": ["lying person"]
+    "sitting_person": ["sitting person", "sitting persons"],
+    "standing_person": ["standing person", "standing persons"],
+    "lying_person": ["lying person", "lying persons"]
 }
 
 
@@ -85,12 +140,10 @@ talk_dict = {
     "your_teams_country": ["your teams country"], 
     "your_teams_affiliation": ["your teams affiliation"], 
     "the_day_of_the_week": ["the day of the week"], 
-    "the_day_of_the_month": ["the day of the month"]
-}
-
-question_dict = {
-    "question": ["question"],
-    "quiz": ["quiz"]
+    "the_day_of_the_month": ["the day of the month"],
+    "the_name_of_the_person": ["the_name_of_the_person"],
+    "the_pose_of_the_person": ["the_pose_of_the_person"],
+    "the_gesture_of_the_person": ["the_gesture_of_the_person"],
 }
 
 color_dict = {
@@ -122,12 +175,23 @@ person_name_dict = {
     "Morgan": ["Morgan"],
     "Paris": ["Paris"],
     "Robin": ["Robin"],
-    "Simone": ["Simone"]
+    "Simone": ["Simone"],
+    "person": ["person"]
 }
 
 gender_dict = {
     "male":["male", "males", "boy", "boys", "man", "men", "gentleman", "gentlemen",],
     "female":["female", "females", "girl", "girls", "woman", "women", "lady", "ladies"]
+}
+
+item_dict = {
+    "drink": ["drink"],
+    "fruit": ["fruit"],
+    "snack": ["snack"],
+    "food": ["food"],
+    "dish": ["dish"],
+    "toy": ["toy"],
+    "cleaning_supply": ["cleaning supply"],
 }
 
 item_name_dict = {
@@ -215,10 +279,14 @@ location_name_dict = {
     "exit": ["exit"]
 }
 
+pronoun_dict = {
+    "it": ["it"],
+    "them": ["them"]
+}
+
 result_dict = {
     "task":"<none>",
     "target":"<none>",
-    "and":"<none>",
     "prep_T":"<none>",
     "location_T":"<none>",
     "room_T":"<none>",
@@ -227,8 +295,6 @@ result_dict = {
     "location_D":"<none>",
     "room_D":"<none>",
     "WYS":"<none>",
-    "FIND":"<none>",
-    "QUESTION":"<none>",
     "gesture":"<none>",
     "pose":"<none>",
     "obj_comp":"<none>",

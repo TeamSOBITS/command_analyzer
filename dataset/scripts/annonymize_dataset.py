@@ -10,13 +10,22 @@ from lib import lists, dicts
 read_file_name = "dataset.txt"
 write_file_name = "annonymized_dataset.txt"
 
-person_names = lists.person_name_list
+person_names = lists.person_name_list + ["me"]
 # location_names = lists.location_names
 
-gender_dict =dicts.gender_dict
-item_names_dict = dicts.item_name_dict
+category_list = lists.category_list
+talk_dict = dicts.talk_dict
+gender_dict = dicts.gender_dict
+item_names_dict = {**dicts.item_name_dict, **dicts.item_dict}
 location_place_names_dicts = dicts.location_name_dict
 room_names_dict = dicts.room_name_dict
+
+gesture_dict = dicts.gesture_person_dict
+pose_dict = dicts.pose_person_dict
+obj_comp_dict = dicts.object_comp_dict
+obj_color_dict = dicts.color_dict
+cloth_dict = dicts.cloth_dict
+
 
 data = {}
 increase_data = {}
@@ -33,16 +42,13 @@ with open("../data/"+read_file_name) as f:
     #print(data)
     #print([k for k, v in collections.Counter(l).items() if v > 0])
 
-category_list = lists.category_list
-talk_list = list.talk_list
 for j, text in enumerate(data):
-    #print(i, d)
     new_text = text
     label = data[text]
     label_list = label.split(' ')
     new_label_list = copy.copy(label_list)
     for i, lbl in enumerate(label_list):
-        if i in [0, 2, 4, 8, 10, 14]:
+        if i in [0, 2, 6]:
             # print(lbl)
             continue
         #annonymize
@@ -83,9 +89,61 @@ for j, text in enumerate(data):
                     new_text = new_text.replace(new_item, new_tag)
                     new_label_list[i] = new_tag
 
+        #オブジェクトの情報の変換
+        elif lbl in obj_comp_dict:
+            for obj in obj_comp_dict[lbl]:
+                if obj in text:
+                    new_tag = "<"+category_list[i]+">"
+                    new_text = new_text.replace(obj, new_tag)
+                    new_label_list[i] = new_tag
 
-        #名前の変換
+        #オブジェクトの色の変換
+        elif lbl in obj_color_dict:
+            for obj in obj_color_dict[lbl]:
+                if obj in text:
+                    new_tag = "<"+category_list[i]+">"
+                    new_text = new_text.replace(obj, new_tag)
+                    new_label_list[i] = new_tag
+
+        #服の変換
+        elif lbl in cloth_dict:
+            for cloth in cloth_dict[lbl]:
+                if cloth in text:
+                    new_tag = "<"+category_list[i]+">"
+                    new_text = new_text.replace(cloth, new_tag)
+                    new_label_list[i] = new_tag
+        
+        #トークリストの変換
+        elif lbl in talk_dict:
+            for talk in talk_dict[lbl]:
+                if talk in text:
+                    new_tag = "<"+category_list[i]+">"
+                    new_text = new_text.replace(talk, new_tag)
+                    new_label_list[i] = new_tag
+
+        # 名前の変換
         if lbl in person_names:
+            found = False  # 名前が見つかったかどうかのフラグ
+            for gesture in gesture_dict:
+                gesture = gesture.replace("_", " ")
+                if gesture in text:
+                    new_tag = "<gesture>"
+                    new_text = new_text.replace(gesture, new_tag)
+                    new_label_list[i] = new_tag
+                    found = True  # 名前が見つかったのでフラグをTrueに設定
+                    break
+            if found:
+                break  # 内側のループから抜ける
+            for pose in pose_dict:
+                pose = pose.replace("_", " ")
+                if pose in text:
+                    new_tag = "<pose>"
+                    new_text = new_text.replace(pose, new_tag)
+                    new_label_list[i] = new_tag
+                    found = True  # 名前が見つかったのでフラグをTrueに設定
+                    break
+            if found:
+                break  # 内側のループから抜ける
             if lbl == "person" and "someone" in text:
                 new_person = "someone"
                 new_tag = "<person>"
@@ -117,24 +175,17 @@ for j, text in enumerate(data):
                 new_text = new_text.replace(new_person.lower(), new_tag)
                 new_label_list[i] = new_tag
 
-        #性別の変換
-        elif lbl in gender_dict:
-            for gen in gender_dict[lbl]:
-                if gen == "man" and "many" in text:
-                    continue
-                if gen+"s" in text:
-                    continue
-                if gen in text:
-                    new_tag = "<gender>"
-                    new_text = new_text.replace(gen, new_tag)
-                    new_label_list[i] = new_tag
-        
-
-        # #場所の変換
-        # elif lbl in location_names and lbl in text:
-        #     new_tag = "<"+category_list[i]+">"
-        #     new_text = new_text.replace(lbl, new_tag)
-        #     new_label_list[i] = new_tag
+        # #性別の変換
+        # elif lbl in gender_dict:
+        #     for gen in gender_dict[lbl]:
+        #         if gen == "man" and "many" in text:
+        #             continue
+        #         if gen+"s" in text:
+        #             continue
+        #         if gen in text:
+        #             new_tag = "<gender>"
+        #             new_text = new_text.replace(gen, new_tag)
+        #             new_label_list[i] = new_tag
 
         #場所の変換
         elif lbl in location_place_names_dicts:
@@ -156,46 +207,11 @@ for j, text in enumerate(data):
                     new_tag = "<"+category_list[i]+">"
                     new_text = new_text.replace(new_room, new_tag)
                     new_label_list[i] = new_tag
-
-        elif lbl in talk_list and i == 13:
-            if lbl == "date" and ("what day it is" in text or "which day it is" in text):
-                if "what day it is" in text:
-                    wys = "what day it is"
-                elif "which day it is" in text:
-                    wys = "which day it is"
-            elif lbl == "name" and "your name" in text:
-                wys = "your name"
-            elif lbl == "joke" and "a joke" in text:
-                wys = "a joke"
-            elif lbl == "time" and ("the time" in text or "what time it is" in text):
-                if "the time" in text:
-                    wys = "the time"
-                elif "what time it is" in text:
-                    wys = "what time it is"
-            elif lbl == "day_of_week" and ("week day" in text or "the day of the week" in text):
-                if "week day" in text:
-                    wys = "week day"
-                elif "the day of the week" in text:
-                    wys = "the day of the week"
-            
-            elif lbl == "name" and "chairperson" in text:
-                continue
-            else:
-                wys = lbl
-            
-            if wys in text:
-                new_tag = "<"+category_list[i]+">"
-                new_text = new_text.replace(wys, new_tag)
-                new_label_list[i] = new_tag
-
-            
-            
-                    
-    # if ">s" in new_text:
-    #     new_text = new_text.replace(">s", ">")
-    increase_data[new_text] = ' '.join(new_label_list)
-
+        
+        if ">s" in new_text:
+            new_text = new_text.replace(">s", ">")
     
+    increase_data[new_text] = ' '.join(new_label_list)
 
 print("annonymized_data:", len(increase_data))
 

@@ -86,12 +86,13 @@ talk_list = [
     "your_teams_country", 
     "your_teams_affiliation", 
     "the_day_of_the_week", 
-    "the_day_of_the_month"
-]
-
-question_list = [
-    "question",
-    "quiz"
+    "the_day_of_the_month",
+    "the_name_of_the_person",
+    "the_pose_of_the_person",
+    "the_gesture_of_the_person",
+    "name",
+    "pose",
+    "gesture"
 ]
 
 color_list = [
@@ -123,12 +124,24 @@ person_name_list = [
     "Morgan",
     "Paris",
     "Robin",
-    "Simone"
+    "Simone",
+    "person"
 ]
 
 gender_list = [
     "male",
     "female"
+]
+
+item_list = [
+    "object",
+    "drink",
+    "fruit",
+    "snack",
+    "food",
+    "dish",
+    "toy",
+    "cleaning_supply",
 ]
 
 item_name_list = [
@@ -211,15 +224,19 @@ location_name_list = [
     "lamp", 
     "side_tables", #snack #p
     "sofa", #p
-    "bookshelf" #toys, #p
+    "bookshelf", #toys, #p
     "entrance",
     "exit"
+]
+
+pronoun_list = [
+    "it",
+    "them"
 ]
 
 category_list = [
     "task",
     "target",
-    "and",
     "prep_T",
     "location_T",
     "room_T",
@@ -228,20 +245,10 @@ category_list = [
     "location_D",
     "room_D",
     "WYS",
-    "FIND",
-    "QUESTION",
     "gesture",
     "pose",
     "obj_comp",
     "obj_color",
     "cloth",
     "room_F"
-]
-
-find_type = [
-    "name",
-    "count",
-    "gender",
-    "where",
-    "pose"
 ]

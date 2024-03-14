@@ -1,99 +1,115 @@
-Introduce yourself to Angel in the office and answer a question
-Bring me a bowl from the storage rack
-Tell me what is the heaviest toy on the bedside table
-Tell me how many snacks there are on the storage rack
-Tell me what is the heaviest cleaning supply on the shelf
-Follow Charlie from the storage rack to the office
-Navigate to the dishwasher then find the standing person and guide them to the bedside table
-Tell the gesture of the person at the cabinet to the person at the bed
-Give me a plum from the shelf
-Tell me how many persons pointing to the right are in the bathroom
-Go to the living room then meet Jane and follow them
-Tell me how many fruits there are on the dishwasher
-Find a drink in the office then fetch it and give it to me
-Follow the lying person at the bed
-Find a person pointing to the left in the living room and follow them
-Escort the person wearing a gray t shirt from the bookshelf to the kitchen
-Navigate to the dishwasher then find a fork and get it and put it on the kitchen table
-Tell me what is the thinnest cleaning supply on the bed
-Take a dish from the kitchen table and give it to the person raising their right arm in the living room
-Take the person wearing a red coat from the desk lamp to the bedroom
-Tell me how many persons pointing to the right are in the living room
-Introduce yourself to Paris in the living room and lead them to the bookshelf
-Tell me how many dishes there are on the bed
-Tell me what is the lightest object on the dishwasher
-Tell me what is the thinnest object on the pantry
-Introduce yourself to the person wearing a blue sweater  the living room and say what day is tomorrow
-Tell me what is the smallest object on the refrigerator
-Go to the trashbin then find the person pointing to the right and answer a quiz
-Tell me how many waving persons are in the kitchen
-Bring me an orange juice from the shelf
-Navigate to the bathroom then find the person pointing to the left and follow them
-Tell me how many fruits there are on the tv stand
-Say the day of the week to the person pointing to the left in the kitchen
-Greet Angel in the living room and take them to the lamp
-Tell me the pose of the person at the sink
-Tell me what is the biggest object on the cabinet
-Look for a sitting person in the bedroom and follow them to the storage rack
-Grasp a baseball from the sink and bring it to the lying person in the living room
-Tell me how many persons raising their right arm are in the bedroom
-Answer the quiz of the person raising their left arm in the kitchen
-Navigate to the kitchen then locate a bowl and grasp it and deliver it to Jules in the office
-Tell me how many fruits there are on the pantry
-Locate a cup in the office then grasp it and bring it to me
-Look for a fruit in the living room then grasp it and give it to Paris in the living room
-Tell me the gesture of the person at the desk lamp
-Give me a tennis ball from the shelf
-Navigate to the bedroom then locate a drink and get it and give it to Jane in the bathroom
-Meet Jules in the office and take them to the lamp
-Guide the waving person from the potted plant to the bedroom
-Tell the pose of the person at the lamp to the person at the desk
-Tell me how many toys there are on the shelf
-Find a cola in the bathroom then get it and bring it to me
-Follow the person raising their left arm at the entrance
-Meet Jules in the kitchen and follow them to the office
-Give me a red wine from the bedside table
-Lead the person pointing to the right from the desk lamp to the bed
-Tell your teams country to the person pointing to the left in the bedroom
-Follow Morgan from the bed to the office
-Meet Angel in the bathroom and follow them to the storage rack
-Find a toy in the bathroom then take it and give it to the person pointing to the right in the bathroom
-Fetch a lemon from the shelf and bring it to Morgan in the office
-Tell me how many people in the office are wearing white coats
-Navigate to the kitchen then meet Jane and answer a quiz
-Follow the lying person in the office
-Follow Angel from the tv stand to the bedroom
-Look for a plate in the bathroom then take it and bring it to Paris in the bathroom
-Find a person raising their left arm in the bathroom and follow them
-Navigate to the bedroom then locate a toy and fetch it and bring it to Jules in the kitchen
-Fetch a drink from the cabinet and put it on the refrigerator
-Follow Jules from the waste basket to the bedroom
-Follow Jules from the sofa to the living room
-Tell me what is the thinnest snack on the shelf
-Bring me a cup from the bedside table
-Greet the person wearing a black jacket  the bathroom and answer a quiz
-Answer the quiz of the person pointing to the right in the living room
-Follow Angel from the exit to the bedroom
-Tell me how many cleaning supplies there are on the tv stand
-Tell me how many foods there are on the bedside table
-Lead the person wearing a black sweater from the bed to the entrance
-Give me an iced tea from the tv stand
-Locate a strawberry jello in the bedroom then grasp it and give it to me
-Navigate to the side tables then look for a snack and take it and deliver it to me
-Tell me what is the biggest dish on the kitchen table
-Tell me the gesture of the person in the bathroom
-Follow Jules from the potted plant to the living room
-Tell me what is the thinnest object on the sink
-Locate a person raising their right arm in the bathroom and say your teams name
-Salute Charlie in the bedroom and lead them to the armchair
-Tell me what is the biggest object on the shelf
-Tell me how many snacks there are on the kitchen table
-Navigate to the office then locate the waving person and answer a question
-Tell me how many people in the kitchen are wearing black blouses
-Tell me how many foods there are on the dishwasher
-Bring me a cheezit from the cabinet
-Navigate to the office then locate a food and fetch it and put it on the desk
+Take a food from the storage rack
+Take an food from the storage rack
+take it
+Get a food from the storage rack
+Get an food from the storage rack
+get it
+Grasp a food from the storage rack
+Grasp an food from the storage rack
+grasp it
+Fetch a food from the storage rack
+Fetch an food from the storage rack
+fetch it
+put it on the pantry
+place it on the pantry
+bring it to me
+bring it to the waving person in the bedroom
+bring it to Jane in the bathroom
+give it to me
+give it to the waving person in the bedroom
+give it to Jane in the bathroom
+deliver it to me
+deliver it to the waving person in the bedroom
+deliver it to Jane in the bathroom
+Bring me a apple from the pantry
+Bring me an apple from the pantry
+Give me a apple from the pantry
+Give me an apple from the pantry
+Go to the bed
+Go to the kitchen
+Navigate to the bed
+Navigate to the kitchen
+Find a cleaning supply in the bathroom
+Find a sitting person in the bedroom
+find them in the kitchen
+Locate a cleaning supply in the bathroom
+Locate a sitting person in the bedroom
+locate them in the kitchen
+Look for a cleaning supply in the bathroom
+Look for a sitting person in the bedroom
+look for them in the kitchen
+Tell the day of the week to the person pointing to the right in the bathroom
+Say the day of the week to the person pointing to the right in the bathroom
+tell your teams affiliation
+say your teams affiliation
+Answer the question of the person raising their left arm in the office
+Answer the quiz of the person raising their left arm in the office
+answer a question
+answer a quiz
+Meet Axel in the bedroom
+Meet Axel at the chairs
+meet Morgan
+Tell me the name of the person in the kitchen
+Tell me the name of the person at the exit
+Tell me the pose of the person in the kitchen
+Tell me the pose of the person at the exit
 Tell me the gesture of the person in the kitchen
-Navigate to the tv stand then look for the person raising their left arm and guide them to the office
-Tell me the pose of the person at the pantry
-Tell me how many cleaning supplies there are on the pantry
+Tell me the gesture of the person at the exit
+Tell me what is the biggest object on the shelf
+Tell the pose of the person at the entrance to the person at the trashbin
+Greet the person wearing a gray sweater in the bathroom
+Greet Angel in the bathroom
+Salute the person wearing a gray sweater in the bathroom
+Salute Angel in the bathroom
+Say hello to the person wearing a gray sweater in the bathroom
+Say hello to Angel in the bathroom
+Introduce yourself to the person wearing a gray sweater in the bathroom
+Introduce yourself to Angel in the bathroom
+Tell me how many persons raising their left arm are in the kitchen
+Tell me how many sitting persons are in the kitchen
+Tell me how many toys there are on the bookshelf
+Tell me how many people in the bedroom are wearing gray sweaters
+Follow Angel from the sink to the kitchen
+Follow the person raising their right arm at the bedside table
+Follow the person raising their right arm in the office 
+Follow the sitting person at the bedside table
+Follow the sitting person in the office
+follow them
+follow them to the lamp
+Guide Angel from the potted plant to the sofa
+Guide Angel from the potted plant to the kitchen
+Guide the waving person from the sofa to the side tables
+Guide the waving person from the sofa to the kitchen
+Guide the sitting person from the dishwasher to the shelf
+Guide the sitting person from the dishwasher to kitchen
+Guide the person pointing to the right from the waste basket to the kitchen
+Guide the person pointing to the right from the waste basket to the shelf
+Escort Angel from the potted plant to the sofa
+Escort Angel from the potted plant to the kitchen
+Escort the waving person from the sofa to the side tables
+Escort the waving person from the sofa to the kitchen
+Escort the sitting person from the dishwasher to the shelf
+Escort the sitting person from the dishwasher to kitchen
+Escort the person pointing to the right from the waste basket to the kitchen
+Escort the person pointing to the right from the waste basket to the shelf
+Take Angel from the potted plant to the sofa
+Take Angel from the potted plant to the kitchen
+Take the waving person from the sofa to the side tables
+Take the waving person from the sofa to the kitchen
+Take the sitting person from the dishwasher to the shelf
+Take the sitting person from the dishwasher to kitchen
+Take the person pointing to the right from the waste basket to the kitchen
+Take the person pointing to the right from the waste basket to the shelf
+Lead Angel from the potted plant to the sofa
+Lead Angel from the potted plant to the kitchen
+Lead the waving person from the sofa to the side tables
+Lead the waving person from the sofa to the kitchen
+Lead the sitting person from the dishwasher to the shelf
+Lead the sitting person from the dishwasher to kitchen
+Lead the person pointing to the right from the waste basket to the kitchen
+Lead the person pointing to the right from the waste basket to the shelf
+
+
+
+
+

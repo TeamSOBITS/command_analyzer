@@ -120,7 +120,7 @@ class AttentionDecoder(nn.Module):
         # print("output size : ", output.size())  # output.size() = ([batch_size, output_size, hidden_size])
 
         # Attention層        
-        
+
         # 列の変換
         t_output = torch.transpose(output, 1, 2)    # t_output.size() = ([batch_size, hidden_size, output_size])
         # print("t_output size : ", t_output.size())
@@ -155,7 +155,18 @@ class AttentionDecoder(nn.Module):
             weight_sum = torch.sum(weighted_hs, axis=1).unsqueeze(1) # weight_sum.size() = ([batch_size, 1, hidden_size])
             # print("w_sum : ", weight_sum.size())
 
+            # 調整したweight_sumのサイズをcと連結するための準備
+            # cとweight_sumのサイズが異なる場合、必要なだけゼロを追加してサイズを調整する
+            if weight_sum.size(1) < c.size(1):
+                # 追加するゼロの数を計算
+                num_zeros = c.size(1) - weight_sum.size(1)
+                # ゼロを追加してサイズを調整
+                zeros = torch.zeros(self.batch_size, num_zeros, self.H, device=device)
+                weight_sum = torch.cat([weight_sum, zeros], dim=1)
+
             # print('c : ', c.size())
+            
+            
             c = torch.cat([c, weight_sum], dim=1) # c.size() = ([batch_size, i, hidden_size])
 
         # 箱として用意したzero要素が残っているのでスライスして削除
@@ -168,8 +179,3 @@ class AttentionDecoder(nn.Module):
         # print("output_2", output.size())
 
         return output, state, attention_weight
-
-
-
-
-

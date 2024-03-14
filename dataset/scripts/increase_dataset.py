@@ -20,6 +20,12 @@ location_place_names_dicts = dicts.location_name_dict
 item_names_dict = dicts.item_name_dict
 room_names_dict = dicts.room_name_dict
 
+gesture_dict = dicts.gesture_person_dict
+pose_dict = dicts.pose_person_dict
+obj_comp_dict = dicts.object_comp_dict
+obj_color_dict = dicts.color_dict
+cloth_dict = dicts.cloth_dict
+
 data = {}
 
 with open("../data/"+read_file_name) as f:
@@ -38,9 +44,9 @@ with open("../data/"+read_file_name) as f:
 category_list = lists.category_list
 talk_list  = lists.talk_list
 
-with tqdm(total = len(category_list)-9, leave=False) as bar1:
+with tqdm(total = len(category_list)-8, leave=False) as bar1:
     for i in range(len(category_list)):
-        if i in [0, 2, 4, 8, 10, 14, 15, 16, 17]:
+        if i in [0, 2, 6]:
         # if i in [0, 2, 4, 5, 8, 10, 11, 12, 14, 15, 16, 17, 18]:
             continue
         bar1.update(1)
@@ -52,6 +58,7 @@ with tqdm(total = len(category_list)-9, leave=False) as bar1:
                 label_list = label.split(' ')
                 increase_dicts = {}
                 increase_lists =[]
+                # print(str(len(label_list)))
                 if "<none>" not in label_list[i] and "<" in label_list[i] and ">" in label_list[i]:
                     # <item>
                     if "item" in label_list[i]:
@@ -73,7 +80,22 @@ with tqdm(total = len(category_list)-9, leave=False) as bar1:
                     # <WYS>
                     elif label_list[i] == "<WYS>":
                         increase_lists = talk_list
-                    
+                    # <gesture>
+                    elif label_list[i] == "<gesture>":
+                        increase_lists = gesture_dict
+                    # <pose>
+                    elif label_list[i] == "<pose>":
+                        increase_dicts = pose_dict
+                    # <obj_comp>
+                    elif label_list[i] == "<obj_comp>":
+                        increase_dicts = obj_comp_dict
+                    # <obj_color>
+                    elif label_list[i] == "<obj_color>":
+                        increase_dicts = obj_comp_dict
+                    # <cloth>
+                    elif label_list[i] == "<cloth>":
+                        increase_dicts = cloth_dict
+
                     if increase_dicts != {}:
                         for words in increase_dicts:
                             for word in increase_dicts[words]:

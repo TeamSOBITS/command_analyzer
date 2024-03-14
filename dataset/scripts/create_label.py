@@ -12,14 +12,14 @@ import os
 from key_direct import get_key
 
 category_list = lists.category_list
-categorys_list = [lists.verb_list, lists.person_name_list+["male", "female"]+lists.item_name_list,
-                 lists.connector_list,
+categorys_list = [lists.verb_list, lists.person_name_list+["me"]+lists.item_list+lists.item_name_list+lists.pronoun_list,
                  lists.prep_list, lists.location_name_list,
-                 lists.room_name_list, lists.person_name_list+["male", "female", "place"],
+                 lists.room_name_list, lists.person_name_list+["me", "place"]+lists.pronoun_list,
                  lists.prep_list, lists.location_name_list,
-                 lists.room_name_list, lists.talk_list, lists.find_type, lists.question_list,
-                 lists.gesture_person_list, lists.pose_person_list, lists.object_comp_list,
-                 lists.color_list, lists.cloth_list, lists.room_name_list]
+                 lists.room_name_list, lists.talk_list,
+                 lists.gesture_person_list, lists.pose_person_list, 
+                 lists.object_comp_list, lists.color_list, 
+                 lists.cloth_list, lists.room_name_list]
 data = {}
 increase_data = {}
 read_file_name = "command.txt"
@@ -70,7 +70,7 @@ def setting_label(text, label):
                 x = ord(get_key())
                 if x == ord('A'):
                     # Up
-                    print("up   \033[5D\033[2A", end="")
+                    print("up \033[5D\033[2A", end="")
                     if py < len(categorys_list[px])-1:
                         py += 1
                 elif x == ord('B'):
@@ -80,7 +80,7 @@ def setting_label(text, label):
                         py -= 1
                 elif x == ord('C'):
                     # Right
-                    print("right\033[5D\033[2A", end="")
+                    print("right \033[5D\033[2A", end="")
                     if px < LABEL_SIZE-1:
                         px += 1
                         try:

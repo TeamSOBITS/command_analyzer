@@ -82,7 +82,7 @@ with tqdm(total = len(category_list)-8, leave=False) as bar1:
                         increase_lists = talk_list
                     # <gesture>
                     elif label_list[i] == "<gesture>":
-                        increase_lists = gesture_dict
+                        increase_dicts = gesture_dict
                     # <pose>
                     elif label_list[i] == "<pose>":
                         increase_dicts = pose_dict

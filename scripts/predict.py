@@ -24,8 +24,8 @@ class CommandAnalyzer():
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         # パラメータ設定
         self.sen_length = 25                    # 入力文の長さ(この長さより短い場合はパディングされる)
-        self.output_len = 20                    # 出力ラベルの数：19 + "_"
-        self.batch_size = 100                   # バッチサイズ(同時に学習するデータの数)
+        self.output_len = 17                    # 出力ラベルの数：19 + "_"
+        self.batch_size = 500                   # バッチサイズ(同時に学習するデータの数)
         self.wordvec_size = 300                 # 辞書ベクトルの特徴の数
         self.hidden_size = 650                  # 入力文をエンコーダで変換するときの特徴の数
         self.dropout = 0.5                      # 特定の層の出力を0にする割合(過学習の抑制)
@@ -37,7 +37,7 @@ class CommandAnalyzer():
         # モデルのパス
         self.dir_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
         self.model_path = "example"             # 保存したモデルのパス
-        self.model_num = 27                      # 保存したモデルのエポック数
+        self.model_num = 15                      # 保存したモデルのエポック数
         self.encoder_path = "{}/model/{}/encoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
         self.decoder_path = "{}/model/{}/decoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
         self.text_vocab_path = "{}/model/{}/text_vocab_01.pth".format(self.dir_path, self.model_path, self.model_path)

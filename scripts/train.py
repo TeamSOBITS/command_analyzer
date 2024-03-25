@@ -30,7 +30,7 @@ class CommandAnalyzer():
     def __init__(self) -> None:
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         # パラメータ設定
-        self.sen_length = 25                    # 入力文の長さ(この長さより短い場合はパディングされる)
+        self.sen_length = 35                    # 入力文の長さ(この長さより短い場合はパディングされる)
         self.output_len = 17                   # 出力ラベルの数：19 + "_"
         self.max_epoch = 10000                   # エポック数(学習回数)の最大値
         self.batch_size = 500                    # バッチサイズ(同時に学習するデータの数)
@@ -48,7 +48,7 @@ class CommandAnalyzer():
         self.is_test_model = True               # モデルのテストを行うかどうかのフラッグ
         self.is_predict_unk = False             # 推論時に未知語を変換するかどうかのフラッグ
 
-        self.train_path = 'train_1000000.txt'           # データセットのパス
+        self.train_path = 'train_2000000.txt'           # データセットのパス
         self.test_path = None                   # 学習データと別のデータセットでテストを行う際のデータセットのパス
         self.model_path = "example"             # モデルを保存する際のパス
         self.text_vocab_path = "text_vocab_01.pth"

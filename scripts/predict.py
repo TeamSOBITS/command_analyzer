@@ -36,8 +36,8 @@ class CommandAnalyzer():
 
         # モデルのパス
         self.dir_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
-        self.model_path = "example"             # 保存したモデルのパス
-        self.model_num = 31                      # 保存したモデルのエポック数
+        self.model_path = "best"             # 保存したモデルのパス
+        self.model_num = 13                      # 保存したモデルのエポック数
         self.encoder_path = "{}/model/{}/encoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
         self.decoder_path = "{}/model/{}/decoder_epoch{}.pth".format(self.dir_path, self.model_path, self.model_num)
         self.text_vocab_path = "{}/model/{}/text_vocab_01.pth".format(self.dir_path, self.model_path, self.model_path)

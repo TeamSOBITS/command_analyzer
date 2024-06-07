@@ -12,15 +12,19 @@ from tqdm import tqdm
 read_file_name = "annonymized_dataset.txt"
 write_file_name = "increased_dataset.txt"
 
-person_names = lists.person_names
-location_names = lists.location_names
-wys_lists = lists.what_you_say
+person_names = lists.person_name_list
+location_names = lists.location_name_list
 
 gender_dict =dicts.gender_dict
-location_place_names_dicts = dicts.location_place_names_dict
-item_names_dict = dicts.item_names_dict
-furniture_names_dict = dicts.furniture_names_dict
-room_names_dict = dicts.room_names_dict
+location_place_names_dicts = dicts.location_name_dict
+item_names_dict = dicts.item_name_dict
+room_names_dict = dicts.room_name_dict
+
+gesture_dict = dicts.gesture_person_dict
+pose_dict = dicts.pose_person_dict
+obj_comp_dict = dicts.object_comp_dict
+obj_color_dict = dicts.color_dict
+cloth_dict = dicts.cloth_dict
 
 data = {}
 
@@ -37,14 +41,12 @@ with open("../data/"+read_file_name) as f:
     #print(data)
     #print([k for k, v in collections.Counter(l).items() if v > 0])
 
-category_list = ["task", "target", "prep_T1", "location_T1", "prep_T2", "location_T2", "room_T",
-                   "destination", "prep_D1", "location_D1", "prep_D2", "location_D2", "room_D",
-                   "WYS", "FIND", "obj_option", "obj_num", "gesture", "room_F"]
+category_list = lists.category_list
+talk_list  = lists.talk_list
 
-
-with tqdm(total = len(category_list)-9, leave=False) as bar1:
+with tqdm(total = len(category_list)-8, leave=False) as bar1:
     for i in range(len(category_list)):
-        if i in [0, 2, 4, 8, 10, 14, 15, 16, 17]:
+        if i in [0, 2, 6]:
         # if i in [0, 2, 4, 5, 8, 10, 11, 12, 14, 15, 16, 17, 18]:
             continue
         bar1.update(1)
@@ -56,6 +58,7 @@ with tqdm(total = len(category_list)-9, leave=False) as bar1:
                 label_list = label.split(' ')
                 increase_dicts = {}
                 increase_lists =[]
+                # print(str(len(label_list)))
                 if "<none>" not in label_list[i] and "<" in label_list[i] and ">" in label_list[i]:
                     # <item>
                     if "item" in label_list[i]:
@@ -67,7 +70,6 @@ with tqdm(total = len(category_list)-9, leave=False) as bar1:
                     elif "location_place" in label_list[i]:
                         increase_dicts = location_place_names_dicts
                     elif "location" in label_list[i]:
-                        increase_dicts = furniture_names_dict
                         increase_lists = location_names 
                     # <room>
                     elif "room" in label_list[i]:
@@ -77,8 +79,23 @@ with tqdm(total = len(category_list)-9, leave=False) as bar1:
                         increase_lists = person_names
                     # <WYS>
                     elif label_list[i] == "<WYS>":
-                        increase_lists = wys_lists
-                    
+                        increase_lists = talk_list
+                    # <gesture>
+                    elif label_list[i] == "<gesture>":
+                        increase_dicts = gesture_dict
+                    # <pose>
+                    elif label_list[i] == "<pose>":
+                        increase_dicts = pose_dict
+                    # <obj_comp>
+                    elif label_list[i] == "<obj_comp>":
+                        increase_dicts = obj_comp_dict
+                    # <obj_color>
+                    elif label_list[i] == "<obj_color>":
+                        increase_dicts = obj_comp_dict
+                    # <cloth>
+                    elif label_list[i] == "<cloth>":
+                        increase_dicts = cloth_dict
+
                     if increase_dicts != {}:
                         for words in increase_dicts:
                             for word in increase_dicts[words]:
@@ -140,7 +157,7 @@ with tqdm(total = len(category_list)-9, leave=False) as bar1:
                                 new_word = "yourself"
 
                             elif word == "your_team_name":
-                                new_word = "your team's name"
+                                new_word = "your team name"
                             # elif word == "your_age":
                             #     new_word = "your age"
                             elif word == "your_team_country":

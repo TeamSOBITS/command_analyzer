@@ -1,1014 +1,115 @@
-Deliver the cup to the person pointing to the right in the dining room
-Meet Charlie at the couch and escort her to the entrance
-Could you please meet Skyler at the sink and follow her
-Could you please meet Robin at the bed and guide her to the desk
-Put the cloth on the counter
-Please navigate to the kitchen, locate a person pointing to the right, and tell a joke
-Deliver drinks to everyone in the kitchen.
-Robot please meet Elizabeth at the bed and follow her to the kitchen
-Could you bring me the tray
-Could you please bring me the fruits
-Bring fruits to the person raising their right arm in the dining room
-Could you please accompany Alex to the exit
-Escort Jennifer from the bookcase to the dining table
-Could you please place the bowl on the counter
-Take out the debris
-Find Charlie at the sink and accompany him to his uber
-Go to the end table, meet Robert, and follow him
-Could you follow Robert from the couch to the kitchen
-Could you please look for the cutlery in the bedroom
-Find John at the entrance and lead him to his cab
-Meet Francis at the dishwasher, follow him, and accompany him back
-Could you navigate to the couch, meet Charlie, and accompany him to the end table
-Go to the dining room, locate a person waving, and say the time
-Could you face Robert at the end table and introduce it to Elizabeth at the couch
-Meet Alex at the bed, follow her, and navigate to the bedroom
-Take the orange and put it on the cupboard
-Contact Mary at the dining table and ask her to leave
-Go to the storage table, locate the apple, and put it on the side table
-Please find the fruits in the bedroom
-Go to the exit, meet Jennifer, and take her to the desk
-Greet Skyler at the couch and guide him to his uber
-Guide Francis from the end table to the sink
-Please Tell me how many snacks there are on the storage table
-Could you navigate to the entrance, meet Skyler, and take her to the sink
-Tell me how many people in the bedroom are female
-Take Jennifer from the dining table to the dishwasher
-Follow Patricia from the exit to the bedroom
-Greet Skyler at the front entrance and introduce her to everyone in the dining room.
-Could you navigate to the end table, meet James, and follow him
-Robot please bring me the object behind the chocolate drink from the side table
-Meet Robert at the dining table, follow him, and navigate to the bedroom
-Could you please meet Robert at the dining table and follow him
-Go to the kitchen, find a person standing, and answer a question
-Meet Robin at the bed, follow her, and go to the corridor
-Tell me what's the lightest cleaning stuff on the bookcase
-Take the cloth and put it on the desk
-Robot please Tell me what's the largest object on the bookcase
-Contact Robert at the main entrance and introduce him to everyone in the dining room.
-Pick up the tray and place it on the storage table
-Robot please bring the spoon to the counter
-Navigate to the side table, locate the paprika, and give it to Robert at the desk
-Could you give me the object above the mug from the desk
-Give me the object under the pockys from the small shelf
-Could you bring me the object on top of the orange from the dinner table
-Could you please find a person pointing to the left in the kitchen and say the day of the month
-Bring me the object at the left of the bubble tea from the small shelf
-Please give me the left most object from the desk
-Deliver the apple to the person pointing to the left in the kitchen
-Bring me the left most object from the side table
-Could you bring me the left most object from the side table
-Give me the left most object from the pantry
-Please look for a person raising their left arm in the office and answer a question
-Go to the bedroom, find a person pointing to the right, and say what day is tomorrow
-Could you bring me the right most object from the side table
-Bring the bowl to the person raising their right arm in the kitchen
-Give me the right most object from the pantry
-Bring me the right most object from the dinner table
-Deliver the tray to the person raising their right arm in the kitchen
-Could you Tell me the name of the person at the sink
-Could you please get the crackers and put it on the sink
-Take Skyler to the sink
-Follow John from the sink to the kitchen
-Meet William at the bed, follow him, and escort him back
-Please Tell me what's the lightest food on the desk
-Bring me the orange from the end table
-Give me the object under the sponge from the desk
-Face Alex at the back entrance and introduce her to everyone in the living room.
-Serve snacks to all the children in the living room.
-Could you please serve snacks to all the people in the corridor.
-Pick up the cloth from the sink and bring it to me
-Tell me how many people in the kitchen are lying down
-Find a person pointing to the left in the dining room and tell your team's country
-Look for the fruits in the bedroom
-Bring me the fruits
-Robot please give me the object at the left of the sprite from the side table
-Deliver snacks to everyone in the living room.
-Robot please navigate to the kitchen, find a man, and answer a question
-Could you please take Robin from the sink to the dishwasher
-Could you please put the tray on the dining table
-Could you please meet Elizabeth at the sink and follow her to the living room
-Please take the bowl from the cupboard and put it on the bookcase
-Give me the paprika from the cupboard
-Follow Jennifer
-Follow John
-Go to the sink, meet Charlie, and take her to the desk
-Could you please navigate to the couch, meet Alex, and take her to the dishwasher
-Meet James at the couch and follow him to the living room
-Go to the counter, find the tray, and put it on the desk
-Please bring me the object on top of the orange from the end table
-Look for a person sitting in the dining room and answer a question
-Follow James
-Go to the bed, meet Linda, and accompany her to the dining table
-Bring my bag to the uber
-Could you please accompany Linda to the exit
-Please meet Skyler at the couch, follow her, and go to the kitchen
-Robot please grasp the apple from the side table and place it on the bookcase
-Could you meet Jennifer at the couch, follow her, and go to the bedroom
-Look for three food in the bedroom
-Please bring me the object above the coke from the end table
-Serve snacks to all the women in the dining room.
-Could you pick up the cloth from the end table and place it on the side table
-Could you please get the bowl and put it on the end table
-Robot please go to the couch, meet Robin, and guide her to the dishwasher
-Could you Tell me what's the smallest object on the end table
-Go to the dining table, meet Robert, and escort him
-Could you Tell me the name of the person at the sink
-Tell me the name of the person in the corridor
-Dump the garbage
-Please navigate to the exit, meet Robin, and follow her
-Take the paprika from the bookcase and put it on the sink
-Please look for three snacks in the kitchen
-Answer a question to the person raising their right arm in the living room
-Could you dump the waste
-Navigate to the exit, meet William, and follow him
-Tell me how many tray there are on the counter
-Contact Elizabeth at the exit and ask her to leave
-Please meet Charlie at the sink and follow her
-Meet Alex at the dishwasher, follow her, and take her back
-Find William at the bookcase and introduce it to Robin at the bed
-Deliver fruits to the person waving in the kitchen
-Deliver the knife to me
-Face Charlie at the end table and guide him to his uber
-Navigate to the entrance, meet Elizabeth, and follow her
-Go to the entrance, meet Mary, and follow her
-Robot please bring me the lightest food from the bookcase
-Tell me what's the largest object on the storage table
-Robot please meet Linda at the bookcase, follow her, and go to the bedroom
-Meet John at the bookcase and guide him to the sink
-Navigate to the exit, meet Jennifer, and escort her
-Robot please deliver drinks to the person pointing to the left in the kitchen
-Could you follow Alex from the dining table to the corridor
-Please bring the coke to the storage table
-Could you take the cascade pod to the sink
-Could you bring me the apple from the cupboard
-Meet Alex at the bookcase, follow him, and lead him back
-Accompany Mary from the bed to the end table
-Tell me the pose of the person in the dining room
-Take out the litter
-Tell me how many people in the kitchen are women
-Please meet William at the desk and follow him to the kitchen
-Face Robert at the couch and introduce it to Alex at the sink
-Could you tell me how many people in the living room are women
-Meet Patricia at the bed, follow her, and go to the kitchen
-Follow James from the dishwasher to the bedroom
-Could you please navigate to the sink, locate the knife, and deliver it to me
-Please meet Jennifer at the entrance, follow her, and navigate to the living room
-Meet Mary at the bed, follow her, and navigate to the dining room
-Please meet Elizabeth at the sink, follow her, and lead her back
-Please navigate to the couch, meet Robert, and accompany him
-Please give fruits to the person raising their left arm in the dining room
-Could you go to the corridor, look for a person sitting, and tell something about yourself
-Please follow Linda from the exit to the kitchen
-Distribute snacks to all the men in the kitchen.
-Could you grasp the cloth from the cupboard and place it on the storage table
-Could you please go to the couch, meet Skyler, and follow him
-Follow James from the bookcase to the corridor
-Robot please find Linda at the exit and ask her to leave
-Bring me the snacks
-Go to the dishwasher, meet Mary, and lead her to the exit
-Accompany Elizabeth from the desk to the entrance
-Guide Robert to the end table, you will find him at the sink
-Navigate to the entrance, meet Francis, and escort her to the bookcase
-Robot please go to the corridor, look for a person raising their left arm, and tell a joke
-The corridor
-Tell me what's the largest tableware on the desk
-Could you Tell me the name of the person at the dishwasher
-Take the paprika from the dining room to the cupboard
-Could you take out the garbage
-Robot please navigate to the side table, find the tray, and deliver it to William at the bookcase
-Robot please go to the corridor, locate a person waving, and answer a question
-Navigate to the end table, meet Charlie, and accompany him to the dishwasher
-Could you meet Alex at the entrance, follow her, and navigate to the living room
-Locate a person standing in the corridor and answer a question
-Bring me the object behind the apple from the desk
-Please bring me the biggest drinks from the side table
-Meet Linda at the bed, follow her, and accompany her back
-Follow James
-Escort Charlie to the bookcase
-Get the tray from the cupboard and put it on the end table
-Follow William
-Place the tray on the desk
-Please give me the thinnest object from the sink
-Robot please meet Francis at the dishwasher, follow him, and go to the kitchen
-Get the tray from the bookcase and put it on the dining table
-Meet Alex and take her
-Please meet Alex at the exit and lead her to the dishwasher
-Please place the orange on the desk
-Meet Jennifer at the end table, follow her, and go to the living room
-Could you please meet Robin at the dining table and guide her to the sink
-Face Mary at the main entrance and introduce her to all the people in the dining room.
-Bring me the cloth
-Robot please follow Elizabeth
-Meet William at the sink and follow him
-Please bring me the food
-Please meet Linda at the couch and follow her
-Navigate to the couch, meet Charlie, and follow him
-Could you look for the fruits in the living room
-Could you greet John at the exit and introduce it to Charlie at the sink
-Robot please bring me the left most object from the sink
-Please follow Charlie from the bed to the kitchen
-Navigate to the sink, meet Robert, and follow him
-Grasp the dish from the bookcase and place it on the dining table
-Deliver drinks to everyone in the living room.
-Meet Skyler at the bed and guide her to the desk
-Could you bring me the object on top of the apple from the storage table
-Take the sprite to the counter
-Give me the object above the orange from the counter
-Robot please bring me the object at the right of the orange from the counter
-Tell me how many cloth there are on the dining table
-Robot please navigate to the entrance, meet Robin, and accompany her
-Guide Linda to the bookcase, you will find her at the bookcase
-Meet Skyler at the couch and lead him to the dining table
-Tell me how many bowl there are on the end table
-Meet Alex at the sink and lead him to the desk
-Lead Robin from the couch to the bed
-Tell me which are the three smallest objects on the end table
-Tell me how many people in the corridor are sitting
-Please tell me how many people in the living room are male
-Please meet Francis at the end table, follow her, and navigate to the dining room
-Please get the bowl and place it on the end table
-Meet Skyler at the sink and follow him
-Please take Elizabeth to the end table
-Meet Alex and take her
-Dump the litter
-Navigate to the dining table, meet Alex, and follow her
-Please accompany James from the bookcase to the exit
-Meet Jennifer at the desk and follow her
-Meet Alex at the dishwasher, follow him, and guide him back
-Could you go to the dishwasher, meet Alex, and follow him
-Could you follow Robert from the desk to the dining room
-Please meet Michael at the bookcase and guide him to the dishwasher
-Follow Michael from the entrance to the dining room
-Please meet Alex at the bookcase, follow her, and guide her back
-Escort James from the entrance to the entrance
-Guide John to the couch, you can find him at the bed
-Robot please deliver fruits to me
-Navigate to the couch, meet John, and follow him
-Could you please escort John to the desk, you will find him at the end table
-Greet Robin at the end table and ask her to leave
-Contact Charlie at the couch and introduce it to James at the dining table
-Robot please look for the drinks in the bedroom
-Face Elizabeth at the main door and introduce her to everyone in the kitchen.
-Could you please go to the bookcase, meet Patricia, and follow her
-Meet Elizabeth at the entrance, follow her, and navigate to the living room
-Could you please look for a boy in the bedroom and say a joke
-Get the tray from the sink and give it to Charlie at the exit
-Tell me how many cloth there are on the storage table
-Find Patricia at the sink and ask her to leave
-Could you follow Francis
-Look for three tableware in the kitchen
-Give me the object above the bowl from the storage table
-Please tell me how many people in the corridor are female
-Could you give me the largest food from the end table
-Could you please go to the end table, find the sponge, and bring it to me
-Please meet Francis at the desk, follow him, and accompany him back
-Could you please meet Alex at the desk, follow her, and navigate to the corridor
-Could you please meet Jennifer at the bookcase and guide her to the desk
-Tell me how many people in the bedroom are girls
-Could you Tell me the name of the person in the bedroom
-Give me the left most object from the storage table
-Answer a question to the person pointing to the right in the living room
-Could you please go to the dining table, meet Michael, and escort him to the desk
-Could you please meet Patricia at the couch and follow her to the bedroom
-Meet Francis at the bookcase, follow her, and go to the kitchen
-Follow Charlie from the dining table to the dining room
-Could you bring my bag to the uber
-Follow Charlie from the couch to the living room
-Please guide Linda to the bookcase
-Go to the dishwasher, meet Linda, and follow her
-Please meet Charlie at the couch, follow him, and guide him back
-Please take the cloth from the sink and place it on the dining table
-Please follow Charlie from the dishwasher to the bedroom
-Take my suitcase to the taxi
-Give me the cleaning stuff
-Meet Francis at the desk and follow her
-Face Jennifer at the entrance and accompany her to her uber
-Could you Tell me the name of the person at the dining table
-Give me the biggest drinks from the counter
-Bring me the left most object from the bookcase
-Take my suitcase to the cab
-Robot please tell me which are the three heaviest snacks on the storage table
-Meet Michael at the desk, follow him, and guide him back
-Could you Tell me how many tableware there are on the sink
-Grasp the bowl from the bookcase and place it on the counter
-Could you meet Charlie at the exit, follow him, and lead him back
-Could you grasp the bowl from the counter and bring it to me
-Tell me the name of the person in the bedroom
-Robot please navigate to the sink, meet Jennifer, and guide her
-Please accompany Michael from the desk to the bed
-Could you take Alex to the end table
-Bring me the right most object from the cupboard
-Tell me the name of the person in the bedroom
-Find a man in the dining room and answer a question
-Meet Alex at the sink, follow him, and go to the dining room
-Robot please tell me how many people in the kitchen are standing
-Meet Michael at the sink, follow him, and accompany him back
-Follow Alex
-Meet Charlie at the dishwasher and follow him
-Tell me how many people in the dining room are sitting
-Face William at the couch and introduce it to Charlie at the dining table
-Robot please give me the heaviest object from the desk
-Bring me the fruits
-Guide Patricia to the couch
-Meet Robin at the sink, follow him, and go to the kitchen
-Contact Skyler at the exit and ask her to leave
-Go to the desk, locate the bowl, and bring it to me
-Meet Alex at the couch, follow her, and take her back
-Arrange drinks to all the children in the kitchen.
-Could you please meet John at the exit and lead him to the bookcase
-Lead John from the couch to the sink
-Could you the dining room
-Could you please take out the litter
-Robot please meet Skyler at the dining table and follow her
-Follow Elizabeth from the couch to the dining room
-Grasp the cloth from the dining table and give it to Jennifer at the sink
-Please give me the object behind the knife from the bookcase
-Meet Robert at the entrance, follow him, and navigate to the kitchen
-Could you bring my trolley to the uber
-Face John at the bed and ask him to leave
-Greet Michael at the couch and guide him to his taxi
-Navigate to the dishwasher, meet James, and take him
-Dump the waste
-Navigate to the sink, find the paprika, and place it on the sink
-Tell me the pose of the person in the bedroom
-Go to the end table, meet Robin, and lead him to the bed
-Accompany Robin from the end table to the sink
-Accompany Francis to the couch, you may find him at the couch
-The corridor
-Meet Patricia at the dining table, follow her, and take her back
-Tell me which are the three lightest tableware on the desk
-Meet John at the dining table and follow him to the corridor
-Take my trolley to the uber
-Tell your team's country to the person pointing to the left in the dining room
-Meet Skyler at the sink and follow him
-Take out the junk
-Distribute snacks to everyone in the dining room.
-Robot please meet Alex and take him
-Could you bring me the orange from the cupboard
-Robot please tell a joke to the person pointing to the right in the living room
-Could you bring me the snacks
-Accompany William to the bookcase, you will find him at the couch
-Meet Francis and lead her
-Could you please Tell me the name of the person in the bedroom
-Meet James at the desk and follow him to the bedroom
-Bring the cloth to me
-Give me the left most object from the dining table
-Please find the bowl in the corridor
-Please say what day is today to the person pointing to the right in the bedroom
-Robot please give me the right most object from the bookcase
-Could you please go to the sink, meet Robin, and follow her
-Meet Francis at the bed, follow her, and navigate to the living room
-Tell me how many snacks there are on the sink
-Please go to the dining table, find the apple, and deliver it to Patricia at the desk
-Tell me what's the biggest drinks on the desk
-Could you please give fruits to the person raising their right arm in the living room
-Could you please contact Robin at the sink and guide her to her cab
-Robot please meet John at the bookcase and follow him
-Please look for a male person in the corridor and say the time
-Give me the object above the orange from the sink
-Please put the tray on the sink
-Bring the bowl to the counter
-Could you tell me how many people in the living room are sitting
-Please face Robin at the sink and take him to his cab
-Navigate to the dishwasher, meet Robin, and lead her to the entrance
-Meet Robin at the desk and follow her
-Navigate to the couch, meet Michael, and follow him
-Deliver drinks to me
-Meet Jennifer at the couch, follow her, and navigate to the corridor
-Find Francis at the end table and introduce it to James at the bookcase
-Meet Robert at the bookcase, follow him, and escort him back
-Please look for a female person in the bedroom and tell a joke
-Could you tell me how many people in the living room are lying down
-Could you please answer a question to the person raising their right arm in the corridor
-Could you deliver fruits to the person pointing to the left in the kitchen
-Meet Robert at the bed, follow him, and lead him back
-Navigate to the bed, meet Mary, and follow her
-Follow Patricia
-Face Mary at the bed and introduce it to Skyler at the end table
-Tell me the name of the person in the living room
-Robot please meet Francis at the dishwasher, follow her, and go to the dining room
-Navigate to the dining room, look for a person raising their left arm, and tell a joke
-Give me the orange from the sink
-Please follow Mary from the couch to the corridor
-Meet Linda at the sink and lead her to the entrance
-Could you meet Skyler at the desk, follow her, and navigate to the living room
-Please meet Linda at the exit, follow her, and take her back
-Could you please bring me the biggest food from the sink
-Robot please go to the side table, find the apple, and give it to John at the end table
-Look for the fruits in the kitchen
-Robot please bring me the fruits
-Robot please contact Mary at the couch and ask her to leave
-Could you accompany Skyler to the end table
-Tell me how many cleaning stuff there are on the dining table
-Could you go to the dining table, meet Francis, and lead him to the end table
-Give me the orange from the counter
-Greet Elizabeth at the dishwasher and introduce it to Robert at the desk
-Meet Michael at the dining table, follow him, and navigate to the living room
-Navigate to the kitchen, locate a person sitting, and tell the time
-Tell me which are the three largest objects on the cupboard
-Greet John at the sink and guide him to his taxi
-Could you bring me the heaviest object from the sink
-Could you please bring me the left most object from the bookcase
-Could you Tell me the name of the person at the couch
-Robot please meet Robin at the dining table, follow her, and navigate to the dining room
-Tell me which are the three biggest objects on the end table
-Could you escort William to the entrance, you will find him at the dishwasher
-Take the dish to the desk
-Could you please Tell me what's the biggest cutlery on the side table
-Bring my trolley to the taxi
-Accompany Alex to the couch
-Please contact Robin at the back entrance and introduce him to all the guests in the dining room.
-Could you meet Skyler at the entrance, follow her, and go to the bedroom
-Could you please go to the sink, meet William, and lead him
-Deliver the orange juice to me
-Put the tray on the storage table
-Meet Francis at the dining table and lead her to the dishwasher
-Tell me which are the three biggest drinks on the desk
-Could you give me the heaviest drinks from the bookcase
-Tell me what's the smallest drinks on the dining table
-Could you bring the apple from the bedroom to the end table
-Give me the right most object from the sink
-Could you locate the fruits in the living room
-Contact Linda at the end table and introduce it to Francis at the couch
-Could you bring me the apple from the dining table
-Bring tableware to the person raising their right arm in the dining room
-Could you please follow Jennifer from the couch to the corridor
-Meet Alex at the desk, follow him, and go to the corridor
-Find the tableware in the bedroom
-Distribute snacks to everyone in the kitchen.
-Robot please find three snacks in the bedroom
-Meet James at the couch and follow him
-Tell me how many containers there are on the bookcase
-Go to the desk, meet Robin, and lead her to the bookcase
-Follow Francis from the dining table to the corridor
-Meet Francis at the entrance, follow him, and escort him back
-Could you grasp the bowl from the end table and place it on the bookcase
-Dump the debris
-Bring me the largest object from the sink
-Greet Patricia at the front entrance and introduce her to all the men in the corridor.
-Could you meet Mary and take her
-Contact Jennifer at the back door and introduce her to all the people in the bedroom.
-Could you follow Francis from the desk to the corridor
-Bring the orange from the living room to the sink
-Please the dining room
-Take the dish to the cupboard
-Give me the fruits
-Please bring fruits to me
-Could you please meet Michael at the sink and escort him to the dining table
-Could you contact Charlie at the end table and ask her to leave
-Robot please deliver snacks to all the children in the living room.
-Robot please put the tray on the sink
-Give me the thinnest cutlery from the cupboard
-Place the orange on the sink
-Could you please take Francis to the bookcase, you will find her at the dining table
-Please give me the object on top of the cup from the storage table
-Contact Robin at the couch and introduce it to Elizabeth at the bed
-Robot please bring fruits to me
-Navigate to the bed, meet Jennifer, and guide her
-Please navigate to the bed, meet Francis, and follow her
-Tell me what's the heaviest snacks on the cupboard
-Bring me the thinnest object from the counter
-Could you please contact Michael at the entrance and lead him to his cab
-Meet Robin at the dining table, follow her, and navigate to the kitchen
-Find Francis at the bed and introduce it to Skyler at the couch
-Meet William at the entrance, follow him, and guide him back
-Go to the end table, locate the tray, and deliver it to James at the dishwasher
-Escort Alex to the entrance
-Robot please meet Patricia at the entrance, follow her, and go to the living room
-Meet William at the bookcase, follow him, and guide him back
-Could you please go to the dining room, locate a woman, and answer a question
-Locate the tableware in the corridor
-Meet Alex at the sink, follow her, and go to the bedroom
-Meet John at the end table, follow him, and lead him back
-Please bring me the apple from the desk
-Go to the sink, find the bowl, and place it on the cupboard
-Meet Skyler at the dining table, follow him, and go to the living room
-Could you please tell me how many people in the dining room are lying down
-Accompany Mary to the dishwasher
-Robot please meet Charlie at the exit, follow her, and guide her back
-Pick up the cloth from the storage table and deliver it to Francis at the end table
-Robot please grasp the tray from the cupboard and give it to me
-Answer a question to the person pointing to the right in the corridor
-Robot please greet Alex at the rear entrance and introduce him to everyone in the dining room.
-Please meet Jennifer at the entrance, follow her, and go to the corridor
-Could you take out the junk
-Could you tell me how many people in the living room are female
-Please locate the drinks in the kitchen
-Could you please look for the fruits in the bedroom
-Follow Charlie from the exit to the dining room
-Could you please go to the sink, meet William, and accompany him
-Robot please meet Francis at the couch and guide her to the exit
-Could you meet Alex at the desk, follow him, and navigate to the dining room
-Could you answer a question to the person pointing to the left in the corridor
-Bring snacks to me
-Answer a question to the person waving in the corridor
-Could you please meet Robin at the dining table, follow him, and accompany him back
-Robot please bring the cup to the end table
-Could you please deliver snacks to the person waving in the living room
-Take out the litter
-Could you tell me which are the three lightest drinks on the cupboard
-Meet Elizabeth and accompany her
-Tell me the gender of the person at the dining table
-Bring me the left most object from the end table
-Go to the dishwasher, meet Charlie, and accompany her to the desk
-Could you please give snacks to everyone in the kitchen.
-Provide drinks to all the men in the living room.
-The living room
-Could you please meet Charlie at the couch, follow him, and take him back
-Tell me how many people in the kitchen are men
-Could you please go to the desk, meet Mary, and guide her
-Robot please bring me the right most object from the side table
-Could you please give me the object behind the sausages from the bookcase
-Navigate to the dining room, look for a person pointing to the right, and answer a question
-Greet Linda at the entrance and introduce it to Robin at the sink
-Contact James at the exit and introduce it to Charlie at the dishwasher
-Robot please find three snacks in the corridor
-Could you contact Francis at the entrance and ask him to leave
-Go to the kitchen, look for a person sitting, and say what day is today
-Please place the tray on the sink
-Find Patricia at the main entrance and introduce her to everyone in the bedroom.
-Could you please bring me the right most object from the cupboard
-Meet William at the sink, follow him, and navigate to the dining room
-Say a joke to the person raising their right arm in the dining room
-Could you greet John at the bed and introduce it to Robert at the exit
-Go to the storage table, find the coke, and put it on the counter
-Give me the object above the apple from the end table
-Answer a question to the person pointing to the left in the dining room
-Robot please meet William at the desk, follow him, and escort him back
-Could you please the dining room
-Follow Linda from the dining table to the corridor
-Robot please bring me the biggest object from the counter
-Escort Robin to the exit
-Meet Mary at the exit and escort her to the entrance
-Give me the cleaning stuff
-Meet William at the dining table, follow him, and take him back
-Give drinks to everyone in the bedroom.
-Tell me how many people in the kitchen are women
-Robot please follow John from the dining table to the bedroom
-Take Jennifer from the end table to the sink
-Place the noodles on the dining table
-Take Robin to the dining table, you will find her at the couch
-Could you guide Alex to the dining table, you will find him at the bookcase
-Navigate to the end table, meet Skyler, and guide her to the entrance
-Could you please bring me the right most object from the sink
-Robot please face Alex at the exit and guide her to her uber
-Could you please Tell me how many cleaning stuff there are on the storage table
-Robot please navigate to the dining table, locate the dish, and place it on the sink
-Could you Tell me the gender of the person at the sink
-Bring me the object on top of the coke from the sink
-Tell me how many fruits there are on the sink
-Could you please Tell me the pose of the person at the bed
-Tell me how many drinks there are on the bookcase
-Please meet Michael at the desk, follow him, and go to the living room
-Find the containers in the living room
-Meet William at the entrance, follow him, and accompany him back
-Please place the tray on the desk
-Meet Mary at the bed, follow her, and take her back
-Contact John at the sink and guide him to his cab
-Could you Tell me the pose of the person in the dining room
-Take the sausages to the sink
-Meet Robert at the bed and follow him
-Please Tell me how many drinks there are on the sink
-Tell me which are the three smallest tableware on the desk
-Could you please Tell me the name of the person at the entrance
-Navigate to the dishwasher, meet Skyler, and escort him
-Could you escort Mary to the end table, you can find her at the couch
-Robot please face Patricia at the main door and introduce her to everyone in the dining room.
-Could you Tell me how many tray there are on the counter
-Deliver fruits to me
-Give drinks to everyone in the dining room.
-Please follow William from the entrance to the dining room
-Bring the tray to the person raising their left arm in the corridor
-Please meet Robin at the entrance, follow her, and navigate to the corridor
-Could you meet Alex at the desk, follow him, and navigate to the corridor
-Find a man in the living room and answer a question
-Robot please follow Charlie from the dining table to the kitchen
-Navigate to the desk, meet Alex, and guide her to the end table
-Meet Alex at the bookcase, follow him, and lead him back
-Find Linda at the sink and escort her to her uber
-Please tell me how many people in the kitchen are girls
-Meet Skyler at the entrance, follow her, and navigate to the corridor
-Could you follow Elizabeth
-Robot please go to the entrance, meet Mary, and lead her to the entrance
-Could you please distribute snacks to everyone in the dining room.
-Follow Francis from the exit to the bedroom
-Meet James at the bed and take him to the bed
-Please find the snacks in the bedroom
-Please meet Charlie at the bed, follow her, and lead her back
-Take out the garbage
-Please look for a person standing in the bedroom and answer a question
-Could you please navigate to the bookcase, meet Patricia, and follow her
-Could you please go to the dining table, meet Patricia, and lead her
-Guide John from the bed to the end table
-Guide Patricia to the bookcase
-Please meet Michael at the desk, follow him, and guide him back
-Robot please give me the left most object from the cupboard
-Answer a question to the person pointing to the left in the kitchen
-Contact Patricia at the exit and accompany her to her uber
-Follow Francis
-Meet Robin at the dishwasher, follow him, and go to the kitchen
-Please grasp the tray from the counter and place it on the end table
-Grasp the potato chips from the sink and place it on the sink
-Face Jennifer at the sink and guide her to her uber
-Robot please accompany Alex to the end table, you may find her at the dishwasher
-Take out the junk
-Robot please take my trolley to the cab
-Please meet Michael at the end table, follow him, and accompany him back
-Please deliver drinks to everyone in the living room.
-The corridor
-Robot please meet Charlie at the bed and take her to the dishwasher
-Go to the living room, look for a male person, and answer a question
-Please go to the living room, locate a boy, and tell a joke
-Meet Skyler at the exit, follow her, and go to the dining room
-Take my baggage to the cab
-Tell me the pose of the person at the couch
-Please meet Robert at the bookcase and follow him to the bedroom
-Please Tell me how many containers there are on the counter
-Could you please look for a person raising their right arm in the kitchen and answer a question
-Please meet Skyler at the dining table and follow him to the dining room
-Meet James at the desk and follow him
-Please meet Alex at the bookcase, follow him, and escort him back
-Meet William at the dishwasher and lead him to the entrance
-Go to the corridor, find a person lying down, and answer a question
-Greet Francis at the rear door and introduce him to everyone in the kitchen.
-Could you please navigate to the bed, meet Elizabeth, and follow her
-Lead Charlie to the desk
-Tell me which are the three largest cutlery on the storage table
-Tell me how many cleaning stuff there are on the side table
-Grasp the bowl from the counter and deliver it to Alex at the bed
-Tell me how many fruits there are on the cupboard
-Navigate to the couch, meet Alex, and accompany her
-Lead William from the entrance to the bookcase
-Robot please Tell me how many cleaning stuff there are on the counter
-Deliver drinks to me
-Give me the food
-Tell me how many cleaning stuff there are on the bookcase
-Tell me the name of the person in the corridor
-Give me the object on top of the orange from the storage table
-Give me the largest object from the desk
-Could you get the bowl and put it on the counter
-Robot please dump the debris
-Tell me the pose of the person in the living room
-Could you please tell me which are the three smallest objects on the bookcase
-Go to the living room, find a person pointing to the right, and tell your team's name
-Follow Elizabeth from the bed to the kitchen
-Tell me how many people in the dining room are women
-Tell me how many people in the corridor are women
-Tell me how many snacks there are on the sink
-Could you please Tell me the name of the person in the corridor
-Meet Michael at the couch and follow him
-Could you please find three drinks in the corridor
-Could you take the coke to the desk
-Could you please look for a male person in the corridor and answer a question
-Meet Francis at the entrance, follow him, and go to the kitchen
-Provide drinks to everyone in the dining room.
-Robot please take out the waste
-Meet Mary at the desk and follow her
-Tell me what's the biggest object on the storage table
-Could you please greet Robin at the desk and introduce it to Patricia at the dining table
-The dining room
-Please follow Francis
-Please guide Francis from the dining table to the bed
-Please bring me the fruits
-Meet Mary at the end table and take her to the dining table
-Could you please look for the tray in the bedroom
-Tell me the name of the person at the dishwasher
-Accompany Charlie to the dishwasher
-Could you get the tray from the dining table and put it on the side table
-Take Alex from the entrance to the bed
-Please bring me the lightest object from the counter
-Follow Francis
-Lead Robin from the couch to the couch
-Bring the sausages to the side table
-Meet Francis at the end table, follow her, and go to the kitchen
-Tell me how many cleaning stuff there are on the side table
-Could you please tell me which are the three lightest objects on the end table
-Meet Robert at the desk and follow him to the kitchen
-Meet Patricia at the dishwasher and follow her to the kitchen
-Find Francis at the end table and take her to her taxi
-Could you give me the right most object from the storage table
-Follow Jennifer
-Bring me the object at the left of the orange from the dining table
-Please give me the right most object from the desk
-Navigate to the bookcase, meet Patricia, and follow her
-Navigate to the storage table, look for the orange, and put it on the side table
-Meet James at the bed and follow him to the dining room
-Robot please tell me how many people in the kitchen are lying down
-Could you please answer a question to the person pointing to the left in the bedroom
-Meet Elizabeth at the bookcase, follow her, and navigate to the living room
-Follow Francis from the bed to the bedroom
-Could you tell me how many people in the kitchen are lying down
-Tell the day of the week to the person raising their right arm in the bedroom
-Could you please follow Charlie
-Please find Michael at the dining table and introduce it to Robin at the couch
-Put the paprika on the dining table
-Give drinks to the person pointing to the left in the kitchen
-Navigate to the desk, meet Michael, and guide him
-Meet Alex at the end table, follow him, and navigate to the corridor
-Please bring me the right most object from the dining table
-Robot please meet Patricia at the dining table and follow her to the kitchen
-Look for the cascade pod in the corridor
-Navigate to the desk, meet James, and escort him to the dishwasher
-Find Alex at the exit and ask him to leave
-Tell me how many people in the dining room are women
-Contact Robert at the front door and introduce him to all the people in the kitchen.
-Locate three tableware in the bedroom
-Greet Charlie at the bed and introduce it to Skyler at the dining table
-Robot please tell me how many people in the kitchen are male
-Answer a question to the person pointing to the right in the kitchen
-Look for the drinks in the living room
-Contact William at the dishwasher and take him to his cab
-Meet Robert at the bed, follow him, and go to the bedroom
-Please deliver drinks to the person pointing to the right in the living room
-Please Tell me what's the largest cleaning stuff on the storage table
-Please Tell me the gender of the person at the bookcase
-Meet Robert at the dining table, follow him, and go to the dining room
-Guide Patricia to the exit, you can find her at the dining table
-Please follow Skyler from the desk to the dining room
-Greet Alex at the exit and accompany him to his taxi
-Navigate to the dishwasher, meet Robin, and follow her
-Robot please meet Robert at the bookcase and lead him to the desk
-Meet Skyler at the exit and lead her to the bookcase
-Follow Mary from the sink to the kitchen
-Greet Mary at the couch and introduce it to Robert at the desk
-Get the tray from the bookcase and bring it to James at the bed
-Meet Alex at the bed and follow her to the bedroom
-Deliver cleaning stuff to the person pointing to the left in the corridor
-Meet John at the dining table, follow him, and go to the corridor
-Meet William at the dining table, follow him, and lead him back
-Tell me how many drinks there are on the desk
-Answer a question to the person pointing to the right in the bedroom
-Get the cloth and place it on the sink
-Tell me how many cleaning stuff there are on the cupboard
-Could you tell me which are the three heaviest fruits on the sink
-Follow Skyler from the sink to the living room
-Could you tell me how many people in the kitchen are men
-Could you please follow Charlie from the couch to the living room
-Follow Robin
-Deliver the cup to me
-Bring me the object above the apple from the dining table
-Could you please lead Robin to the entrance, you may find him at the couch
-Take the cloth to the dining table
-Meet Charlie at the sink, follow him, and guide him back
-Meet Robin at the dishwasher, follow her, and accompany her back
-Tell me what's the largest object on the side table
-Robot please meet Linda at the couch, follow her, and escort her back
-Meet Alex at the bed and follow him
-Please follow Robin
-Please navigate to the entrance, meet Robert, and guide him
-Bring the orange from the corridor to the end table
-Grasp the paprika from the dining table and put it on the bookcase
-Give me the object at the left of the fork from the storage table
-Go to the sink, meet Michael, and follow him
-Could you bring me the fruits
-The bedroom
-Robot please follow Robin from the desk to the living room
-Bring me the cloth
-Look for the drinks in the bedroom
-Pick up the tray from the desk and place it on the counter
-Contact Mary at the exit and introduce it to Linda at the sink
-Could you give me the bowl
-Follow Alex from the end table to the dining room
-Accompany Robert from the end table to the desk
-Follow Skyler from the dining table to the dining room
-Could you please meet Francis at the couch and follow him
-Greet Charlie at the bed and ask him to leave
-Go to the bookcase, look for the tray, and place it on the storage table
-Could you please bring me the right most object from the bookcase
-Robot please bring the cereal to the cupboard
-Please give me the fruits
-Could you please meet James at the end table, follow him, and go to the bedroom
-Meet Charlie at the sink, follow him, and go to the dining room
-Serve snacks to everyone in the kitchen.
-Meet Robert at the bed and follow him to the kitchen
-Meet Robin at the desk, follow her, and navigate to the corridor
-Tell me the gender of the person in the dining room
-Navigate to the kitchen, locate a person standing, and tell something about yourself
-Tell me the gender of the person at the entrance
-Navigate to the kitchen, find a person lying down, and answer a question
-Look for the fruits in the dining room
-Please navigate to the couch, meet Skyler, and follow her
-Dump the garbage
-Could you please meet Skyler at the desk, follow her, and guide her back
-Robot please meet Elizabeth at the entrance, follow her, and navigate to the dining room
-Give drinks to me
-Could you Tell me the name of the person at the desk
-Put the cloth on the storage table
-Robot please meet James at the bed, follow him, and go to the dining room
-Meet Charlie at the entrance, follow her, and escort her back
-Place the sponge on the side table
-Could you please serve snacks to everyone in the corridor.
-Provide snacks to all the men in the dining room.
-Could you tell the time to the person waving in the kitchen
-Follow Charlie from the end table to the kitchen
-Meet Francis at the dishwasher, follow her, and lead her back
-Meet Robin at the bookcase and take him to the end table
-Please Tell me how many drinks there are on the cupboard
-Find Skyler at the sink and introduce it to Robert at the bookcase
-Please contact Linda at the bed and introduce it to John at the end table
-Meet William at the sink, follow him, and go to the corridor
-Meet Linda at the desk, follow her, and take her back
-Robot please lead Elizabeth to the entrance, you can find her at the dining table
-Could you please navigate to the kitchen, look for a female person, and tell something about yourself
-Meet Francis at the bookcase and follow her
-Could you meet James at the bookcase and follow him to the living room
-Follow Elizabeth
-Could you navigate to the entrance, meet Francis, and follow him
-Please find James at the end table and take him to his cab
-Please meet Robin and escort her
-Meet Patricia at the end table, follow her, and navigate to the living room
-Find James at the end table and introduce it to Robin at the desk
-Could you please give me the object under the apple from the dining table
-Please meet John at the desk, follow him, and navigate to the corridor
-Meet Charlie at the entrance and follow her to the kitchen
-Could you escort Robin to the couch
-Robot please contact Jennifer at the dining table and escort her to her taxi
-Could you please meet Elizabeth at the end table, follow her, and go to the living room
-Take Michael to the bed
-Locate a person raising their right arm in the living room and answer a question
-Could you go to the dishwasher, meet Francis, and lead her to the sink
-Give me the biggest object from the storage table
-The kitchen
-Could you follow Charlie from the bookcase to the corridor
-Serve drinks to all the women in the kitchen.
-Dump the debris
-Could you bring me the object at the right of the apple from the cupboard
-Please deliver snacks to all the men in the corridor.
-Could you meet Jennifer at the dishwasher and take her to the bookcase
-Face Francis at the front door and introduce her to everyone in the kitchen.
-Deliver fruits to the person raising their left arm in the living room
-Robot please greet Charlie at the back door and introduce her to all the guests in the dining room.
-Please meet Francis at the dishwasher, follow him, and go to the living room
-Please distribute snacks to everyone in the corridor.
-Could you give me the tray
-Could you Tell me the pose of the person in the corridor
-Give me the apple
-Deliver fruits to me
-Meet Alex at the end table and guide her to the end table
-Please Tell me how many containers there are on the end table
-Please meet William at the sink, follow him, and take him back
-Dump the litter
-Please navigate to the exit, meet Francis, and take him to the bed
-Bring me the fruits
-Follow Charlie
-Robot please meet Elizabeth at the bookcase, follow her, and go to the bedroom
-Could you please go to the bookcase, look for the cloth, and place it on the dining table
-Could you give me the apple from the end table
-Please Tell me what's the smallest object on the desk
-Tell me how many people in the kitchen are lying down
-Could you please Tell me what's the lightest cleaning stuff on the counter
-Could you please deliver fruits to the person waving in the kitchen
-Contact James at the sink and ask him to leave
-Navigate to the sink, meet Michael, and follow him
-Find John at the sink and ask him to leave
-Meet Elizabeth and accompany her
-Pick up the cloth and place it on the dining table
-Could you please answer a question to the person raising their left arm in the living room
-Contact Michael at the sink and escort him to his cab
-Please meet Jennifer and guide her
-Contact William at the exit and escort him to his cab
-Could you please follow Charlie from the bed to the kitchen
-Answer a question to the person pointing to the left in the corridor
-Meet Robin at the exit, follow her, and guide her back
-Contact Francis at the front door and introduce him to all the guests in the kitchen.
-Could you please tell me which are the three heaviest containers on the sink
-Could you locate a person sitting in the bedroom and answer a question
-Robot please go to the entrance, meet Francis, and take him to the dining table
-Please go to the bedroom, find a person sitting, and tell a joke
-Could you please follow Linda
-Could you give the tray to me
-Robot please tell me which are the three largest objects on the dining table
-Escort Francis from the dishwasher to the dining table
-Could you meet Francis at the exit, follow him, and go to the corridor
-Could you please face Charlie at the bookcase and introduce it to Michael at the exit
-Meet William at the entrance, follow him, and lead him back
-Tell me how many people in the corridor are men
-Could you Tell me what's the thinnest object on the bookcase
-Contact Linda at the entrance and ask her to leave
-Could you please meet Robin at the dining table, follow him, and accompany him back
-Tell me the name of the person at the entrance
-Robot please take the cup from the dining table and put it on the counter
-Pick up the bowl from the cupboard and bring it to Patricia at the sink
-Find the cloth in the bedroom
-Get the bowl from the side table and put it on the side table
-Accompany Elizabeth from the sink to the entrance
-Find Charlie at the dishwasher and ask him to leave
-Give me the heaviest object from the dining table
-Find Skyler at the front entrance and introduce her to all the women in the kitchen.
-Could you escort Michael to the desk
-Could you take the paprika from the kitchen to the desk
-Answer a question to the person waving in the corridor
-Meet Robert and take him
-Could you meet Mary at the sink, follow her, and lead her back
-Robot please locate the orange in the bedroom
-Please take Robert from the sink to the desk
-Could you look for the containers in the kitchen
-Deliver the tray to the person raising their right arm in the corridor
-Go to the counter, look for the cloth, and bring it to Francis at the dishwasher
-Robot please contact Skyler at the bookcase and take him to his uber
-Tell me what's the smallest fruits on the dining table
-Robot please go to the counter, locate the cloth, and bring it to me
-Robot please Tell me what's the heaviest object on the desk
-Take Alex from the bed to the end table
-Bring cleaning stuff to me
-Could you please contact Linda at the entrance and introduce it to Patricia at the bookcase
-Could you locate the cutlery in the living room
-Meet Robin and guide her
-Look for the apple in the bedroom
-Bring the pringles to the counter
-Meet Alex at the bookcase and follow her
-Could you grasp the apple and place it on the bookcase
-Meet Charlie at the exit and follow her to the dining room
-Robot please grasp the cloth and place it on the sink
-Escort William to the bookcase
-Could you take the cup to the cupboard
-Grasp the tray and put it on the desk
-Robot please meet Elizabeth at the entrance and guide her to the exit
-Tell me how many people in the corridor are men
-Look for the bowl in the bedroom
-Tell me what's the smallest object on the bookcase
-Go to the couch, meet Alex, and guide him to the end table
-Could you please Tell me the pose of the person at the bookcase
-Lead Mary to the dining table, you can find her at the entrance
-Meet Robin at the desk, follow him, and navigate to the bedroom
-Could you please meet William at the entrance and follow him
-Please locate the tray in the corridor
-Meet Robin at the bed, follow her, and guide her back
-Bring me the object on top of the apple from the desk
-Meet Robin at the end table, follow him, and lead him back
-Tell me the pose of the person in the living room
-Give snacks to all the people in the dining room.
-Could you please look for three food in the bedroom
-Please greet Charlie at the back door and introduce her to all the elders in the kitchen.
-Please place the tray on the dining table
-Bring the potato chips to the desk
-Could you the bedroom
-Robot please contact James at the entrance and take him to his taxi
-Could you please meet Francis at the dishwasher and follow him to the bedroom
-Accompany Alex from the entrance to the bookcase
-Guide Skyler from the sink to the dining table
-Please go to the exit, meet Francis, and escort him to the exit
-Please take the paprika from the bedroom to the end table
-Tell me the name of the person in the corridor
-Tell me the name of the person in the corridor
-Could you please Tell me how many snacks there are on the counter
-Could you bring me the biggest object from the storage table
-Tell me how many cutlery there are on the storage table
-Robot please find the fruits in the bedroom
-Dump the litter
-Please guide Jennifer to the end table, you may find her at the couch
-Could you navigate to the desk, find the bowl, and give it to Robin at the entrance
-Tell me how many people in the corridor are sitting
-Tell me which are the three smallest fruits on the cupboard
-Could you please tell something about yourself to the person waving in the dining room
-Lead Robert from the desk to the bed
-Please get the cloth and place it on the sink
-Please give me the left most object from the bookcase
-Tell me how many fruits there are on the counter
-Could you guide Elizabeth from the dining table to the bookcase
-Meet James at the bookcase, follow him, and escort him back
-Bring the cereal to the desk
-Could you find Francis at the desk and ask her to leave
-Please bring fruits to me
-Deliver tableware to me
-Please tell me how many people in the dining room are lying down
-Meet James at the end table, follow him, and take him back
-Could you please take the cereal to the sink
-Tell me how many people in the kitchen are lying down
-Give fruits to the person raising their left arm in the dining room
-Please meet Charlie at the exit, follow him, and accompany him back
-Meet Alex at the bookcase, follow him, and guide him back
-Meet Mary at the end table and follow her to the living room
-Meet William at the desk, follow him, and go to the dining room
-Robot please Tell me the name of the person at the bed
-Get the apple from the counter and put it on the bookcase
-Guide John to the couch
-Meet Skyler at the bookcase and follow him
-Find the cloth in the corridor
-Tell me the name of the person at the bed
-Go to the bookcase, meet Francis, and follow him
-Dump the debris
-Tell me how many bowl there are on the end table
-Could you please meet Linda at the exit and take her to the dishwasher
-Take the paprika from the kitchen to the end table
-Deliver drinks to the person raising their right arm in the dining room
-Give me the fruits
-Escort Robert to the exit
-Greet Francis at the front door and introduce her to all the people in the kitchen.
-Could you please meet Patricia at the dining table, follow her, and guide her back
-Could you meet Robin at the sink, follow her, and guide her back
-Accompany Charlie from the couch to the bookcase
-Could you please take Charlie from the sink to the entrance
-Please answer a question to the person pointing to the left in the kitchen
-Tell me how many cloth there are on the sink
-Locate the fruits in the bedroom
-Go to the dining table, meet Michael, and accompany him
-Could you please place the cloth on the cupboard
-Contact Robin at the sink and escort her to her cab
-Could you follow James from the bed to the kitchen
-Could you please meet Mary at the entrance, follow her, and accompany her back
-Meet Robert at the end table, follow him, and go to the kitchen
-Take out the trash
-Robot please find Elizabeth at the bed and take her to her uber
-Could you give me the object above the sponge from the storage table
+Take a food from the storage rack
+Take an food from the storage rack
+take it
+Get a food from the storage rack
+Get an food from the storage rack
+get it
+Grasp a food from the storage rack
+Grasp an food from the storage rack
+grasp it
+Fetch a food from the storage rack
+Fetch an food from the storage rack
+fetch it
+put it on the pantry
+place it on the pantry
+bring it to me
+bring it to the waving person in the bedroom
+bring it to Jane in the bathroom
+give it to me
+give it to the waving person in the bedroom
+give it to Jane in the bathroom
+deliver it to me
+deliver it to the waving person in the bedroom
+deliver it to Jane in the bathroom
+Bring me a apple from the pantry
+Bring me an apple from the pantry
+Give me a apple from the pantry
+Give me an apple from the pantry
+Go to the bed
+Go to the kitchen
+Navigate to the bed
+Navigate to the kitchen
+Find a cleaning supply in the bathroom
+Find a sitting person in the bedroom
+find them in the kitchen
+Locate a cleaning supply in the bathroom
+Locate a sitting person in the bedroom
+locate them in the kitchen
+Look for a cleaning supply in the bathroom
+Look for a sitting person in the bedroom
+look for them in the kitchen
+Tell the day of the week to the person pointing to the right in the bathroom
+Say the day of the week to the person pointing to the right in the bathroom
+tell your teams affiliation
+say your teams affiliation
+Answer the question of the person raising their left arm in the office
+Answer the quiz of the person raising their left arm in the office
+answer a question
+answer a quiz
+Meet Axel in the bedroom
+Meet Axel at the chairs
+meet Morgan
+Tell me the name of the person in the kitchen
+Tell me the name of the person at the exit
+Tell me the pose of the person in the kitchen
+Tell me the pose of the person at the exit
+Tell me the gesture of the person in the kitchen
+Tell me the gesture of the person at the exit
+Tell me what is the biggest object on the shelf
+Tell the pose of the person at the entrance to the person at the trashbin
+Greet the person wearing a gray sweater in the bathroom
+Greet Angel in the bathroom
+Salute the person wearing a gray sweater in the bathroom
+Salute Angel in the bathroom
+Say hello to the person wearing a gray sweater in the bathroom
+Say hello to Angel in the bathroom
+Introduce yourself to the person wearing a gray sweater in the bathroom
+Introduce yourself to Angel in the bathroom
+Tell me how many persons raising their left arm are in the kitchen
+Tell me how many sitting persons are in the kitchen
+Tell me how many toys there are on the bookshelf
+Tell me how many people in the bedroom are wearing gray sweaters
+Follow Angel from the sink to the kitchen
+Follow the person raising their right arm at the bedside table
+Follow the person raising their right arm in the office 
+Follow the sitting person at the bedside table
+Follow the sitting person in the office
+follow them
+follow them to the lamp
+Guide Angel from the potted plant to the sofa
+Guide Angel from the potted plant to the kitchen
+Guide the waving person from the sofa to the side tables
+Guide the waving person from the sofa to the kitchen
+Guide the sitting person from the dishwasher to the shelf
+Guide the sitting person from the dishwasher to kitchen
+Guide the person pointing to the right from the waste basket to the kitchen
+Guide the person pointing to the right from the waste basket to the shelf
+Escort Angel from the potted plant to the sofa
+Escort Angel from the potted plant to the kitchen
+Escort the waving person from the sofa to the side tables
+Escort the waving person from the sofa to the kitchen
+Escort the sitting person from the dishwasher to the shelf
+Escort the sitting person from the dishwasher to kitchen
+Escort the person pointing to the right from the waste basket to the kitchen
+Escort the person pointing to the right from the waste basket to the shelf
+Take Angel from the potted plant to the sofa
+Take Angel from the potted plant to the kitchen
+Take the waving person from the sofa to the side tables
+Take the waving person from the sofa to the kitchen
+Take the sitting person from the dishwasher to the shelf
+Take the sitting person from the dishwasher to kitchen
+Take the person pointing to the right from the waste basket to the kitchen
+Take the person pointing to the right from the waste basket to the shelf
+Lead Angel from the potted plant to the sofa
+Lead Angel from the potted plant to the kitchen
+Lead the waving person from the sofa to the side tables
+Lead the waving person from the sofa to the kitchen
+Lead the sitting person from the dishwasher to the shelf
+Lead the sitting person from the dishwasher to kitchen
+Lead the person pointing to the right from the waste basket to the kitchen
+Lead the person pointing to the right from the waste basket to the shelf
+
+
+
+
+

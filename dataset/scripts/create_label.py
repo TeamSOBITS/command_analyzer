@@ -12,14 +12,14 @@ import os
 from key_direct import get_key
 
 category_list = lists.category_list
-categorys_list = [lists.verb_list, lists.person_names+["male", "female"]+lists.item_names,
-                 lists.prep_list, lists.furniture_names+lists.location_names+lists.item_names,
-                 lists.prep_list, lists.furniture_names+lists.location_names+lists.item_names,
-                 lists.room_names, lists.person_names+["male", "female", "place"],
-                 lists.prep_list, lists.furniture_names+lists.location_names,
-                 lists.prep_list, lists.furniture_names+lists.location_names,
-                 lists.room_names, lists.what_you_say, lists.find_type, lists.superlatives,
-                 lists.quantity, lists.guestures, lists.room_names]
+categorys_list = [lists.verb_list, lists.person_name_list+["me"]+lists.item_list+lists.item_name_list+lists.pronoun_list,
+                 lists.prep_list, lists.location_name_list,
+                 lists.room_name_list, lists.person_name_list+["me", "place"]+lists.pronoun_list,
+                 lists.prep_list, lists.location_name_list,
+                 lists.room_name_list, lists.talk_list,
+                 lists.gesture_person_list, lists.pose_person_list, 
+                 lists.object_comp_list, lists.color_list, 
+                 lists.cloth_list, lists.room_name_list]
 data = {}
 increase_data = {}
 read_file_name = "command.txt"
@@ -27,7 +27,7 @@ write_file_name = "dataset.txt"
 
 cmd_type = "create" # create or fix
 
-LABEL_SIZE = 19
+LABEL_SIZE = len(categorys_list)
 
 ENT = 10
 ESC = 27
@@ -52,13 +52,13 @@ def setting_label(text, label):
         ls = ""
         for i, (cw, lw) in enumerate(zip(category_list, label_list)):
             if px == i:
-                cw = colors['GREEN'] + cw + END
+                cw = colors['BLUE'] + cw + END
                 lw = colors['GREEN'] + lw + END
-            cs += cw + '\t'
-            ls += lw + '\t'
-        print(cs)
+            cs += cw + ' '
+            ls += lw + ' '
+        print("\r"+cs, end="")
         print(' '*180+'\033[180D', end="")
-        print(ls)
+        print("\r"+ls, end="")
         x = ord(get_key())
         #print(x)
         if x == ENT:
@@ -70,7 +70,7 @@ def setting_label(text, label):
                 x = ord(get_key())
                 if x == ord('A'):
                     # Up
-                    print("up   \033[5D\033[2A", end="")
+                    print("up \033[5D\033[2A", end="")
                     if py < len(categorys_list[px])-1:
                         py += 1
                 elif x == ord('B'):
@@ -80,7 +80,7 @@ def setting_label(text, label):
                         py -= 1
                 elif x == ord('C'):
                     # Right
-                    print("right\033[5D\033[2A", end="")
+                    print("right \033[5D\033[2A", end="")
                     if px < LABEL_SIZE-1:
                         px += 1
                         try:
@@ -108,7 +108,11 @@ def setting_label(text, label):
 if __name__=='__main__':
     offset = 1
     cnt = 0
-    with open("../data/"+write_file_name, mode='r') as f:
+    file_path = "../data/" + write_file_name
+    if not os.path.exists(file_path):
+        with open(file_path, mode='w') as f:
+            print(f"ファイル '{write_file_name}' が見つからなかったため、新しいファイルを生成しました。")
+    with open(file_path, mode='r') as f:
         l = f.readlines()
         offset = len(l) + 1
     with open("../data/"+read_file_name) as f:
@@ -124,7 +128,7 @@ if __name__=='__main__':
                     text, label = s_line.split('_ ')
                 elif cmd_type == "create":
                     text = s_line.replace("\n", " \n")
-                    label = "<none> "*19
+                    label = "<none> "* LABEL_SIZE
                 os.system('clear')
                 print(str(cnt)+':'+text)
                 setting_label(text, label.split())

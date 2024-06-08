@@ -365,18 +365,18 @@ $ python3 train.py
 学習中は以下のような損失グラフが表示されます．
 損失の値が，学習時と検証時共に低い値で収束していたら学習成功です．
 
-<div align="center"><img src="docs/pictures/損失グラフ.png" width="80%"></div><br>
+<div align="center"><img src="doc/pictures/損失グラフ.png" width="80%"></div><br>
 
 テストを行う場合，学習後に以下のような出力とAttentionマップが表示されます．
 出力はテストデータの理解精度と，成功例10個，失敗例20個を示します．
 
-<div align="center"><img src="docs/pictures/実行画面_テスト.png" width="80%"></div><br>
+<div align="center"><img src="doc/pictures/実行画面_テスト.png" width="80%"></div><br>
 
 Attentionマップは各出力をする際に入力文中のどの単語に注目をしていたかを示すものです．
 上部のカラーバーに示すように，マスの色が明るければ明るいほど，その単語に注目をしていることを示しています．
 この結果から正しい学習・注目による命令理解が出来ているか考察することができます．
 
-<div align="center"><img src="docs/pictures/Attentionマップ.png" width="80%"></div><br>
+<div align="center"><img src="doc/pictures/Attentionマップ.png" width="80%"></div><br>
 
 <p align="right">(<a href="#readme-top">上に戻る</a>)</p>
 
@@ -505,7 +505,7 @@ $ python3 predict.py
 プログラムは`Ctrl+C`で終了することができます．
 
 
-<div align="center"><img src="docs/pictures/実行画面_推論.png" width="80%"></div><br>
+<div align="center"><img src="doc/pictures/実行画面_推論.png" width="80%"></div><br>
 
 </details>
 

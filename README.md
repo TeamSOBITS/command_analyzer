@@ -29,7 +29,7 @@
     　<a href="#データセットの作り方">データセットの作り方</a>
     </li>
     <li>
-    　<a href="#学習の回し方">学習の回し方</a>
+    　<a href="#学習の回し方と推論">学習の回し方と推論</a>
     </li>
     <li><a href="#実行方法">実行方法</a></li>
     <li><a href="#解説">解説</a></li>
@@ -181,7 +181,7 @@ $ python3 create_label.py
 上下キーで選択している情報の正解ラベルを変更します．  
 全ての情報にラベルをつけ終えたら，Enterキーを押すことで次のコマンドに移動します．  
 
-<div align="center"><img src="doc/pictures/実行画面_create_label.png" width="80%"></div><br>
+<div align="center"><img src="doc/pictures/実行画面_create_label.png" width="80%"></div>
 
 ※正解ラベルの選択肢は`lib/lists.py`を編集することで追加,削除することが出来ます．
 
@@ -270,12 +270,12 @@ $ python3 trim_datset.py
 以上の手順でデータセットの作成は完了です．
 
 </details>
-<summary>データセットの作り方まとめ</summary>
 
 <p align="right">(<a href="#readme-top">上に戻る</a>)</p>
 
-## 学習の回し方
+## 学習の回し方と推論
 <details>
+<summary>学習のまとめ</summary>
 
 
 ### 各種ファイルについて

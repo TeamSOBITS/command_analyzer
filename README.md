@@ -98,8 +98,7 @@ torchvision <= 0.14
    ```
 
 > [!WARNING]
-> install.sh でインストールするpytorchは使用するPCのGPU，CUDAによってバージョンが異なります
-> 手順通りにインストールして下さい
+> install.sh でインストールするpytorchは使用するPCのGPU，CUDAによってバージョンが異なります. 手順通りにインストールして下さい
 
 <p align="right">(<a href="#readme-top">上に戻る</a>)</p>
 
@@ -519,8 +518,7 @@ $ python3 example.py
 please input command >>                     # 命令文を入力する
 ```
 > [!NOTE]
-> example.pyの内部ではCommandAnalyzerクラスのインスタンスが生成される
-> CommandAnalyzerクラスのpredict関数に入力(命令文)を渡すと，認識結果が辞書型で返される
+> example.pyの内部ではCommandAnalyzerクラスのインスタンスが生成される. CommandAnalyzerクラスのpredict関数に入力(命令文)を渡すと，認識結果が辞書型で返される
 
 <p align="right">(<a href="#readme-top">上に戻る</a>)</p>
 

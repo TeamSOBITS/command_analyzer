@@ -614,3 +614,14 @@ please input command >>                     # 命令文を入力する
         <td>living kitchen, bedroom</td>
     </tr>
 </table>
+
+[contributors-shield]: https://img.shields.io/github/contributors/TeamSOBITS/command_analyzer.svg?style=for-the-badge
+[contributors-url]: https://github.com/TeamSOBITS/command_analyzer/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/TeamSOBITS/command_analyzer.svg?style=for-the-badge
+[forks-url]: https://github.com/TeamSOBITS/command_analyzer/network/members
+[stars-shield]: https://img.shields.io/github/stars/TeamSOBITS/command_analyzer.svg?style=for-the-badge
+[stars-url]: https://github.com/TeamSOBITS/command_analyzer/stargazers
+[issues-shield]: https://img.shields.io/github/issues/TeamSOBITS/command_analyzer.svg?style=for-the-badge
+[issues-url]: https://github.com/TeamSOBITS/command_analyzer/issues
+[license-shield]: https://img.shields.io/github/license/TeamSOBITS/command_analyzer.svg?style=for-the-badge
+[license-url]: LICENSE

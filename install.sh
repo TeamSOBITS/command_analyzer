@@ -9,9 +9,9 @@ case "$yn" in
   [yY]*) sudo apt install python3-pip
          python3 -m pip install -U pip
          python3 -m pip install torch==1.13.1+cpu torchvision==0.14.1+cpu torchaudio==0.13.1 -f https://download.pytorch.org/whl/torch_stable.html;;
-  *) echo "終了します。
-pytorchのGPU版を入れたい方はこちら
-https://pytorch.org/";;
+  *) echo pytorchのGPU版をインストールします。
+python3 -m pip install torch==1.13.0 torchvision==0.14.0 torchaudio==0.13.0;;
+
 esac
 
 echo "---------------------------------------------------------------"
@@ -53,8 +53,6 @@ read -p $'ここから先の実行は\e[33mpytorchを入れた方のみ\e[0m行�
 case "$yn" in
   [yY]*) python3 -m pip install torchtext==${torch_text_versions[$version]} numpy matplotlib tqdm pandas seaborn;;
   *) echo "終了します。
-pytorchのGPU版を入れたい方はこちら
-https://pytorch.org/";;
 esac
 
 # python3 -m pip install torchtext==${torch_text_versions[$version]}

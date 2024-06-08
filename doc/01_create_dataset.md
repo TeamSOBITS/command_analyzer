@@ -26,9 +26,9 @@
 
 ---
 
-## 1. テキストデータを作成する
+## テキストデータを作成する
 学習時の入力となるテキストデータの作成手順を説明します．
-今回の例では，[RoboCup@Home Sydney2019のGPSRのコマンドジェネレータ](https://github.com/RoboCupAtHome/Sydney2019)を使用してテキストデータを作成します．
+今回の例では，[RoboCup@Home Japan2024のGPSRのコマンドジェネレータ](https://github.com/RoboCupAtHomeJP/CommandGenerator)を使用してテキストデータを作成します．
 Handyman等，別競技のデータを使いたい場合は別途用意して下さい．
 
 Windows用の実行ファイル(.exeファイル)をUbuntuで実行するためのリポジトリをインストールします．

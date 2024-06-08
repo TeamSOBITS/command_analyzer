@@ -270,6 +270,7 @@ $ python3 trim_datset.py
 以上の手順でデータセットの作成は完了です．
 
 </details>
+<summary>データセットの作り方まとめ</summary>
 
 <p align="right">(<a href="#readme-top">上に戻る</a>)</p>
 
@@ -521,6 +522,8 @@ please input command >>                     # 命令文を入力する
 > example.pyの内部ではCommandAnalyzerクラスのインスタンスが生成される
 > CommandAnalyzerクラスのpredict関数に入力(命令文)を渡すと，認識結果が辞書型で返される
 
+<p align="right">(<a href="#readme-top">上に戻る</a>)</p>
+
 ### 出力情報の説明
 <table>
     <tr>
@@ -614,6 +617,8 @@ please input command >>                     # 命令文を入力する
         <td>living kitchen, bedroom</td>
     </tr>
 </table>
+
+<p align="right">(<a href="#readme-top">上に戻る</a>)</p>
 
 [contributors-shield]: https://img.shields.io/github/contributors/TeamSOBITS/command_analyzer.svg?style=for-the-badge
 [contributors-url]: https://github.com/TeamSOBITS/command_analyzer/graphs/contributors

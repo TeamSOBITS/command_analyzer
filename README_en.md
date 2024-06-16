@@ -40,7 +40,7 @@
 <!-- INTRODUCTION -->
 ## Introduction
 
-GPSR(General Purpose Service Robot)タスクの命令理解リポジトリ
+This repository performs the command recognition for RoboCup @Home GPSR(General Purpose Service Robot).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

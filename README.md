@@ -21,27 +21,24 @@
       <a href="#セットアップ">セットアップ</a>
       <ul>
         <li><a href="#環境条件">環境条件</a></li>
-        <li><a href="#Pytorchのバージョン">Pytorchのバージョン</a></li>
         <li><a href="#インストール方法">インストール方法</a></li>
       </ul>
     </li>
-    <li>
-    　<a href="#データセットの作り方">データセットの作り方</a>
-    </li>
-    <li>
-    　<a href="#学習の回し方と推論">学習の回し方と推論</a>
-    </li>
+    <li><a href="#データセットの作り方">データセットの作り方</a></li>
+    <li><a href="#学習の回し方と推論">学習の回し方と推論</a></li>
     <li><a href="#実行方法">実行方法</a></li>
-    <li><a href="#解説">解説</a></li>
+    <li><a href="#出力情報の説明">出力情報の説明</a></li>
+    <li><a href="#マイルストーン">マイルストーン</a></li>
     <!-- <li><a href="#contributing">Contributing</a></li> -->
     <!-- <li><a href="#license">License</a></li> -->
+    <li><a href="#参考文献">参考文献</a></li>
   </ol>
 </details>
 
 
 ## 概要
 
-GPSR(General Purpose Service Robot)タスクの命令理解リポジトリ
+GPSR(General Purpose Service Robot)タスクの命令理解リポジトリです．
 
 <p align="right">(<a href="#readme-top">上に戻る</a>)</p>
 
@@ -115,20 +112,20 @@ GPSR(General Purpose Service Robot)タスクの命令理解リポジトリ
 
 ### 各種ファイルについて
 
-- `dataset/scripts/create_label.py`  
-    正解ラベルを作成するためのプログラム  
+- [create_label.py](dataset/scripts/create_label.py)
+    正解ラベルを作成するためのプログラム．
 
-- `dataset/scripts/key_direct.py`  
-    `create_label.py`のキーボード入力を受け取るプログラム  
+- [key_direct.py](dataset/scripts/key_direct.py)
+    [create_label.py](dataset/scripts/create_label.py)のキーボード入力を受け取るプログラム．
 
-- `dataset/scripts/annonymize_dataset.py`  
-    データセット増量のために，単語を種類ごとに匿名化するプログラム  
+- [annonymize_dataset.py](dataset/scripts/annonymize_dataset.py)
+    データセット増量のために，単語を種類ごとに匿名化するプログラム．
 
-- `dataset/scripts/increase_dataset.py`  
-    匿名化した単語を入れ替えることでデータセットを増量するプログラム  
+- [increase_dataset.py](dataset/scripts/increase_dataset.py)
+    匿名化した単語を入れ替えることでデータセットを増量するプログラム．
 
-- `dataset/scripts/trim_dataset.py`  
-    データセットのサイズをトリミングするプログラム  
+- [trim_dataset.py](dataset/scripts/trim_dataset.py)
+    データセットのサイズをトリミングするプログラム．
 
 <p align="right">(<a href="#readme-top">上に戻る</a>)</p>
 
@@ -151,7 +148,8 @@ $ cd  ~/catkin_ws/src/CommandGenerator/CommandGeneratorJP
 $ python3 gpsr_commands.py
 ```
 
-番号を押すたびにコマンドが生成されるので，適当なtxtファイルにコピー＆ペーストします．今回の例では，`command.txt`というファイルに保存します．
+番号を押すたびにコマンドが生成されるので，適当なtxtファイルにコピー＆ペーストします．
+今回の例では，[command.txt](dataset/data/command.txt)というファイルに保存します．
 
 <p align="right">(<a href="#readme-top">上に戻る</a>)</p>
 
@@ -159,7 +157,7 @@ $ python3 gpsr_commands.py
 ### 正解ラベルをつける
 
 テキストデータに正解ラベルをつける手順を説明します．
-正解ラベルの作成には，`create_label.py`というプログラムを使用します．  
+正解ラベルの作成には，[create_label.py](dataset/scripts/create_label.py)というプログラムを使用します．  
 まず，テキストデータのファイルと保存するファイルの設定を行います．
 
 以下のファイルを編集します．
@@ -168,9 +166,9 @@ $ cd  ~/catkin_ws/src/command_analyzer/dataset/scripts/
 $ gedit create_label.py
 ```
 
-`create_label.py`の25, 26行目を読み込むファイル名と書き込むファイル名に書き換えます.
+[create_label.py](dataset/scripts/create_label.py)の25, 26行目を読み込むファイル名と書き込むファイル名に書き換えます.
 28行目の設定は正解ラベルを新規作成する場合`create`，一度正解ラベルがついたファイルを修正する場合`fix`にして下さい．
-```create_label.py
+```python
 data = {}
 increase_data = {}
 read_file_name = "command.txt"      # << ここを書き換える
@@ -179,15 +177,16 @@ write_file_name = "dataset.txt"     # << ここを書き換える
 cmd_type = "create"                 # create or fix
 ```
 
-`create_label.py`を実行します．
+[create_label.py](dataset/scripts/create_label.py)を実行します．
 ```console
 $ cd  ~/catkin_ws/src/command_analyzer/dataset/scripts/
 $ python3 create_label.py
 ```
-実行すると，以下のような出力がされます．操作は上下左右キーとEnterキーで行います．  
+
+実行すると，以下のような出力がされます．操作は上下左右キーとEnterキーで行います．
 左右キーで情報の種類を選択します．
-上下キーで選択している情報の正解ラベルを変更します．  
-全ての情報にラベルをつけ終えたら，Enterキーを押すことで次のコマンドに移動します．  
+上下キーで選択している情報の正解ラベルを変更します．
+全ての情報にラベルをつけ終えたら，Enterキーを押すことで次のコマンドに移動します．
 
 <div align="center"><img src="doc/pictures/実行画面_create_label.png" width="80%"></div>
 
@@ -210,8 +209,8 @@ $ python3 create_label.py
 
 </details>
 
-`create_label.py`のプログラムは`Ctrl＋C`で中断することが出来ます．  
-次回`create_label.py`を実行する際に途中から再開することが出来ます．  
+[create_label.py](dataset/scripts/create_label.py)のプログラムは`Ctrl＋C`で中断することが出来ます．  
+次回[create_label.py](dataset/scripts/create_label.py)を実行する際に途中から再開することが出来ます．  
 
 <p align="right">(<a href="#readme-top">上に戻る</a>)</p>
 
@@ -297,20 +296,20 @@ $ python3 trim_datset.py
 
 ### 各種ファイルについて
 
-- `scripts/network.py`  
-    Seq2Seq(Sequence to Sequence)ネットワークのクラスが記述されたプログラム  
+- [network.py](scripts/network.py)
+    Seq2Seq(Sequence to Sequence)ネットワークのクラスが記述されたプログラム
 
-- `scripts/train.py`  
-    実際に学習を行うプログラム  
+- [train.py](scripts/train.py)
+    実際に学習を行うプログラム
 
-- `scripts/test.py`  
-    学習したモデルの命令理解精度をテストするプログラム  
+- [test.py](scripts/test.py)
+    学習したモデルの命令理解精度をテストするプログラム
 
-- `scripts/predict.py`  
-    学習したモデルで命令を理解するプログラム  
+- [predict.py](scripts/predict.py)
+    学習したモデルで命令を理解するプログラム
 
-- `scripts/example.py`  
-    命令理解のサンプルプログラム  
+- [example.py](scripts/example.py)
+    命令理解のサンプルプログラム
 
 <p align="right">(<a href="#readme-top">上に戻る</a>)</p>
 
@@ -452,6 +451,7 @@ class CommandAnalyzer():
 $ cd  ~/catkin_ws/src/command_analyzer/scripts/
 $ python3 test.py
 ```
+
 実行結果は，[test.py](scripts/test.py)のテスト行こうと同じであるため割愛します．
 
 2つ目は，入力された命令文を理解(推論)する方法です．
@@ -499,6 +499,7 @@ class CommandAnalyzer():
 この例では，158行目で受け取ったした命令文の理解を行います．
 
 プログラムに書き込む際はこの書き方を参考にして下さい．
+
 ```python
 if __name__ == "__main__":
     command_analyzer = CommandAnalyzer()    
@@ -538,6 +539,7 @@ $ cd ~/catkin_ws/src/command_analyzer/scripts
 $ python3 example.py
 please input command >>                     # 命令文を入力する
 ```
+
 > [!NOTE]
 > [example.py](scripts/example.py)の内部では`CommandAnalyzer`クラスのインスタンスが生成される. `CommandAnalyzer`クラスの`predict`関数に入力(命令文)を渡すと，認識結果が辞書型で返されます．
 

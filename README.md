@@ -649,7 +649,7 @@ please input command >>                     # 命令文を入力する
 
 現時点のバッグや新規機能の依頼を確認するために[Issueページ][issues-url]をご覧ください．
 
-<p align="right">(<a href="#readme-top">上に</a>)</p>
+<p align="right">(<a href="#readme-top">上に戻る</a>)</p>
 
 
 <!-- 参考文献 -->
